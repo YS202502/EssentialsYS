@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: YSROOMcomplete.ma
-//Last modified: Fri, May 30, 2025 02:56:40 PM
+//Last modified: Fri, May 30, 2025 04:05:41 PM
 //Codeset: 1252
 file -rdi 1 -ns "cup1" -rfn "cupRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//scenes/cup.ma";
 file -r -ns "cup1" -dr 1 -rfn "cupRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//scenes/cup.ma";
@@ -13,23 +13,24 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "74A51A02-49E2-E8B2-85AE-A9AC76C04D90";
+fileInfo "UUID" "97AC57DB-49D6-0018-B95A-9B9977F3836F";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "747D795E-4DED-9B30-3989-F797DAE30293";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6.4738946683214964 6.9560467587897152 11.235874871130832 ;
-	setAttr ".r" -type "double3" -8.9999999999962501 -306.79999999999063 0 ;
-	setAttr ".rpt" -type "double3" -4.8580302449792543e-15 4.1083034188685071e-17 -7.345037023305173e-15 ;
+	setAttr ".t" -type "double3" 25.98241951702791 27.67003277496984 16.957978976624055 ;
+	setAttr ".r" -type "double3" -25.799999999997876 47.2000000000074 2.3405661839479266e-15 ;
+	setAttr ".rp" -type "double3" 1.3322676295501878e-15 2.6645352591003757e-15 0 ;
+	setAttr ".rpt" -type "double3" -4.8718701096222611e-15 2.9257732392466501e-17 -7.66057354239229e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B1A73A26-47E8-235D-9CBB-69AC6A905BDC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 3.3172800581692359;
+	setAttr ".coi" 43.646267086670058;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -9.0756322257629751 6.5274457219887356 9.3176218419188181 ;
+	setAttr ".tp" -type "double3" 2.6344843305818157 3.6081871655137832 -9.7042182922310687 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "4F3A9783-41E2-DCC9-26C1-EFBBDB222FCE";
@@ -11083,6 +11084,9 @@ createNode mesh -n "pbookShape" -p "pbook";
 createNode transform -n "pbook1";
 	rename -uid "52109751-478F-FFA9-94BB-2A87A2EF2647";
 	setAttr ".s" -type "double3" 0.16988888733547214 1.3017897719512479 1.1338041765304478 ;
+	setAttr ".rp" -type "double3" -8.5071125030517578 6.6033921241760254 8.8567829132080078 ;
+	setAttr ".sp" -type "double3" -50.074567186099443 5.0725487835706611 7.8115631398630532 ;
+	setAttr ".spt" -type "double3" 41.567454683047686 1.5308433406053648 1.0452197733449551 ;
 createNode mesh -n "pbookShape1" -p "pbook1";
 	rename -uid "78E7055F-4A35-8D65-850C-C492B8FB66EA";
 	setAttr -k off ".v";
