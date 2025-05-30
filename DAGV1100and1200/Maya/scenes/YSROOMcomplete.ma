@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: YSROOMcomplete.ma
-//Last modified: Fri, May 30, 2025 02:40:59 PM
+//Last modified: Fri, May 30, 2025 02:56:40 PM
 //Codeset: 1252
 file -rdi 1 -ns "cup1" -rfn "cupRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//scenes/cup.ma";
 file -r -ns "cup1" -dr 1 -rfn "cupRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//scenes/cup.ma";
@@ -13,23 +13,23 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "41CB46BC-48C1-E6D7-309F-7D9B7E2D02BE";
+fileInfo "UUID" "74A51A02-49E2-E8B2-85AE-A9AC76C04D90";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "747D795E-4DED-9B30-3989-F797DAE30293";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 26.023590913556802 19.740165326569318 43.654655245536475 ;
-	setAttr ".r" -type "double3" -13.799999999996816 -333.60000000000463 -4.4385856346985798e-16 ;
+	setAttr ".t" -type "double3" -6.4738946683214964 6.9560467587897152 11.235874871130832 ;
+	setAttr ".r" -type "double3" -8.9999999999962501 -306.79999999999063 0 ;
 	setAttr ".rpt" -type "double3" -4.8580302449792543e-15 4.1083034188685071e-17 -7.345037023305173e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B1A73A26-47E8-235D-9CBB-69AC6A905BDC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 49.61880163947346;
+	setAttr ".coi" 3.3172800581692359;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1.782073817659739 8.4622345980487843 -9.8921615264579792 ;
+	setAttr ".tp" -type "double3" -9.0756322257629751 6.5274457219887356 9.3176218419188181 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "4F3A9783-41E2-DCC9-26C1-EFBBDB222FCE";
