@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: flowerpotys.ma
-//Last modified: Sat, Jun 07, 2025 05:38:07 PM
+//Last modified: Sat, Jun 07, 2025 05:38:34 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "ABD0D236-4CC8-6245-CBD2-B58898FA062E";
+fileInfo "UUID" "4625DCE0-4DEC-F91D-DA71-E7A6685D2D32";
 createNode transform -s -n "persp";
 	rename -uid "7E5F217B-45D1-4134-2655-06BB5124591F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -29.052036272989078 28.099408625785038 21.989198313713864 ;
-	setAttr ".r" -type "double3" -26.399999999993359 -410.79999999999501 2.5161449540811433e-15 ;
+	setAttr ".t" -type "double3" -8.3013729395889193 -27.853478944656331 19.202861560891165 ;
+	setAttr ".r" -type "double3" 57.000000000003574 -375.19999999998919 1.6479276259430873e-15 ;
 	setAttr ".rpt" -type "double3" -9.8826583707382356e-15 9.0311228152071377e-16 -1.9050271665118305e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D0FCD516-44BA-A774-3056-8DA2E1F6C7A1";
@@ -507,18 +507,6 @@ createNode mesh -n "loftedSurfaceShape4" -p "loftedSurface4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "pCube1";
-	rename -uid "07149627-4307-3FA4-59F4-37AB6A82CEEE";
-createNode mesh -n "pCubeShape1" -p "pCube1";
-	rename -uid "D924D87F-452C-9BD1-1B86-FE822BC1148F";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "8C8708A4-47F4-53E6-82EA-D1B705C60B0B";
 	setAttr -s 2 ".lnk";
@@ -800,9 +788,6 @@ createNode nurbsTessellate -n "nurbsTessellate2";
 	setAttr ".un" 2;
 	setAttr ".ucr" no;
 	setAttr ".cht" 0.01;
-createNode polyCube -n "polyCube1";
-	rename -uid "7F8A45B5-4EC8-A4EE-4D50-B1ADE44BB899";
-	setAttr ".cuv" 4;
 createNode loft -n "loft2";
 	rename -uid "721EB999-4428-AA63-77BA-EA8AA5B6E7CF";
 	setAttr -s 3 ".ic";
@@ -839,7 +824,7 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 6 ".dsm";
+	setAttr -s 5 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -869,7 +854,6 @@ connectAttr "makeNurbsSquare1.oc4" "rightnurbsSquareShape1.cr";
 connectAttr "polyExtrudeFace3.out" "pSphereShape1.i";
 connectAttr "nurbsTessellate2.op" "loftedSurfaceShape3.i";
 connectAttr "nurbsTessellate3.op" "loftedSurfaceShape4.i";
-connectAttr "polyCube1.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -914,5 +898,4 @@ connectAttr "loftedSurfaceShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "loftedSurfaceShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "loftedSurfaceShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of flowerpotys.ma
