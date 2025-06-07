@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: flowerpotys.ma
-//Last modified: Sat, Jun 07, 2025 05:41:10 PM
+//Last modified: Sat, Jun 07, 2025 05:52:15 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,19 +11,19 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "FDB6435A-4189-DEE3-4360-ECB54269DE70";
+fileInfo "UUID" "682D9E1E-4F76-A54B-9850-22996B9FFD2A";
 createNode transform -s -n "persp";
 	rename -uid "7E5F217B-45D1-4134-2655-06BB5124591F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -31.882915777120036 15.221007218245315 0.83122089856803782 ;
-	setAttr ".r" -type "double3" 348.13561031744592 -85.400000000001242 359.99999999973778 ;
+	setAttr ".t" -type "double3" 19.860718885920821 12.490104438941428 -26.859732434690692 ;
+	setAttr ".r" -type "double3" 352.93561031711425 -938.99999999991735 360.00000000000222 ;
 	setAttr ".rp" -type "double3" -1.7971735211119721e-15 -8.8817841970012523e-16 3.5527136788005009e-15 ;
 	setAttr ".rpt" -type "double3" -8.8543500006668344e-15 3.2951407689578331e-15 -7.620687958989014e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D0FCD516-44BA-A774-3056-8DA2E1F6C7A1";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 32.37554505675795;
+	setAttr ".coi" 32.65424243972209;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -95,7 +95,7 @@ createNode nurbsCurve -n "curveShape1" -p "curve1";
 		 0.83333333333333348 0.91666666666666663 1 1 1
 		15
 		0 11.755485893418021 -0.14106583072101536
-		-0 11.784556166070223 -0.61777251598743999
+		0 11.784556166070223 -0.61777251598743999
 		0 12.432007953041369 -2.3179484085369211
 		0 10.741049730260373 -3.0406490922798182
 		0 10.60758424756313 -0.8161619088990506
@@ -112,9 +112,14 @@ createNode nurbsCurve -n "curveShape1" -p "curve1";
 		;
 createNode transform -n "revolvedSurface1";
 	rename -uid "EB5F6C51-490E-92D3-633C-87AC0E4FFB51";
-createNode mesh -n "POT" -p "revolvedSurface1";
+createNode transform -n "transform3" -p "revolvedSurface1";
+	rename -uid "179AE961-4EE4-33E0-61FE-57B5A62CE363";
+	setAttr ".v" no;
+createNode mesh -n "POT" -p "transform3";
 	rename -uid "69E552E9-4C9A-68A1-E4EB-A694588A88BC";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:319]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.024400381371378899 0.5 ;
@@ -1109,7 +1114,7 @@ createNode nurbsCurve -n "curveShape6" -p "curve6";
 		9 0 0 0 0.25 0.5 0.74999999999999989 1 1 1
 		7
 		0 15.005712622234972 -2.0181278969144736
-		-0 14.833023210635284 -1.7458808885918378
+		0 14.833023210635284 -1.7458808885918378
 		0 14.488931481275383 -1.220965731990322
 		0 13.891122814561875 -0.4434085719333235
 		0 12.944288138722179 -0.11045053411811191
@@ -1127,7 +1132,7 @@ createNode nurbsCurve -n "curveShape7" -p "curve7";
 		9 0 0 0 0.25 0.5 0.75 1 1 1
 		7
 		0 14.874837941949288 -2.1073606334728949
-		-0 14.605695368488417 -2.2198121054614024
+		0 14.605695368488417 -2.2198121054614024
 		0.020796342780853738 14.0735923205552 -2.4209495828132295
 		0.094766545507736014 13.179775512462246 -2.5013692841936064
 		0.10642345657255625 12.409187393085196 -2.0123765770657389
@@ -1145,7 +1150,7 @@ createNode nurbsCurve -n "curveShape8" -p "curve8";
 		9 0 0 0 0.25 0.5 0.75 1 1 1
 		7
 		0 14.95217298029992 -2.0597698406417364
-		-0 14.69472299313095 -1.9576071473207133
+		0 14.69472299313095 -1.9576071473207133
 		-0.057576199803693218 14.193278867469015 -1.7282288588492234
 		-0.18410757005147776 13.454731046952924 -1.3728449859271392
 		-0.23346463462966793 12.686512256918128 -1.0522007391730641
@@ -1163,7 +1168,7 @@ createNode nurbsCurve -n "curveShape9" -p "curve9";
 		9 0 0 0 0.25 0.5 0.75 1 1 1
 		7
 		0 14.95217298029992 -2.0597698406417364
-		-0 14.69472299313095 -1.9576071473207133
+		0 14.69472299313095 -1.9576071473207133
 		-0.057576199803693218 14.193278867469015 -1.7282288588492234
 		-0.18410757005147776 13.454731046952924 -1.3728449859271392
 		-0.23346463462966793 12.686512256918128 -1.0522007391730641
@@ -1181,7 +1186,7 @@ createNode nurbsCurve -n "curveShape10" -p "curve10";
 		9 0 0 0 0.25 0.5 0.74999999999999989 1 1 1
 		7
 		0 15.005712622234972 -2.0181278969144736
-		-0 14.833023210635284 -1.7458808885918378
+		0 14.833023210635284 -1.7458808885918378
 		0 14.488931481275383 -1.220965731990322
 		0 13.891122814561875 -0.4434085719333235
 		0 12.944288138722179 -0.11045053411811191
@@ -1199,7 +1204,7 @@ createNode nurbsCurve -n "curveShape11" -p "curve11";
 		9 0 0 0 0.25 0.5 0.75 1 1 1
 		7
 		0 14.874837941949288 -2.1073606334728949
-		-0 14.605695368488417 -2.2198121054614024
+		0 14.605695368488417 -2.2198121054614024
 		0.020796342780853738 14.0735923205552 -2.4209495828132295
 		0.094766545507736014 13.179775512462246 -2.5013692841936064
 		0.10642345657255625 12.409187393085196 -2.0123765770657389
@@ -1209,9 +1214,14 @@ createNode nurbsCurve -n "curveShape11" -p "curve11";
 createNode transform -n "loftedSurface2";
 	rename -uid "D5F05127-4663-A469-CABF-2C8F758A163F";
 	setAttr ".t" -type "double3" 0 -0.58778502251698672 0.40464595636283129 ;
-createNode mesh -n "LEAF1" -p "loftedSurface2";
+createNode transform -n "transform1" -p "loftedSurface2";
+	rename -uid "D82859C8-473A-B78B-C8CF-84B25D4F1287";
+	setAttr ".v" no;
+createNode mesh -n "LEAF1" -p "transform1";
 	rename -uid "16C354CF-4C91-DC58-5CCE-ADA26633ADA6";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:15]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -1280,9 +1290,14 @@ createNode transform -n "pSphere1";
 	rename -uid "20A43601-4062-6DBF-6141-E1A1D031F2F8";
 	setAttr ".t" -type "double3" 0 10.321342852075773 0 ;
 	setAttr ".s" -type "double3" 1.5104274428369064 1.5104274428369064 1.5104274428369064 ;
-createNode mesh -n "pSphereShape1" -p "pSphere1";
+createNode transform -n "transform5" -p "pSphere1";
+	rename -uid "3460BB1C-4E14-ECC2-2485-ECAE618AC3F7";
+	setAttr ".v" no;
+createNode mesh -n "pSphereShape1" -p "transform5";
 	rename -uid "2B75ADF9-44EA-F7EF-6875-E38CC77C8516";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:276]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.50000005960464478 0.40000004321336746 ;
@@ -1367,7 +1382,7 @@ createNode mesh -n "pSphereShape1" -p "pSphere1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 165 ".pt";
+	setAttr -s 4 ".pt";
 	setAttr ".pt[211]" -type "float3" 0 -2.9802322e-08 0 ;
 	setAttr ".pt[213]" -type "float3" 0 -2.9802322e-08 0 ;
 	setAttr ".pt[214]" -type "float3" 0 -2.9802322e-08 0 ;
@@ -2141,9 +2156,14 @@ createNode nurbsCurve -n "curveShape14" -p "curve14";
 createNode transform -n "loftedSurface3";
 	rename -uid "E9B2701E-4B1F-327A-B0FF-E99387F6E0CC";
 	setAttr ".t" -type "double3" 0 0 0.51247685783544683 ;
-createNode mesh -n "LEAF2" -p "loftedSurface3";
+createNode transform -n "transform2" -p "loftedSurface3";
+	rename -uid "9EE9E67F-45EC-DFA6-819E-AAB9DD7DA157";
+	setAttr ".v" no;
+createNode mesh -n "LEAF2" -p "transform2";
 	rename -uid "5EAA13F4-4BA9-AF56-A9FE-4797E952A8C6";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:17]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2282,9 +2302,14 @@ createNode nurbsCurve -n "curveShape17" -p "curve17";
 		;
 createNode transform -n "loftedSurface4";
 	rename -uid "DE1C111A-4ECF-02D1-E2E4-C8B185352B43";
-createNode mesh -n "TALLLEAF" -p "loftedSurface4";
+createNode transform -n "transform4" -p "loftedSurface4";
+	rename -uid "76814C6F-4B8D-9179-0A52-86BDCE41C499";
+	setAttr ".v" no;
+createNode mesh -n "TALLLEAF" -p "transform4";
 	rename -uid "97E723CA-4B3A-99CB-57A0-908740F5DDB3";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:79]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -2541,21 +2566,36 @@ createNode mesh -n "TALLLEAF" -p "loftedSurface4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pSphere2";
+	rename -uid "D5742CEE-4532-ADAC-B62F-3B8C2327F490";
+	setAttr ".rp" -type "double3" 0 8.0200859904289246 0 ;
+	setAttr ".sp" -type "double3" 0 8.0200859904289246 0 ;
+createNode mesh -n "pSphere2Shape" -p "pSphere2";
+	rename -uid "4DE652FE-482E-17A3-FCBF-6E8714DE9919";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "8C8708A4-47F4-53E6-82EA-D1B705C60B0B";
+	rename -uid "A9389720-4772-D293-DF23-57BA0E4B0F0A";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "4C103B59-414E-15D5-E62B-15A179A6717E";
+	rename -uid "4C508856-42DB-F04A-E64B-53A16E023E62";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C9D8196B-47C1-60F5-0456-589F22472C8F";
+	rename -uid "F0316313-46D1-5E73-0A97-54AB88AB447C";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BF924D74-4578-7819-143E-2B92EA278F5F";
+	rename -uid "E1BF1133-452E-D66C-86BA-46A0B46CA729";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B16B190E-4AC7-F3CA-465F-B9903F24B983";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E1127C82-4E24-C83B-E882-508C6347FEB0";
+	rename -uid "4AEF3D83-4195-9FE5-A480-5BAE1ED89C2F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "A5CC25C4-4F30-0AAB-9308-9F86591F1311";
 	setAttr ".g" yes;
@@ -2621,6 +2661,50 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	setAttr ".output_mode" 0;
 createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
 	rename -uid "431A23D9-46B2-A30C-BE43-378FF526F51F";
+createNode polyUnite -n "polyUnite1";
+	rename -uid "366AFC92-4438-EE13-6AAE-4FA8D0520DF1";
+	setAttr -s 5 ".ip";
+	setAttr -s 5 ".im";
+createNode groupId -n "groupId1";
+	rename -uid "D324E094-4A48-B4DB-B002-DAB9A9B1A799";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId2";
+	rename -uid "5CB6FF66-4DE2-F3EC-F227-3DB415F2AE6B";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId3";
+	rename -uid "017A648D-4D12-DCAD-4354-47BB47C299B4";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId4";
+	rename -uid "FC1ECA08-4EAE-1B5E-BB6E-849069B78044";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId5";
+	rename -uid "42A9157B-495A-8EEC-B2A7-67A7905E0CEA";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId6";
+	rename -uid "54A24A63-4DE9-3AEC-1F85-6CB165E5EB70";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId7";
+	rename -uid "BDB2D47D-49FD-9DAA-A00C-C0A8B3B95E02";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId8";
+	rename -uid "7E98D8BD-4010-0BF3-F4F5-F088C5F19FB5";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId9";
+	rename -uid "08629B84-48EF-2A9E-20E9-A682DA413610";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId10";
+	rename -uid "C10704A9-4280-AA95-7BE2-A098E7CC234F";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId11";
+	rename -uid "E34012E0-4E12-88F5-CDBD-6097350CB185";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts1";
+	rename -uid "895C3539-4F4E-7711-F961-BB847F36CDD1";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:710]";
+createNode groupId -n "groupId12";
+	rename -uid "552C3E1F-4167-2ABA-3FCD-6CBD43EEE032";
+	setAttr ".ihi" 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2643,8 +2727,9 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 5 ".dsm";
+	setAttr -s 12 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 11 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -2665,8 +2750,25 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+connectAttr "groupId5.id" "POT.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "POT.iog.og[0].gco";
+connectAttr "groupId6.id" "POT.ciog.cog[0].cgid";
+connectAttr "groupId9.id" "LEAF1.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "LEAF1.iog.og[0].gco";
+connectAttr "groupId10.id" "LEAF1.ciog.cog[0].cgid";
+connectAttr "groupId1.id" "pSphereShape1.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pSphereShape1.iog.og[0].gco";
+connectAttr "groupId2.id" "pSphereShape1.ciog.cog[0].cgid";
+connectAttr "groupId7.id" "LEAF2.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "LEAF2.iog.og[0].gco";
+connectAttr "groupId8.id" "LEAF2.ciog.cog[0].cgid";
+connectAttr "groupId3.id" "TALLLEAF.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "TALLLEAF.iog.og[0].gco";
+connectAttr "groupId4.id" "TALLLEAF.ciog.cog[0].cgid";
+connectAttr "groupParts1.og" "pSphere2Shape.i";
+connectAttr "groupId11.id" "pSphere2Shape.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pSphere2Shape.iog.og[0].gco";
+connectAttr "groupId12.id" "pSphere2Shape.ciog.cog[0].cgid";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -2679,10 +2781,40 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "pSphereShape1.o" "polyUnite1.ip[0]";
+connectAttr "TALLLEAF.o" "polyUnite1.ip[1]";
+connectAttr "POT.o" "polyUnite1.ip[2]";
+connectAttr "LEAF2.o" "polyUnite1.ip[3]";
+connectAttr "LEAF1.o" "polyUnite1.ip[4]";
+connectAttr "pSphereShape1.wm" "polyUnite1.im[0]";
+connectAttr "TALLLEAF.wm" "polyUnite1.im[1]";
+connectAttr "POT.wm" "polyUnite1.im[2]";
+connectAttr "LEAF2.wm" "polyUnite1.im[3]";
+connectAttr "LEAF1.wm" "polyUnite1.im[4]";
+connectAttr "polyUnite1.out" "groupParts1.ig";
+connectAttr "groupId11.id" "groupParts1.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "POT.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "LEAF1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "LEAF2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "TALLLEAF.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pSphereShape1.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pSphereShape1.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "TALLLEAF.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "TALLLEAF.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "POT.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "POT.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "LEAF2.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "LEAF2.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "LEAF1.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "LEAF1.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pSphere2Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pSphere2Shape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId5.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId9.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId10.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId11.msg" ":initialShadingGroup.gn" -na;
 // End of flowerpotys.ma
