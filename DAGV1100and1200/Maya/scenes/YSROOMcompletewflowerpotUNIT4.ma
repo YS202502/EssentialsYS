@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: YSROOMcompletewflowerpot.ma
-//Last modified: Sat, Jun 07, 2025 06:08:50 PM
+//Name: YSROOMcompletewflowerpotUNIT4.ma
+//Last modified: Sat, Jun 07, 2025 07:37:47 PM
 //Codeset: 1252
 file -rdi 1 -ns "cup1" -rfn "cupRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//scenes/cup.ma";
 file -rdi 1 -ns "tableys" -rfn "tableysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/tableys.ma";
@@ -65,23 +65,23 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "2CC01A14-4837-21FD-4BD4-15A1A4DB53E5";
+fileInfo "UUID" "60203471-4547-EA36-BBBC-BBA72143FA5E";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "747D795E-4DED-9B30-3989-F797DAE30293";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 38.456824460470123 28.904430290703324 48.200000169187277 ;
-	setAttr ".r" -type "double3" -17.400000000000105 43.200000000000074 1.0907721408787267e-15 ;
-	setAttr ".rpt" -type "double3" -1.0730691149606698e-14 -5.5522054827044788e-16 4.3659994182772686e-16 ;
+	setAttr ".t" -type "double3" 16.64404271315415 9.9228283460126825 18.106301180185998 ;
+	setAttr ".r" -type "double3" -15.6 46.4 1.153010638385641e-15 ;
+	setAttr ".rpt" -type "double3" -8.4044268378767025e-15 -6.0928929262768327e-16 5.3290444948579425e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B1A73A26-47E8-235D-9CBB-69AC6A905BDC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 64.086121801735075;
+	setAttr ".coi" 26.810651712253915;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -3.7670135526513382e-05 3.7619275563179144 -0.0036373138427734375 ;
+	setAttr ".tp" -type "double3" -3.7670135526511641e-05 3.7619275563179144 -0.0036373138427734375 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "4F3A9783-41E2-DCC9-26C1-EFBBDB222FCE";
@@ -3076,15 +3076,15 @@ createNode transform -n "group";
 	setAttr ".rp" -type "double3" 0 11.064576802507887 -0.81525600835944245 ;
 	setAttr ".sp" -type "double3" 0 11.064576802507887 -0.81525600835944245 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E759CAFB-411A-6251-0A33-7AAEB6FE33BD";
+	rename -uid "C71F0EA8-4AE8-F248-53FF-7FBBFD427BCF";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "FC783F5B-49A1-338D-49CC-159AE6FA8306";
+	rename -uid "4A9B47AF-439A-47A6-2A1C-DFBB3AF4C46E";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6644B524-4D27-0229-DF48-A78986EBFD8D";
+	rename -uid "70B0CDD2-4740-3D5A-A4FC-CBA519704F21";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9DB875C7-45EE-7300-C88E-3AAD1AE74373";
+	rename -uid "577BA35C-4CCC-BCD7-8052-C38AA4114270";
 	setAttr ".cdl" 3;
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
 	setAttr -s 3 ".dli";
@@ -3092,7 +3092,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "BFD781FC-4897-04E4-F3D2-31B44850BC57";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F382FFFF-4DBA-FAFC-94EC-46876A7A9B1D";
+	rename -uid "3F3F391F-4E07-28C0-F22B-6C8E3B65744B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "669BB9A7-4E43-2CA6-0A4D-BBB87BA485E7";
 	setAttr ".g" yes;
@@ -3281,8 +3281,8 @@ createNode reference -n "cupysRN";
 	rename -uid "606B2E62-4EAB-15DC-AE9F-7D915CCC441C";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"cupysRN"
-		"cupysRN" 0
-		"cupys:cupRN" 0;
+		"cupys:cupRN" 0
+		"cupysRN" 0;
 lockNode -l 1 ;
 createNode reference -n "cup2ysRN";
 	rename -uid "F3EA0419-4C19-88E8-3694-C8AF18E3A7FA";
@@ -3481,8 +3481,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "groupId10.id" "chairmesh2Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "chairmesh2Shape.iog.og[0].gco";
 connectAttr "layer1.di" "wallmesh1.do";
@@ -3560,4 +3558,4 @@ connectAttr "groupId202.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId203.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId204.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId205.msg" ":initialShadingGroup.gn" -na;
-// End of YSROOMcompletewflowerpot.ma
+// End of YSROOMcompletewflowerpotUNIT4.ma

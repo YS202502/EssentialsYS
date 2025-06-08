@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: flowerpotysUNIT4.ma
-//Last modified: Sat, Jun 07, 2025 06:36:12 PM
+//Last modified: Sat, Jun 07, 2025 06:57:28 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "C5BFBD17-4157-74C4-E4C9-B3AD654630A1";
+fileInfo "UUID" "E666BC77-415F-3EBC-89BC-63BF51AB3ACE";
 createNode transform -s -n "persp";
 	rename -uid "7E5F217B-45D1-4134-2655-06BB5124591F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 47.542238944039774 28.991242506239736 -1.4886626503880542 ;
-	setAttr ".r" -type "double3" -20.399999999994169 -993.59999999998377 7.5980132956049104e-14 ;
+	setAttr ".t" -type "double3" -52.47759249717263 10.368262346782803 1.5998358697156059 ;
+	setAttr ".r" -type "double3" 0.5999999999156751 -1163.1999999999741 -4.1971707205822348e-16 ;
 	setAttr ".rpt" -type "double3" -1.3953657319492938e-14 2.6353760775117913e-15 -7.0653191746821359e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D0FCD516-44BA-A774-3056-8DA2E1F6C7A1";
