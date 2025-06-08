@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: YSROOMcompletewflowerpot.ma
-//Last modified: Sat, Jun 07, 2025 06:05:30 PM
+//Last modified: Sat, Jun 07, 2025 06:08:50 PM
 //Codeset: 1252
 file -rdi 1 -ns "cup1" -rfn "cupRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//scenes/cup.ma";
 file -rdi 1 -ns "tableys" -rfn "tableysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/tableys.ma";
@@ -65,12 +65,13 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "CCE1AC96-4FF8-AC62-BCEE-5D9762F4D391";
+fileInfo "UUID" "2CC01A14-4837-21FD-4BD4-15A1A4DB53E5";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "747D795E-4DED-9B30-3989-F797DAE30293";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.7670135515782688e-05 3.7619275563179149 64.082484487892302 ;
+	setAttr ".t" -type "double3" 38.456824460470123 28.904430290703324 48.200000169187277 ;
+	setAttr ".r" -type "double3" -17.400000000000105 43.200000000000074 1.0907721408787267e-15 ;
 	setAttr ".rpt" -type "double3" -1.0730691149606698e-14 -5.5522054827044788e-16 4.3659994182772686e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B1A73A26-47E8-235D-9CBB-69AC6A905BDC";
