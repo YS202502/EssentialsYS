@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Unit5_HardSurface.ma
-//Last modified: Fri, Jun 13, 2025 01:12:49 PM
+//Last modified: Fri, Jun 13, 2025 01:15:01 PM
 //Codeset: 1252
 file -rdi 1 -ns "Sofays" -rfn "SofaysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/Sofays.ma";
 file -r -ns "Sofays" -dr 1 -rfn "SofaysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/Sofays.ma";
@@ -13,23 +13,22 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "CDD4E6ED-47BD-6EC8-79F0-469004A9F2A6";
+fileInfo "UUID" "DECD1431-4047-6F9D-CA59-7686A8C2E1CD";
 createNode transform -s -n "persp";
 	rename -uid "8170D626-4FB9-A440-01CC-8A811E7AA0F8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.070357214992988304 16.175194611781276 29.760648682917552 ;
-	setAttr ".r" -type "double3" -34.200000000006291 -1.9999999999999964 -1.989058356522933e-15 ;
-	setAttr ".rp" -type "double3" -1.7347234759768071e-18 -8.8817841970012523e-16 0 ;
-	setAttr ".rpt" -type "double3" -3.2658532691165178e-15 1.0810774600124049e-15 -1.040592624154926e-15 ;
+	setAttr ".t" -type "double3" 5.0681725317180151 10.136365773256951 10.366342948361776 ;
+	setAttr ".r" -type "double3" -44.399999999999913 24.799999999999947 0 ;
+	setAttr ".rpt" -type "double3" -2.7418445695838388e-15 8.5147702141963835e-16 -1.7411179904563501e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "10BA283B-4955-1487-8690-9BAC95D4FB2D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 29.32167806805893;
+	setAttr ".coi" 14.906130225273813;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -5.3291301727294922 2.7506918907165527 5.0988106727600098 ;
+	setAttr ".tp" -type "double3" -1.1920928955089536e-07 0 -1.788139343256275e-07 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "C1659C18-4F2F-9570-AD61-18B3091566AF";
