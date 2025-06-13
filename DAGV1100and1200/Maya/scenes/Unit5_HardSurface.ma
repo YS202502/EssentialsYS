@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Unit5_HardSurface.ma
-//Last modified: Fri, Jun 13, 2025 10:54:30 AM
+//Last modified: Fri, Jun 13, 2025 11:43:26 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "57260200-4454-F6B5-D5E4-C18162030507";
+fileInfo "UUID" "1F3E0602-467B-142C-6573-989484DF0CA0";
 createNode transform -s -n "persp";
 	rename -uid "8170D626-4FB9-A440-01CC-8A811E7AA0F8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -11.212020952845346 8.1688640604296872 30.838663751418284 ;
-	setAttr ".r" -type "double3" -16.799999999999358 -25.599999999999866 -4.4084608122056836e-16 ;
+	setAttr ".t" -type "double3" -11.888421682699617 6.9859715692213573 30.873900567215621 ;
+	setAttr ".r" -type "double3" -14.400000000000269 -26.799999999999972 4.4541300899490317e-16 ;
 	setAttr ".rp" -type "double3" -1.7347234759768071e-18 -8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" -3.2658532691165178e-15 1.0810774600124049e-15 -1.040592624154926e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
