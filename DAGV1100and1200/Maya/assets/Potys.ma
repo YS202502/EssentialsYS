@@ -1,21 +1,22 @@
 //Maya ASCII 2025ff03 scene
 //Name: Potys.ma
-//Last modified: Fri, Jun 13, 2025 03:34:01 PM
+//Last modified: Fri, Jun 13, 2025 03:34:30 PM
 //Codeset: 1252
 requires maya "2025ff03";
-requires "mtoa" "5.4.5";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
+		 "mtoa" "5.4.5";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "6937F424-4881-ACC0-C9E7-74B80FD08A3B";
+fileInfo "UUID" "2E200957-4137-2EA3-505C-C2945A5663B9";
 createNode transform -s -n "persp";
 	rename -uid "5CC778F7-41BF-E047-529C-DA9C12E982EC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.2003795902633208 1.9043003510690539 12.286984324953346 ;
-	setAttr ".r" -type "double3" -3.0000000000000093 -1418.7999999999927 0 ;
+	setAttr ".t" -type "double3" 1.8593220505796411 4.451333473114115 12.719246289801156 ;
+	setAttr ".r" -type "double3" -13.199999999999987 -1431.999999999992 -6.0221471498345484e-16 ;
 	setAttr ".rpt" -type "double3" 4.8811680512788287e-17 1.1738868474733639e-16 -1.521256450070582e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EAE389AB-4AEF-836F-997A-0B85265E8679";
@@ -1566,28 +1567,15 @@ createNode mesh -n "leaf5" -p "loftedSurface1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[0]" -type "float3" 2.0107167 2.9846306 -11.395957 ;
-	setAttr ".pt[1]" -type "float3" 2.0463037 3.8751674 -9.2952852 ;
-	setAttr ".pt[2]" -type "float3" 1.588529 3.5712552 -10.236037 ;
-	setAttr ".pt[3]" -type "float3" 2.4333901 3.5700421 -10.090753 ;
-	setAttr ".pt[4]" -type "float3" 2.0685477 2.9945869 -11.414867 ;
-	setAttr ".pt[5]" -type "float3" 1.7089374 3.1118281 -11.164791 ;
-	setAttr ".pt[6]" -type "float3" 2.4218194 3.1114755 -10.965078 ;
-	setAttr ".pt[7]" -type "float3" 1.9114177 3.1535618 -11.137767 ;
-	setAttr ".pt[8]" -type "float3" 2.0329022 2.9809356 -11.407322 ;
-	setAttr ".pt[9]" -type "float3" 1.8935448 3.7644386 -10.003191 ;
-	setAttr ".pt[10]" -type "float3" 1.5377975 3.3471055 -10.717902 ;
-	setAttr ".pt[11]" -type "float3" 1.8354989 3.5051498 -10.571616 ;
-	setAttr ".pt[12]" -type "float3" 2.5155048 3.352159 -10.521646 ;
-	setAttr ".pt[13]" -type "float3" 2.0666804 3.8756104 -9.293067 ;
-	setAttr ".pt[14]" -type "float3" 1.7578858 3.720747 -9.8686075 ;
-	setAttr ".pt[15]" -type "float3" 2.2683482 3.7106647 -9.7863436 ;
-	setAttr ".pt[16]" -type "float3" 1.9783641 3.8579998 -9.6668024 ;
-	setAttr ".pt[17]" -type "float3" 2.0597181 3.8791952 -9.2777719 ;
-	setAttr ".pt[18]" -type "float3" 1.9433688 3.8151464 -9.5513601 ;
-	setAttr ".pt[19]" -type "float3" 2.035583 3.8691888 -9.467967 ;
-	setAttr ".pt[20]" -type "float3" 2.1215096 3.8108869 -9.5362339 ;
+	setAttr -s 21 ".pt[0:20]" -type "float3"  2.0107167 2.9846306 -11.395957 
+		2.0463037 3.8751674 -9.2952852 1.588529 3.5712552 -10.236037 2.4333901 3.5700421 
+		-10.090753 2.0685477 2.9945869 -11.414867 1.7089374 3.1118281 -11.164791 2.4218194 
+		3.1114755 -10.965078 1.9114177 3.1535618 -11.137767 2.0329022 2.9809356 -11.407322 
+		1.8935448 3.7644386 -10.003191 1.5377975 3.3471055 -10.717902 1.8354989 3.5051498 
+		-10.571616 2.5155048 3.352159 -10.521646 2.0666804 3.8756104 -9.293067 1.7578858 
+		3.720747 -9.8686075 2.2683482 3.7106647 -9.7863436 1.9783641 3.8579998 -9.6668024 
+		2.0597181 3.8791952 -9.2777719 1.9433688 3.8151464 -9.5513601 2.035583 3.8691888 
+		-9.467967 2.1215096 3.8108869 -9.5362339;
 	setAttr -s 21 ".vt[0:20]"  -1.95300841 -0.0079799369 11.32712078 -1.98881972 -0.0079799369 9.23573589
 		 -1.27975416 -0.0079799369 9.95196342 -2.73436427 0.0017473232 9.95196342 -2.060087442 -0.014286766 11.32712078
 		 -1.40867519 -0.0079799369 11.054954529 -2.60431671 -0.0041253525 11.056083679 -1.7678659 -0.057584506 11.060149193
@@ -1649,28 +1637,15 @@ createNode mesh -n "leaf4" -p "loftedSurface2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[0]" -type "float3" 2.0354745 3.0091314 -11.354363 ;
-	setAttr ".pt[1]" -type "float3" 2.7686143 3.5585713 -9.2532892 ;
-	setAttr ".pt[2]" -type "float3" 2.0093448 3.1207147 -10.077602 ;
-	setAttr ".pt[3]" -type "float3" 3.0903897 3.6063309 -10.167371 ;
-	setAttr ".pt[4]" -type "float3" 2.1149654 3.0512352 -11.365509 ;
-	setAttr ".pt[5]" -type "float3" 1.7268176 2.9041047 -10.981605 ;
-	setAttr ".pt[6]" -type "float3" 2.6133778 3.3129473 -11.002034 ;
-	setAttr ".pt[7]" -type "float3" 1.9900261 3.0694375 -11.042048 ;
-	setAttr ".pt[8]" -type "float3" 2.0582693 3.0211096 -11.375317 ;
-	setAttr ".pt[9]" -type "float3" 2.5008297 3.449645 -9.936697 ;
-	setAttr ".pt[10]" -type "float3" 1.7485359 2.9551749 -10.535559 ;
-	setAttr ".pt[11]" -type "float3" 2.2134624 3.261065 -10.48156 ;
-	setAttr ".pt[12]" -type "float3" 2.9873395 3.5222683 -10.608136 ;
-	setAttr ".pt[13]" -type "float3" 2.7955008 3.5706401 -9.2568741 ;
-	setAttr ".pt[14]" -type "float3" 2.3406003 3.3069205 -9.7594357 ;
-	setAttr ".pt[15]" -type "float3" 2.9960656 3.5913124 -9.8198204 ;
-	setAttr ".pt[16]" -type "float3" 2.6811156 3.5393724 -9.6197605 ;
-	setAttr ".pt[17]" -type "float3" 2.7868547 3.5684443 -9.2390337 ;
-	setAttr ".pt[18]" -type "float3" 2.6242616 3.4675169 -9.4886112 ;
-	setAttr ".pt[19]" -type "float3" 2.7609177 3.5615792 -9.4300175 ;
-	setAttr ".pt[20]" -type "float3" 2.8566194 3.566258 -9.5241451 ;
+	setAttr -s 21 ".pt[0:20]" -type "float3"  2.0354745 3.0091314 -11.354363 
+		2.7686143 3.5585713 -9.2532892 2.0093448 3.1207147 -10.077602 3.0903897 3.6063309 
+		-10.167371 2.1149654 3.0512352 -11.365509 1.7268176 2.9041047 -10.981605 2.6133778 
+		3.3129473 -11.002034 1.9900261 3.0694375 -11.042048 2.0582693 3.0211096 -11.375317 
+		2.5008297 3.449645 -9.936697 1.7485359 2.9551749 -10.535559 2.2134624 3.261065 -10.48156 
+		2.9873395 3.5222683 -10.608136 2.7955008 3.5706401 -9.2568741 2.3406003 3.3069205 
+		-9.7594357 2.9960656 3.5913124 -9.8198204 2.6811156 3.5393724 -9.6197605 2.7868547 
+		3.5684443 -9.2390337 2.6242616 3.4675169 -9.4886112 2.7609177 3.5615792 -9.4300175 
+		2.8566194 3.566258 -9.5241451;
 	setAttr -s 21 ".vt[0:20]"  -1.95300841 -0.0079799369 11.32712078 -1.98881972 -0.0079799369 9.23573589
 		 -1.27975416 -0.0079799369 9.95196342 -2.73436427 0.0017473232 9.95196342 -2.060087442 -0.014286766 11.32712078
 		 -1.40867519 -0.0079799369 11.054954529 -2.60431671 -0.0041253525 11.056083679 -1.7678659 -0.057584506 11.060149193
@@ -1732,28 +1707,15 @@ createNode mesh -n "leaf2" -p "loftedSurface3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[0]" -type "float3" 1.964008 3.2239008 -11.284775 ;
-	setAttr ".pt[1]" -type "float3" 2.7252221 2.7802377 -8.9351034 ;
-	setAttr ".pt[2]" -type "float3" 1.5955814 2.6440454 -9.753746 ;
-	setAttr ".pt[3]" -type "float3" 3.4272223 3.0762062 -9.9843473 ;
-	setAttr ".pt[4]" -type "float3" 2.1036968 3.2960672 -11.232784 ;
-	setAttr ".pt[5]" -type "float3" 1.3879895 3.0134106 -10.847729 ;
-	setAttr ".pt[6]" -type "float3" 2.8815277 3.3574729 -11.083373 ;
-	setAttr ".pt[7]" -type "float3" 1.8264338 3.1497192 -10.96636 ;
-	setAttr ".pt[8]" -type "float3" 2.0151303 3.2811494 -11.22485 ;
-	setAttr ".pt[9]" -type "float3" 2.3689346 2.8261414 -9.6026773 ;
-	setAttr ".pt[10]" -type "float3" 1.2799382 2.7525496 -10.280293 ;
-	setAttr ".pt[11]" -type "float3" 2.0272341 2.9400606 -10.224874 ;
-	setAttr ".pt[12]" -type "float3" 3.3805881 3.2689905 -10.523681 ;
-	setAttr ".pt[13]" -type "float3" 2.7703738 2.7896752 -8.9426746 ;
-	setAttr ".pt[14]" -type "float3" 2.0741699 2.6541328 -9.4208498 ;
-	setAttr ".pt[15]" -type "float3" 3.1826549 2.8950467 -9.5866928 ;
-	setAttr ".pt[16]" -type "float3" 2.6075339 2.7856703 -9.3011246 ;
-	setAttr ".pt[17]" -type "float3" 2.7542195 2.7868547 -8.9226789 ;
-	setAttr ".pt[18]" -type "float3" 2.5079095 2.7260938 -9.1624928 ;
-	setAttr ".pt[19]" -type "float3" 2.7227159 2.7847462 -9.1136446 ;
-	setAttr ".pt[20]" -type "float3" 2.9000292 2.8056121 -9.2340412 ;
+	setAttr -s 21 ".pt[0:20]" -type "float3"  1.964008 3.2239008 -11.284775 
+		2.7252221 2.7802377 -8.9351034 1.5955814 2.6440454 -9.753746 3.4272223 3.0762062 
+		-9.9843473 2.1036968 3.2960672 -11.232784 1.3879895 3.0134106 -10.847729 2.8815277 
+		3.3574729 -11.083373 1.8264338 3.1497192 -10.96636 2.0151303 3.2811494 -11.22485 
+		2.3689346 2.8261414 -9.6026773 1.2799382 2.7525496 -10.280293 2.0272341 2.9400606 
+		-10.224874 3.3805881 3.2689905 -10.523681 2.7703738 2.7896752 -8.9426746 2.0741699 
+		2.6541328 -9.4208498 3.1826549 2.8950467 -9.5866928 2.6075339 2.7856703 -9.3011246 
+		2.7542195 2.7868547 -8.9226789 2.5079095 2.7260938 -9.1624928 2.7227159 2.7847462 
+		-9.1136446 2.9000292 2.8056121 -9.2340412;
 	setAttr -s 21 ".vt[0:20]"  -1.95300841 -0.0079799369 11.32712078 -1.98881972 -0.0079799369 9.23573589
 		 -1.27975416 -0.0079799369 9.95196342 -2.73436427 0.0017473232 9.95196342 -2.060087442 -0.014286766 11.32712078
 		 -1.40867519 -0.0079799369 11.054954529 -2.60431671 -0.0041253525 11.056083679 -1.7678659 -0.057584506 11.060149193
@@ -1815,28 +1777,15 @@ createNode mesh -n "leafs" -p "loftedSurface4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[0]" -type "float3" 1.9570197 3.0863943 -11.344383 ;
-	setAttr ".pt[1]" -type "float3" 1.3933388 3.6602449 -8.9374838 ;
-	setAttr ".pt[2]" -type "float3" 0.9539634 3.6605797 -10.018661 ;
-	setAttr ".pt[3]" -type "float3" 2.0979581 3.1877222 -9.7323017 ;
-	setAttr ".pt[4]" -type "float3" 2.0389624 3.0575218 -11.327139 ;
-	setAttr ".pt[5]" -type "float3" 1.4832923 3.3539348 -11.083591 ;
-	setAttr ".pt[6]" -type "float3" 2.4535878 2.9799204 -10.804679 ;
-	setAttr ".pt[7]" -type "float3" 1.7513915 3.2786045 -11.046934 ;
-	setAttr ".pt[8]" -type "float3" 1.990537 3.0725985 -11.357422 ;
-	setAttr ".pt[9]" -type "float3" 1.2836854 3.6314445 -9.6921244 ;
-	setAttr ".pt[10]" -type "float3" 1.0523486 3.5584769 -10.589995 ;
-	setAttr ".pt[11]" -type "float3" 1.3925579 3.500927 -10.357191 ;
-	setAttr ".pt[12]" -type "float3" 2.3824019 3.0280752 -10.236558 ;
-	setAttr ".pt[13]" -type "float3" 1.420382 3.648757 -8.9314861 ;
-	setAttr ".pt[14]" -type "float3" 1.0794274 3.6669383 -9.5769291 ;
-	setAttr ".pt[15]" -type "float3" 1.7695181 3.3698878 -9.4082737 ;
-	setAttr ".pt[16]" -type "float3" 1.3243542 3.6568313 -9.3149109 ;
-	setAttr ".pt[17]" -type "float3" 1.4097121 3.6571951 -8.9174967 ;
-	setAttr ".pt[18]" -type "float3" 1.2787749 3.6487961 -9.2125721 ;
-	setAttr ".pt[19]" -type "float3" 1.3845228 3.645505 -9.1066914 ;
-	setAttr ".pt[20]" -type "float3" 1.5176414 3.5414281 -9.165513 ;
+	setAttr -s 21 ".pt[0:20]" -type "float3"  1.9570197 3.0863943 -11.344383 
+		1.3933388 3.6602449 -8.9374838 0.9539634 3.6605797 -10.018661 2.0979581 3.1877222 
+		-9.7323017 2.0389624 3.0575218 -11.327139 1.4832923 3.3539348 -11.083591 2.4535878 
+		2.9799204 -10.804679 1.7513915 3.2786045 -11.046934 1.990537 3.0725985 -11.357422 
+		1.2836854 3.6314445 -9.6921244 1.0523486 3.5584769 -10.589995 1.3925579 3.500927 
+		-10.357191 2.3824019 3.0280752 -10.236558 1.420382 3.648757 -8.9314861 1.0794274 
+		3.6669383 -9.5769291 1.7695181 3.3698878 -9.4082737 1.3243542 3.6568313 -9.3149109 
+		1.4097121 3.6571951 -8.9174967 1.2787749 3.6487961 -9.2125721 1.3845228 3.645505 
+		-9.1066914 1.5176414 3.5414281 -9.165513;
 	setAttr -s 21 ".vt[0:20]"  -1.95300841 -0.0079799369 11.32712078 -1.98881972 -0.0079799369 9.23573589
 		 -1.27975416 -0.0079799369 9.95196342 -2.73436427 0.0017473232 9.95196342 -2.060087442 -0.014286766 11.32712078
 		 -1.40867519 -0.0079799369 11.054954529 -2.60431671 -0.0041253525 11.056083679 -1.7678659 -0.057584506 11.060149193
@@ -1898,28 +1847,15 @@ createNode mesh -n "leaf6" -p "loftedSurface5";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[0]" -type "float3" 1.9546229 3.3320823 -11.274894 ;
-	setAttr ".pt[1]" -type "float3" 1.4972454 2.8804202 -8.5982523 ;
-	setAttr ".pt[2]" -type "float3" 0.67817652 3.1577959 -9.6563606 ;
-	setAttr ".pt[3]" -type "float3" 2.5821834 2.7211375 -9.5765705 ;
-	setAttr ".pt[4]" -type "float3" 2.120719 3.3442845 -11.207172 ;
-	setAttr ".pt[5]" -type "float3" 1.1853547 3.4475188 -10.910133 ;
-	setAttr ".pt[6]" -type "float3" 2.7401836 3.0757799 -10.890496 ;
-	setAttr ".pt[7]" -type "float3" 1.6394836 3.3692875 -10.951537 ;
-	setAttr ".pt[8]" -type "float3" 2.0380208 3.3711686 -11.216658 ;
-	setAttr ".pt[9]" -type "float3" 1.3194404 3.0171437 -9.3477287 ;
-	setAttr ".pt[10]" -type "float3" 0.68639421 3.3279495 -10.292389 ;
-	setAttr ".pt[11]" -type "float3" 1.3384945 3.1896787 -10.088063 ;
-	setAttr ".pt[12]" -type "float3" 2.8827658 2.8477745 -10.183107 ;
-	setAttr ".pt[13]" -type "float3" 1.5428703 2.8684578 -8.5978298 ;
-	setAttr ".pt[14]" -type "float3" 0.96824467 3.0000305 -9.2096672 ;
-	setAttr ".pt[15]" -type "float3" 2.1133504 2.7118349 -9.1845026 ;
-	setAttr ".pt[16]" -type "float3" 1.4151011 2.908617 -8.9823589 ;
-	setAttr ".pt[17]" -type "float3" 1.5239754 2.8749475 -8.5806379 ;
-	setAttr ".pt[18]" -type "float3" 1.3173386 2.9039392 -8.8650513 ;
-	setAttr ".pt[19]" -type "float3" 1.503234 2.8727884 -8.7744455 ;
-	setAttr ".pt[20]" -type "float3" 1.7182125 2.7962604 -8.8679037 ;
+	setAttr -s 21 ".pt[0:20]" -type "float3"  1.9546229 3.3320823 -11.274894 
+		1.4972454 2.8804202 -8.5982523 0.67817652 3.1577959 -9.6563606 2.5821834 2.7211375 
+		-9.5765705 2.120719 3.3442845 -11.207172 1.1853547 3.4475188 -10.910133 2.7401836 
+		3.0757799 -10.890496 1.6394836 3.3692875 -10.951537 2.0380208 3.3711686 -11.216658 
+		1.3194404 3.0171437 -9.3477287 0.68639421 3.3279495 -10.292389 1.3384945 3.1896787 
+		-10.088063 2.8827658 2.8477745 -10.183107 1.5428703 2.8684578 -8.5978298 0.96824467 
+		3.0000305 -9.2096672 2.1133504 2.7118349 -9.1845026 1.4151011 2.908617 -8.9823589 
+		1.5239754 2.8749475 -8.5806379 1.3173386 2.9039392 -8.8650513 1.503234 2.8727884 
+		-8.7744455 1.7182125 2.7962604 -8.8679037;
 	setAttr -s 21 ".vt[0:20]"  -1.95300841 -0.0079799369 11.32712078 -1.98881972 -0.0079799369 9.23573589
 		 -1.27975416 -0.0079799369 9.95196342 -2.73436427 0.0017473232 9.95196342 -2.060087442 -0.014286766 11.32712078
 		 -1.40867519 -0.0079799369 11.054954529 -2.60431671 -0.0041253525 11.056083679 -1.7678659 -0.057584506 11.060149193
@@ -1981,28 +1917,15 @@ createNode mesh -n "leaf3" -p "loftedSurface6";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 22 ".pt";
-	setAttr ".pt[0]" -type "float3" 2.0716689 3.1615067 -11.464071 ;
-	setAttr ".pt[1]" -type "float3" 1.9423362 2.7244053 -8.6297083 ;
-	setAttr ".pt[2]" -type "float3" 0.95716822 2.8141546 -9.6946955 ;
-	setAttr ".pt[3]" -type "float3" 3.0046487 2.6016316 -9.6759491 ;
-	setAttr ".pt[4]" -type "float3" 2.2192831 3.1472657 -11.474133 ;
-	setAttr ".pt[5]" -type "float3" 1.2602086 3.1529324 -11.119363 ;
-	setAttr ".pt[6]" -type "float3" 2.9035847 2.8928437 -11.130465 ;
-	setAttr ".pt[7]" -type "float3" 1.7586607 3.1415057 -11.174949 ;
-	setAttr ".pt[8]" -type "float3" 2.1277692 3.1638696 -11.483368 ;
-	setAttr ".pt[9]" -type "float3" 1.6951652 2.7346587 -9.3900146 ;
-	setAttr ".pt[10]" -type "float3" 0.85708499 2.9699607 -10.393064 ;
-	setAttr ".pt[11]" -type "float3" 1.5966763 2.883812 -10.193826 ;
-	setAttr ".pt[12]" -type "float3" 3.2143111 2.7594934 -10.358006 ;
-	setAttr ".pt[13]" -type "float3" 1.9921166 2.7179513 -8.62955 ;
-	setAttr ".pt[14]" -type "float3" 1.335153 2.7136941 -9.2218561 ;
-	setAttr ".pt[15]" -type "float3" 2.5746961 2.5704284 -9.213274 ;
-	setAttr ".pt[16]" -type "float3" 1.8512551 2.6897516 -8.9859209 ;
-	setAttr ".pt[17]" -type "float3" 1.9719177 2.7243204 -8.6131363 ;
-	setAttr ".pt[18]" -type "float3" 1.7395135 2.6932888 -8.8820524 ;
-	setAttr ".pt[19]" -type "float3" 1.9512426 2.6921272 -8.7908106 ;
-	setAttr ".pt[20]" -type "float3" 2.1753621 2.6339116 -8.8881683 ;
+	setAttr -s 21 ".pt[0:20]" -type "float3"  2.0716689 3.1615067 -11.464071 
+		1.9423362 2.7244053 -8.6297083 0.95716822 2.8141546 -9.6946955 3.0046487 2.6016316 
+		-9.6759491 2.2192831 3.1472657 -11.474133 1.2602086 3.1529324 -11.119363 2.9035847 
+		2.8928437 -11.130465 1.7586607 3.1415057 -11.174949 2.1277692 3.1638696 -11.483368 
+		1.6951652 2.7346587 -9.3900146 0.85708499 2.9699607 -10.393064 1.5966763 2.883812 
+		-10.193826 3.2143111 2.7594934 -10.358006 1.9921166 2.7179513 -8.62955 1.335153 2.7136941 
+		-9.2218561 2.5746961 2.5704284 -9.213274 1.8512551 2.6897516 -8.9859209 1.9719177 
+		2.7243204 -8.6131363 1.7395135 2.6932888 -8.8820524 1.9512426 2.6921272 -8.7908106 
+		2.1753621 2.6339116 -8.8881683;
 	setAttr -s 21 ".vt[0:20]"  -1.95300841 -0.0079799369 11.32712078 -1.98881972 -0.0079799369 9.23573589
 		 -1.27975416 -0.0079799369 9.95196342 -2.73436427 0.0017473232 9.95196342 -2.060087442 -0.014286766 11.32712078
 		 -1.40867519 -0.0079799369 11.054954529 -2.60431671 -0.0041253525 11.056083679 -1.7678659 -0.057584506 11.060149193
@@ -2045,20 +1968,20 @@ createNode mesh -n "leaf3" -p "loftedSurface6";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B84DE04D-444E-1AB5-7620-C2832F856A05";
+	rename -uid "E0611D94-43A3-A656-962D-6B8572A12578";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3F787107-4600-6902-92FC-65A1312A3BEF";
+	rename -uid "43DDB183-458C-1663-40BC-8DB28899A1E5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "075F511E-466A-69AB-8B36-009214B50355";
+	rename -uid "ACED3B8E-4789-E7EE-A51C-A1AE8C10A9A0";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "CA1C9A7F-48C7-99D0-F7BD-869279E48683";
+	rename -uid "FA82DA7B-4A9E-A768-D444-4C82E1780D13";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "60B7DC52-4350-F3A9-60D4-159E3ADA9E1D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5B824B2A-42A0-F016-9BB3-258EAF43ACA8";
+	rename -uid "55ECD673-425F-271A-E08A-F8833193E559";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "466F059F-4936-3CF9-35A7-B595CB269EF3";
 	setAttr ".g" yes;
@@ -2116,6 +2039,21 @@ createNode shadingEngine -n "lambert1SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "64C09D90-4DD3-934E-D63B-0BB5B3C5F005";
+createNode aiOptions -s -n "defaultArnoldRenderOptions";
+	rename -uid "10F8DAEF-4A4A-99FC-9FC1-629F24FA872C";
+	setAttr ".version" -type "string" "5.4.5";
+createNode aiAOVFilter -s -n "defaultArnoldFilter";
+	rename -uid "A8C42FA0-4F93-1A17-16C3-5FBAE71E09F9";
+	setAttr ".ai_translator" -type "string" "gaussian";
+createNode aiAOVDriver -s -n "defaultArnoldDriver";
+	rename -uid "279E1365-4B86-91A6-F13F-5280C6AA6229";
+	setAttr ".ai_translator" -type "string" "exr";
+createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
+	rename -uid "1A12DA19-4928-EBFD-3DBC-A381DFDDFB7F";
+	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
+createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
+	rename -uid "F03DF3F4-4660-E8AD-C905-4AB8B649F4CE";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2160,8 +2098,6 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert1SG.message" ":defaultLightSet.message";
@@ -2179,6 +2115,12 @@ connectAttr "leaf6.iog" "lambert1SG.dsm" -na;
 connectAttr "leaf3.iog" "lambert1SG.dsm" -na;
 connectAttr "lambert1SG.msg" "materialInfo1.sg";
 connectAttr ":lambert1.msg" "materialInfo1.m";
+connectAttr ":defaultArnoldDenoiser.msg" ":defaultArnoldRenderOptions.imagers" -na
+		;
+connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
+		 -na;
+connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
+connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "lambert1SG.pa" ":renderPartition.st" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "flowerpot.iog" ":initialShadingGroup.dsm" -na;
