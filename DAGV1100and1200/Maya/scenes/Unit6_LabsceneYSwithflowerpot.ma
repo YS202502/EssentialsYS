@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: Unit5_LabsceneYS.ma
-//Last modified: Mon, Jun 23, 2025 04:42:03 PM
+//Name: Unit6_LabsceneYSwithflowerpot.ma
+//Last modified: Mon, Jun 23, 2025 04:42:21 PM
 //Codeset: 1252
 file -rdi 1 -ns "Sofays" -rfn "SofaysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/Sofays.ma";
 file -rdi 1 -ns "rugys" -rfn "rugysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/rugys.ma";
@@ -21,7 +21,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "01633C7C-4A92-E864-4169-7A95AABD7A29";
+fileInfo "UUID" "BC3F03E5-4356-79FE-F12A-AC978AD98A41";
 createNode transform -s -n "persp";
 	rename -uid "8170D626-4FB9-A440-01CC-8A811E7AA0F8";
 	setAttr ".v" no;
@@ -7375,7 +7375,7 @@ createNode mesh -n "FLOWERPOTUNIT6YS:flowershapeOrig" -p "FLOWERPOTUNIT6YS:pSphe
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "PotysRNfosterParent1";
-	rename -uid "93A35D9D-4C90-5472-2338-45A0396C4E2D";
+	rename -uid "3C750AD5-4E27-5731-07D1-17B496658F7D";
 createNode transform -n "Potys:transform5" -p "PotysRNfosterParent1";
 	rename -uid "B20049D5-4FDF-0190-D44C-019E2B9DB134";
 	setAttr ".v" no;
@@ -7887,4 +7887,4 @@ connectAttr "|FLOWERPOTUNIT6YS:pSphere4|FLOWERPOTUNIT6YS:flowershape.iog.og[0]" 
 connectAttr "groupId13.msg" ":initialShadingGroup.gn" -na;
 connectAttr "FLOWERPOTUNIT6YS:groupId3.msg" ":initialShadingGroup.gn" -na;
 connectAttr "FLOWERPOTUNIT6YS:groupId4.msg" ":initialShadingGroup.gn" -na;
-// End of Unit5_LabsceneYS.ma
+// End of Unit6_LabsceneYSwithflowerpot.ma
