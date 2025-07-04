@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: cupys.ma
-//Last modified: Fri, Jul 04, 2025 04:08:35 PM
+//Last modified: Fri, Jul 04, 2025 04:09:12 PM
 //Codeset: 1252
 file -rdi 1 -ns "cup1" -rfn "cupRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//scenes/cup.ma";
 file -r -ns "cup1" -dr 1 -rfn "cupRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//scenes/cup.ma";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "2C4B531D-44A1-78DD-325D-869F92499AAE";
+fileInfo "UUID" "5B9F46C5-4EDF-4039-D136-70B1BD2EABBC";
 createNode transform -s -n "persp";
 	rename -uid "6B590347-43F2-6FAF-8DEA-50BA76219CCF";
 	setAttr ".v" no;
@@ -80,7 +80,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode fosterParent -n "cupRNfosterParent1";
-	rename -uid "E91802B4-4FD7-FF3A-5F65-669C6B5D6F0B";
+	rename -uid "6219A8F6-471D-D7C0-619A-2F9E273C9A48";
 createNode mesh -n "cup1:polySurfaceShape1" -p "cupRNfosterParent1";
 	rename -uid "22F2D0A5-44D5-EBBC-2663-1EA462CEA1C7";
 	setAttr -k off ".v";
