@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Unit6_LabsceneYSwithflowerpot.ma
-//Last modified: Fri, Jul 11, 2025 12:45:44 PM
+//Last modified: Fri, Jul 11, 2025 12:47:15 PM
 //Codeset: 1252
 file -rdi 1 -ns "Sofays" -rfn "SofaysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/Sofays.ma";
 file -rdi 1 -ns "rugys" -rfn "rugysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/rugys.ma";
@@ -21,12 +21,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "C5FC3306-4C48-E568-E927-93837309329C";
+fileInfo "UUID" "FC420DEF-4074-8087-A4BF-8CA464823C32";
 createNode transform -s -n "persp";
 	rename -uid "8170D626-4FB9-A440-01CC-8A811E7AA0F8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -23.51712831982541 21.385919195362568 19.343502746718883 ;
-	setAttr ".r" -type "double3" -39.600000000921227 -4376.3999999999833 0 ;
+	setAttr ".t" -type "double3" -24.707325282917726 19.037771269491731 22.811922485746948 ;
+	setAttr ".r" -type "double3" -21.000000000922249 -4360.399999999966 0 ;
 	setAttr ".rpt" -type "double3" -3.3449792949157602e-15 1.2403935862768928e-15 -1.9702815160618133e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "10BA283B-4955-1487-8690-9BAC95D4FB2D";
@@ -7917,7 +7917,7 @@ createNode mesh -n "nighttableys:nighttableys:polySurface3Shape" -p "nighttabley
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "SofaysRNfosterParent1";
-	rename -uid "C76D6005-44C0-EE8B-F90A-CCB72A030DDA";
+	rename -uid "0BB2E14E-42D3-42E4-6FFC-609359DE228C";
 createNode mesh -n "Sofays:polySurfaceShape1" -p "SofaysRNfosterParent1";
 	rename -uid "D9731065-46B5-365F-08A7-D7A03E4D3FF0";
 	setAttr -k off ".v";
@@ -9681,7 +9681,7 @@ createNode mesh -n "Sofays:polySurfaceShape3" -p "SofaysRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "rugysRNfosterParent1";
-	rename -uid "7DDA39BA-46DF-A2CA-FE57-ABB3B21C37AF";
+	rename -uid "F253C94E-434F-C81F-8204-C0ACFB30B274";
 createNode mesh -n "rugys:polySurfaceShape1" -p "rugysRNfosterParent1";
 	rename -uid "8368698F-49D3-AB5D-81E2-46B36A955631";
 	setAttr -k off ".v";
@@ -9756,7 +9756,7 @@ createNode mesh -n "rugys:polySurfaceShape1" -p "rugysRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "nighttableysRNfosterParent1";
-	rename -uid "B2A4CD23-48F8-60B2-C2A7-0782648BA92A";
+	rename -uid "42EB82F6-4C11-15F9-1987-E98EAA1CB63C";
 createNode transform -n "nighttableys:transform5" -p "nighttableysRNfosterParent1";
 	rename -uid "31463171-484F-A257-8C0C-FEAB234223A6";
 	setAttr ".v" no;
@@ -9831,7 +9831,7 @@ createNode mesh -n "nighttableys:polySurfaceShape5" -p "nighttableys:polySurface
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".de" 1;
 createNode fosterParent -n "PotysRNfosterParent1";
-	rename -uid "E253D65B-45A7-70C2-746D-39996B37810F";
+	rename -uid "8652D12A-4658-6C9B-88BC-0FB65F568D57";
 createNode transform -n "Potys:transform5" -p "PotysRNfosterParent1";
 	rename -uid "B20049D5-4FDF-0190-D44C-019E2B9DB134";
 	setAttr ".v" no;
