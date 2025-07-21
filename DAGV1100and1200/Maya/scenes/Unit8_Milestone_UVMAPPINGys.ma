@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Unit8_Milestone_UVMAPPINGys.ma
-//Last modified: Fri, Jul 18, 2025 01:37:26 PM
+//Last modified: Sun, Jul 20, 2025 07:34:03 PM
 //Codeset: 1252
 file -rdi 1 -ns "Sofays" -rfn "SofaysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/Sofays.ma";
 file -rdi 1 -ns "rugys" -rfn "rugysRN" -op "v=0;" -typ "mayaAscii" "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/rugys.ma";
@@ -21,22 +21,22 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "B605F3D5-4ECD-DF17-8487-17BADBB064F3";
+fileInfo "UUID" "A88A86AD-4D2C-EFFC-9A7A-39B40D16AEB2";
 createNode transform -s -n "persp";
 	rename -uid "8170D626-4FB9-A440-01CC-8A811E7AA0F8";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -9.7760845718764902 31.635976323821829 33.801685994040596 ;
-	setAttr ".r" -type "double3" -44.999999999997243 -4337.199999999968 0 ;
+	setAttr ".t" -type "double3" -37.854324728415101 15.958641355760577 28.06694638988553 ;
+	setAttr ".r" -type "double3" -18.000000000049226 -4376.7999999998983 0 ;
 	setAttr ".rpt" -type "double3" -3.3449792949157602e-15 1.2403935862768928e-15 -1.9702815160618133e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "10BA283B-4955-1487-8690-9BAC95D4FB2D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 41.947997208985313;
+	setAttr ".coi" 44.572758507427025;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.01087676023323958 5.4519014358520508 -0.045319460353029584 ;
+	setAttr ".tp" -type "double3" 0 -0.22178764147917862 0.10584972419881211 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "C1659C18-4F2F-9570-AD61-18B3091566AF";
@@ -8919,8 +8919,23 @@ createNode mesh -n "nighttableys:nighttableys:polySurface3Shape" -p "nighttabley
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube1";
+	rename -uid "8A059281-4261-2797-7256-668FADCD9C33";
+	setAttr ".t" -type "double3" 0 -0.22178764147917862 0.10584972419881214 ;
+	setAttr ".s" -type "double3" 23.774203182817502 0.088458128832056254 23.774203182817502 ;
+createNode mesh -n "pCubeShape1" -p "pCube1";
+	rename -uid "8FD6CCB3-4277-DFC3-D40D-4E9EEA696275";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.089236111111111183 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "SofaysRNfosterParent1";
-	rename -uid "569177C6-4FB2-D411-97D5-838B8CCEA742";
+	rename -uid "04670863-4543-4432-D06C-C7BE324A8522";
 createNode mesh -n "Sofays:polySurfaceShape1" -p "SofaysRNfosterParent1";
 	rename -uid "D9731065-46B5-365F-08A7-D7A03E4D3FF0";
 	setAttr -k off ".v";
@@ -10684,7 +10699,7 @@ createNode mesh -n "Sofays:polySurfaceShape3" -p "SofaysRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "rugysRNfosterParent1";
-	rename -uid "EA95495E-4491-9072-3B65-B9AD6F53E82D";
+	rename -uid "6CE59048-41FE-9AB6-2627-B2A5F5C87FE7";
 createNode mesh -n "rugys:polySurfaceShape1" -p "rugysRNfosterParent1";
 	rename -uid "8368698F-49D3-AB5D-81E2-46B36A955631";
 	setAttr -k off ".v";
@@ -10759,7 +10774,7 @@ createNode mesh -n "rugys:polySurfaceShape1" -p "rugysRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "nighttableysRNfosterParent1";
-	rename -uid "4EEAB7E0-42DF-064A-381B-048F62D5BCBA";
+	rename -uid "FB2AEC85-4EBF-C80B-989B-DE9A9A77D0AF";
 createNode transform -n "nighttableys:transform5" -p "nighttableysRNfosterParent1";
 	rename -uid "31463171-484F-A257-8C0C-FEAB234223A6";
 	setAttr ".v" no;
@@ -11532,7 +11547,7 @@ createNode mesh -n "nighttableys:polySurfaceShape5" -p "nighttableys:polySurface
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".de" 1;
 createNode fosterParent -n "PotysRNfosterParent1";
-	rename -uid "A7989A05-4063-014C-3F3C-20A2B57D6554";
+	rename -uid "FD255E33-45CF-BAA0-722C-4FA0B3A3BBC8";
 createNode transform -n "Potys:transform5" -p "PotysRNfosterParent1";
 	rename -uid "B20049D5-4FDF-0190-D44C-019E2B9DB134";
 	setAttr ".v" no;
@@ -11561,21 +11576,21 @@ createNode transform -n "Potys:transform3" -p "PotysRNfosterParent1";
 	rename -uid "F1257675-431B-814F-9385-B88230230779";
 	setAttr ".v" no;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "7FDBBC62-47E4-B215-618A-04B9C18D16B8";
+	rename -uid "CA0096E1-4C73-7483-8157-DEBC8D69F5BD";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "12C48078-4E18-4B08-3197-1395A4493B42";
+	rename -uid "B98C7BB8-43EF-4BE1-3E1C-E8BF97CAE4DE";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "2DFA2D81-430A-B3D1-24AB-7A9491C764F5";
+	rename -uid "746B995F-4EEF-9498-95F8-86A50DFAC736";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3B61287B-4E31-F2DB-FA39-E3A5A108D06A";
+	rename -uid "5F697523-42F4-E08A-05C6-02ADB44DBEB5";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8D0CD5D3-4E68-0951-B7D0-DCBD162B1FB2";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F7AB0E93-4F21-9AA2-6945-8BBA09022820";
+	rename -uid "B35C3784-434D-6CE7-0447-968C13C89511";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "91A265B2-46D2-9456-3023-1A870A32F0F5";
 	setAttr ".g" yes;
@@ -11692,7 +11707,7 @@ createNode reference -n "SofaysRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"SofaysRN"
 		"SofaysRN" 0
-		"SofaysRN" 190
+		"SofaysRN" 150
 		0 "|SofaysRNfosterParent1|Sofays:polySurfaceShape3" "|Sofays:polySurface1" 
 		"-s -r "
 		0 "|SofaysRNfosterParent1|Sofays:polySurfaceShape5" "|Sofays:polySurface2" 
@@ -11715,65 +11730,23 @@ createNode reference -n "SofaysRN";
 		2 "|Sofays:polySurface1|Sofays:sofabase" "currentUVSet" " -type \"string\" \"map1\""
 		
 		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts" " -s 44"
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[0]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[0:2]" " -type \"float3\" 0 0 0 0 0 0 0 0 0"
 		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[1]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[4:7]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0"
 		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[2]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[9:11]" " -type \"float3\" 0 0 0 0 0 0 0 0 0"
 		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[4]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[5]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[6]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[7]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[9]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[10]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[11]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[13]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[14]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[15]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[16]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[17]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[13:17]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[20]" " -type \"float3\" 0 0 0"
 		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[23]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[23:24]" " -type \"float3\" 0 0 0 0 0 0"
 		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[24]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[26:31]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[26]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[35:37]" " -type \"float3\" 0 0 0 0 0 0 0 0 0"
 		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[27]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[28]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[29]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[30]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[31]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[35]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[36]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[37]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[40]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[41]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[42]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[40:42]" " -type \"float3\" 0 0 0 0 0 0 0 0 0"
 		
 		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[47]" " -type \"float3\" 0 0 0"
 		
@@ -11781,23 +11754,9 @@ createNode reference -n "SofaysRN";
 		
 		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[53]" " -type \"float3\" 0 0 0"
 		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[55]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[55:57]" " -type \"float3\" 0 0 0 0 0 0 0 0 0"
 		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[56]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[57]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[60]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[61]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[62]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[63]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[64]" " -type \"float3\" 0 0 0"
-		
-		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[65]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:polySurface1|Sofays:sofabase" "pt[60:65]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		2 "|Sofays:polySurface1|Sofays:sofabase" "pnts[67]" " -type \"float3\" 0 0 0"
 		
@@ -11827,24 +11786,19 @@ createNode reference -n "SofaysRN";
 		
 		2 "|Sofays:pCube1|Sofays:cushion1" "currentUVSet" " -type \"string\" \"map1\""
 		
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts" " -s 19"
+		2 "|Sofays:pCube1|Sofays:cushion1" "pnts" " -s 17"
 		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[0]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[2]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[3]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:pCube1|Sofays:cushion1" "pt[2:3]" " -type \"float3\" 0 0 0 0 0 0"
+		
 		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[5]" " -type \"float3\" 0 0 0"
 		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[12]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[14]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[15]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[16]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[17]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[18]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[29]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[30]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[31]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[32]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:pCube1|Sofays:cushion1" "pt[14:18]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "|Sofays:pCube1|Sofays:cushion1" "pt[29:32]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[36]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[44]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube1|Sofays:cushion1" "pnts[45]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:pCube1|Sofays:cushion1" "pt[44:45]" " -type \"float3\" 0 0 0 0 0 0"
+		
 		2 "|Sofays:pCube2" "translate" " -type \"double3\" 0 0 0"
 		2 "|Sofays:pCube2" "rotatePivot" " -type \"double3\" 4.86836603363170095 2.91914942454762771 -8.33914561485598149"
 		
@@ -11854,12 +11808,10 @@ createNode reference -n "SofaysRN";
 		
 		2 "|Sofays:pCube2|Sofays:cushion2" "uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		
-		2 "|Sofays:pCube2|Sofays:cushion2" "pnts" " -s 12"
+		2 "|Sofays:pCube2|Sofays:cushion2" "pnts" " -s 10"
 		2 "|Sofays:pCube2|Sofays:cushion2" "pnts[0]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube2|Sofays:cushion2" "pnts[2]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube2|Sofays:cushion2" "pnts[3]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube2|Sofays:cushion2" "pnts[4]" " -type \"float3\" 0 0 0"
-		2 "|Sofays:pCube2|Sofays:cushion2" "pnts[5]" " -type \"float3\" 0 0 0"
+		2 "|Sofays:pCube2|Sofays:cushion2" "pt[2:5]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0"
+		
 		2 "|Sofays:pCube2|Sofays:cushion2" "pnts[9]" " -type \"float3\" 0 0 0"
 		2 "|Sofays:pCube2|Sofays:cushion2" "pnts[18]" " -type \"float3\" 0 0 0"
 		2 "|Sofays:pCube2|Sofays:cushion2" "pnts[20]" " -type \"float3\" 0 0 0"
@@ -11956,8 +11908,7 @@ createNode reference -n "SofaysRN";
 		2 "|Sofays:loftedSurface5|Sofays:pillow3" "pt[166:197]" (" -1.68374350000000006 2.91766570000000014 -19.821861 -0.92870664999999997 2.70722150000000017 -20.473934 -0.97200006000000005 2.66784240000000006 -19.621525 -0.95242852 2.64000540000000017 -20.055595 -1.67230609999999991 2.8171113000000001 -20.168518 -1.29499460000000011 2.71370790000000017 -20.488281 -1.31481479999999995 2.70786360000000004 -20.1021 -1.33179770000000008 2.76274940000000013 -19.701136 -0.99702310999999999 2.88783790000000007 -18.863106 -0.98621135999999998 2.77165270000000019 -19.21929 -1.69632880000000008 3.02831150000000004 -19.440418 -1.345487 2.86905769999999993 -19.30689 -1.35682079999999994 2.98274490000000014 -18.942715 -0.67964190000000002 3.59355089999999988 -17.383232 -0.65314549 3.02925939999999994 -18.153498 -0.64135246999999995 2.91552690000000014 -18.502012 -0.27178036999999999 2.89208789999999993 -18.480528 -0.28341669000000003 3.00709060000000017 -18.129316 -0.66753775000000004 3.26044109999999998 -17.7304 -0.29703593 3.24679919999999989 -17.694471 -0.30697885000000003 3.59568"
 		+ "410000000016 -17.338428 -1.73061430000000005 3.3297403000000001 -18.40126 -1.01887079999999997 3.079917 -18.200924 -1.007115 2.96935679999999991 -18.54492 -1.7198325000000001 3.23495009999999983 -18.728045 -1.36722349999999992 3.07026790000000016 -18.617512 -1.37866850000000007 3.174824 -18.280533 -1.0467150999999999 3.584615 -17.451004 -1.03336310000000009 3.28977269999999988 -17.794184 -1.74232720000000008 3.43271760000000015 -18.046253 -1.39234780000000002 3.34409689999999982 -17.896057 -1.405772 3.56697540000000002 -17.548077"
 		)
-		3 "Sofays:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
-		3 "Sofays:groupId7.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "Sofays:groupId6.message" ":initialShadingGroup.groupNodes" "-na"
 		3 ":initialShadingGroup.memberWireframeColor" "|Sofays:loftedSurface3|Sofays:pillow2.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "Sofays:groupId14.groupId" "|Sofays:loftedSurface3|Sofays:pillow2.instObjGroups.objectGroups[0].objectGroupId" 
@@ -11968,6 +11919,8 @@ createNode reference -n "SofaysRN";
 		""
 		3 "|Sofays:loftedSurface3|Sofays:pillow2.compInstObjGroups.compObjectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Sofays:groupId7.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "Sofays:groupId14.message" ":initialShadingGroup.groupNodes" "-na"
 		3 ":initialShadingGroup.memberWireframeColor" "|Sofays:polySurface2|Sofays:sofatop.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "Sofays:groupId6.groupId" "|Sofays:polySurface2|Sofays:sofatop.instObjGroups.objectGroups[0].objectGroupId" 
@@ -11980,7 +11933,6 @@ createNode reference -n "SofaysRN";
 		""
 		3 "|Sofays:polySurface2|Sofays:sofatop.instObjGroups.objectGroups[1]" ":initialShadingGroup.dagSetMembers" 
 		"-na"
-		3 "Sofays:groupId6.message" ":initialShadingGroup.groupNodes" "-na"
 		5 4 "SofaysRN" "|Sofays:polySurface1|Sofays:sofabase.uvSet[0].uvSetTweakLocation" 
 		"SofaysRN.placeHolderList[1]" ""
 		5 4 "SofaysRN" "|Sofays:polySurface1|Sofays:sofabase.inMesh" "SofaysRN.placeHolderList[2]" 
@@ -12215,34 +12167,56 @@ createNode reference -n "nighttableysRN";
 		2 "nighttableys:groupParts3" "groupId" " 127"
 		2 "nighttableys:groupParts4" "groupId" " 129"
 		2 "nighttableys:groupParts5" "groupId" " 131"
-		3 "nighttableys:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "nighttableys:groupId6.message" ":initialShadingGroup.groupNodes" "-na"
 		
-		3 "nighttableys:groupId3.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "nighttableys:groupId7.message" ":initialShadingGroup.groupNodes" "-na"
 		
+		3 "nighttableys:groupId7.groupId" "nighttableys:groupParts4.groupId" ""
+		3 "nighttableys:polyMergeVert4.output" "nighttableys:groupParts4.inputGeometry" 
+		""
 		3 "nighttableys:groupId1.groupId" "nighttableys:groupParts1.groupId" ""
 		3 "nighttableys:polyMergeVert1.output" "nighttableys:groupParts1.inputGeometry" 
 		""
-		3 "nighttableys:polyUnite1.output" "nighttableys:groupParts5.inputGeometry" 
-		""
-		3 "nighttableys:groupId9.groupId" "nighttableys:groupParts5.groupId" ""
-		3 "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.worldMatrix" 
-		"nighttableys:polyMergeVert1.manipMatrix" ""
-		3 "|nighttableys:pCube1|nighttableys:polySurfaceShape1.outMesh" "nighttableys:polyMergeVert1.inputPolymesh" 
-		""
-		3 "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.instObjGroups.objectGroups[0]" 
+		3 "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "nighttableys:groupId1.groupId" "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		3 "nighttableys:groupId3.groupId" "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.instObjGroups.objectGroups[0].objectGroupId" 
 		""
-		3 ":initialShadingGroup.memberWireframeColor" "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 ":initialShadingGroup.memberWireframeColor" "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "nighttableys:groupParts1.outputGeometry" "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.inMesh" 
+		3 "nighttableys:groupParts2.outputGeometry" "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.inMesh" 
 		""
-		3 "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.compInstObjGroups.compObjectGroups[0]" 
+		3 "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.compInstObjGroups.compObjectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "nighttableys:groupId2.groupId" "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		3 "nighttableys:groupId4.groupId" "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		""
-		3 "nighttableys:groupId2.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "nighttableys:groupId5.groupId" "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "nighttableys:groupParts3.outputGeometry" "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.inMesh" 
+		""
+		3 "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.compInstObjGroups.compObjectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "nighttableys:groupId6.groupId" "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		""
+		3 "nighttableys:groupId8.message" ":initialShadingGroup.groupNodes" "-na"
 		
+		3 "nighttableys:groupId5.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "nighttableys:groupParts5.outputGeometry" "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.inMesh" 
+		""
+		3 "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "nighttableys:groupId9.groupId" "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.compInstObjGroups.compObjectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "nighttableys:groupId10.groupId" "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		""
 		3 "|nighttableys:pSphere1|nighttableys:transform1|nighttableys:pSphereShape1.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "nighttableys:groupId7.groupId" "|nighttableys:pSphere1|nighttableys:transform1|nighttableys:pSphereShape1.instObjGroups.objectGroups[0].objectGroupId" 
@@ -12255,7 +12229,9 @@ createNode reference -n "nighttableysRN";
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "nighttableys:groupId8.groupId" "|nighttableys:pSphere1|nighttableys:transform1|nighttableys:pSphereShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		""
-		3 "nighttableys:groupId7.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "nighttableys:groupId2.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "nighttableys:groupId3.message" ":initialShadingGroup.groupNodes" "-na"
 		
 		3 "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.outMesh" 
 		"nighttableys:polyUnite1.inputPoly[0]" ""
@@ -12273,72 +12249,48 @@ createNode reference -n "nighttableysRN";
 		"nighttableys:polyUnite1.inputMat[2]" ""
 		3 "|nighttableys:pSphere1|nighttableys:transform1|nighttableys:pSphereShape1.worldMatrix" 
 		"nighttableys:polyUnite1.inputMat[3]" ""
-		3 "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.worldMatrix" 
-		"nighttableys:polyMergeVert2.manipMatrix" ""
-		3 "|nighttableys:pCube2|nighttableys:polySurfaceShape2.outMesh" "nighttableys:polyMergeVert2.inputPolymesh" 
-		""
-		3 "nighttableys:groupId9.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "nighttableys:groupId8.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "nighttableys:groupId4.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "nighttableys:groupId6.message" ":initialShadingGroup.groupNodes" "-na"
-		
-		3 "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "nighttableys:groupId3.groupId" "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "nighttableys:groupParts2.outputGeometry" "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.inMesh" 
-		""
-		3 "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.compInstObjGroups.compObjectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "nighttableys:groupId4.groupId" "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		3 "nighttableys:groupId5.groupId" "nighttableys:groupParts3.groupId" ""
+		3 "nighttableys:polyMergeVert3.output" "nighttableys:groupParts3.inputGeometry" 
 		""
 		3 "|nighttableys:pSphere1|nighttableys:transform1|nighttableys:pSphereShape1.worldMatrix" 
 		"nighttableys:polyMergeVert4.manipMatrix" ""
 		3 "|nighttableys:pSphere1|nighttableys:polySurfaceShape4.outMesh" "nighttableys:polyMergeVert4.inputPolymesh" 
 		""
-		3 "nighttableys:groupId7.groupId" "nighttableys:groupParts4.groupId" ""
-		3 "nighttableys:polyMergeVert4.output" "nighttableys:groupParts4.inputGeometry" 
-		""
-		3 "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "nighttableys:groupId5.groupId" "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "nighttableys:groupParts3.outputGeometry" "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.inMesh" 
-		""
-		3 "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.compInstObjGroups.compObjectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "nighttableys:groupId6.groupId" "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		""
-		3 "nighttableys:groupId5.groupId" "nighttableys:groupParts3.groupId" ""
-		3 "nighttableys:polyMergeVert3.output" "nighttableys:groupParts3.inputGeometry" 
-		""
-		3 "nighttableys:groupParts5.outputGeometry" "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.inMesh" 
-		""
-		3 "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.instObjGroups.objectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "nighttableys:groupId9.groupId" "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.compInstObjGroups.compObjectGroups[0]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "nighttableys:groupId10.groupId" "|nighttableysRNfosterParent1|nighttableys:transform5|nighttableys:pCube3Shape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		""
-		3 "nighttableys:groupId5.message" ":initialShadingGroup.groupNodes" "-na"
+		3 "nighttableys:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
 		
-		3 "nighttableys:groupId3.groupId" "nighttableys:groupParts2.groupId" ""
-		3 "nighttableys:polyMergeVert2.output" "nighttableys:groupParts2.inputGeometry" 
-		""
 		3 "|nighttableys:pCylinder1|nighttableys:transform2|nighttableys:pCylinderShape1.worldMatrix" 
 		"nighttableys:polyMergeVert3.manipMatrix" ""
 		3 "|nighttableys:pCylinder1|nighttableys:polySurfaceShape3.outMesh" "nighttableys:polyMergeVert3.inputPolymesh" 
+		""
+		3 "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.worldMatrix" 
+		"nighttableys:polyMergeVert1.manipMatrix" ""
+		3 "|nighttableys:pCube1|nighttableys:polySurfaceShape1.outMesh" "nighttableys:polyMergeVert1.inputPolymesh" 
+		""
+		3 "|nighttableys:pCube2|nighttableys:transform3|nighttableys:pCubeShape2.worldMatrix" 
+		"nighttableys:polyMergeVert2.manipMatrix" ""
+		3 "|nighttableys:pCube2|nighttableys:polySurfaceShape2.outMesh" "nighttableys:polyMergeVert2.inputPolymesh" 
+		""
+		3 "nighttableys:groupId3.groupId" "nighttableys:groupParts2.groupId" ""
+		3 "nighttableys:polyMergeVert2.output" "nighttableys:groupParts2.inputGeometry" 
+		""
+		3 "nighttableys:groupId4.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "nighttableys:polyUnite1.output" "nighttableys:groupParts5.inputGeometry" 
+		""
+		3 "nighttableys:groupId9.groupId" "nighttableys:groupParts5.groupId" ""
+		3 "nighttableys:groupId9.message" ":initialShadingGroup.groupNodes" "-na"
+		
+		3 "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.instObjGroups.objectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "nighttableys:groupId1.groupId" "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "nighttableys:groupParts1.outputGeometry" "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.inMesh" 
+		""
+		3 "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.compInstObjGroups.compObjectGroups[0]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "nighttableys:groupId2.groupId" "|nighttableys:pCube1|nighttableys:transform4|nighttableys:pCubeShape1.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -12428,8 +12380,6 @@ createNode reference -n "PotysRN";
 		
 		2 "|PotysRNfosterParent1|Potys:transform5|Potys:leaf3" "intermediateObject" 
 		" 1"
-		3 "|PotysRNfosterParent1|Potys:transform8|Potys:pCylinderShape2.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PotysRNfosterParent1|Potys:transform9|Potys:leaf2.instObjGroups" "Potys:lambert1SG.dagSetMembers" 
 		"-na"
 		3 "|PotysRNfosterParent1|Potys:transform7|Potys:leaf5.instObjGroups" "Potys:lambert1SG.dagSetMembers" 
@@ -12442,9 +12392,11 @@ createNode reference -n "PotysRN";
 		"-na"
 		3 "|PotysRNfosterParent1|Potys:transform1|Potys:leaf6.instObjGroups" "Potys:lambert1SG.dagSetMembers" 
 		"-na"
-		3 "|PotysRNfosterParent1|Potys:transform2|Potys:flowerbody.instObjGroups" 
+		3 "|PotysRNfosterParent1|Potys:transform8|Potys:pCylinderShape2.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|PotysRNfosterParent1|Potys:transform3|Potys:flowerpot.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|PotysRNfosterParent1|Potys:transform2|Potys:flowerbody.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -13658,7 +13610,7 @@ createNode polyMapSewMove -n "polyMapSewMove3";
 createNode polyTweak -n "Sofays:polyTweak4";
 	rename -uid "FBB8F388-449C-C9B5-270F-6E8962F134C1";
 	setAttr ".uopa" yes;
-	setAttr -s 41 ".tk";
+	setAttr -s 13 ".tk";
 	setAttr ".tk[6]" -type "float3" 0.14420891 0 -0.14212179 ;
 	setAttr ".tk[11]" -type "float3" -0.14420891 0 0.14212179 ;
 	setAttr ".tk[13]" -type "float3" 0.13806772 0 -0.14212179 ;
@@ -13696,7 +13648,7 @@ createNode polyMapSewMove -n "polyMapSewMove4";
 createNode polyTweakUV -n "polyTweakUV4";
 	rename -uid "75DDAF1C-4421-1CEA-723A-B4B21FFBBD20";
 	setAttr ".uopa" yes;
-	setAttr -s 44 ".uvtk";
+	setAttr -s 43 ".uvtk";
 	setAttr ".uvtk[2]" -type "float2" 0 0.3049202 ;
 	setAttr ".uvtk[3]" -type "float2" 0 0.3049202 ;
 	setAttr ".uvtk[4]" -type "float2" 0 0.3049202 ;
@@ -13763,8 +13715,18 @@ createNode place2dTexture -n "place2dTexture2";
 	rename -uid "0A1151C8-4100-371A-12BC-4D9184856C5F";
 createNode bump2d -n "bump2d1";
 	rename -uid "71A9C6E4-46C0-910D-3A7A-E2B1F0EA527D";
-	setAttr ".vc1" -type "float3" 0 3.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode polyCube -n "polyCube1";
+	rename -uid "B11D9180-476F-7BFC-68A4-C0ACDB1A6C74";
+	setAttr ".cuv" 4;
+createNode polyTweakUV -n "polyTweakUV6";
+	rename -uid "515575FE-4FED-E2F8-B34E-4E8E6D3457B1";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.31006944 0.40277779 -0.51145828
+		 0.40277779 -0.31006944 0.2013889 -0.51145828 0.2013889 -0.31006944 0 -0.51145828
+		 0 -0.31006944 -0.2013889 -0.51145828 -0.2013889 -0.31006944 -0.40277779 -0.51145828
+		 -0.40277779 -0.71284723 0.40277779 -0.71284723 0.2013889 -0.10868058 0.40277779 -0.10868058
+		 0.2013889;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -13791,7 +13753,7 @@ select -ne :defaultTextureList1;
 select -ne :standardSurface1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 23 ".dsm";
+	setAttr -s 24 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 13 ".gn";
 select -ne :initialParticleSE;
@@ -13815,12 +13777,10 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "polyTweakUV5.uvtk[0]" "SofaysRN.phl[1]";
 connectAttr "polyTweakUV5.out" "SofaysRN.phl[2]";
-connectAttr "SofaysRN.phl[3]" "Sofays:polyRemesh1.mp";
-connectAttr "SofaysRN.phl[4]" "FLOWERPOTUNIT6YS:polyPlanarProj2.mp";
+connectAttr "SofaysRN.phl[3]" "FLOWERPOTUNIT6YS:polyPlanarProj2.mp";
+connectAttr "SofaysRN.phl[4]" "Sofays:polyRemesh1.mp";
 connectAttr "SofaysRN.phl[5]" "Sofays:polySewEdge1.mp";
 connectAttr "SofaysRN.phl[6]" "Sofays:polySewEdge2.mp";
 connectAttr "SofaysRN.phl[7]" "Sofays:polySewEdge3.mp";
@@ -13839,13 +13799,13 @@ connectAttr "transformGeometry6.og" "SofaysRN.phl[19]";
 connectAttr "SofaysRN.phl[20]" "Sofays:polyPlanarProj7.mp";
 connectAttr "polyTweakUV3.uvtk[0]" "SofaysRN.phl[21]";
 connectAttr "polyTweakUV3.out" "SofaysRN.phl[22]";
-connectAttr "SofaysRN.phl[23]" "Sofays:polyPlanarProj4.mp";
-connectAttr "SofaysRN.phl[24]" "Sofays:polyPlanarProj1.mp";
+connectAttr "SofaysRN.phl[23]" "Sofays:polyPlanarProj1.mp";
+connectAttr "SofaysRN.phl[24]" "Sofays:polyPlanarProj4.mp";
 connectAttr "SofaysRN.phl[25]" "Sofays:polyPlanarProj6.mp";
 connectAttr "Sofays:polyTweakUV18.uvtk[0]" "SofaysRN.phl[26]";
 connectAttr "transformGeometry4.og" "SofaysRN.phl[27]";
-connectAttr "SofaysRN.phl[28]" "Sofays:polyPlanarProj5.mp";
-connectAttr "SofaysRN.phl[29]" "Sofays:polyPlanarProj3.mp";
+connectAttr "SofaysRN.phl[28]" "Sofays:polyPlanarProj3.mp";
+connectAttr "SofaysRN.phl[29]" "Sofays:polyPlanarProj5.mp";
 connectAttr "SofaysRN.phl[30]" ":initialShadingGroup.dsm" -na;
 connectAttr "Sofays:groupId19.id" "SofaysRN.phl[31]";
 connectAttr ":initialShadingGroup.mwc" "SofaysRN.phl[32]";
@@ -13855,8 +13815,8 @@ connectAttr "SofaysRN.phl[35]" "polyPlanarProj2.mp";
 connectAttr "file2.msg" "SofaysRN.phl[36]";
 connectAttr "rugys:polyTweakUV3.uvtk[0]" "rugysRN.phl[1]";
 connectAttr "rugys:polyTweakUV3.out" "rugysRN.phl[2]";
-connectAttr "rugysRN.phl[3]" "polyPlanarProj1.mp";
-connectAttr "rugysRN.phl[4]" "rugys:polyPlanarProj1.mp";
+connectAttr "rugysRN.phl[3]" "rugys:polyPlanarProj1.mp";
+connectAttr "rugysRN.phl[4]" "polyPlanarProj1.mp";
 connectAttr "groupId13.id" "polySurfaceShape1.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "polySurfaceShape1.iog.og[0].gco";
 connectAttr "groupId10.id" "polySurfaceShape1.ciog.cog[0].cgid";
@@ -13874,6 +13834,8 @@ connectAttr ":initialShadingGroup.mwc" "nighttableys:nighttableys:polySurface3Sh
 		;
 connectAttr "nighttableys:nighttableys:groupId2.id" "nighttableys:nighttableys:polySurface3Shape.ciog.cog[0].cgid"
 		;
+connectAttr "polyTweakUV6.out" "pCubeShape1.i";
+connectAttr "polyTweakUV6.uvtk[0]" "pCubeShape1.uvst[0].uvtw";
 connectAttr "groupId18.id" "nighttableys:polySurfaceShape6.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "nighttableys:polySurfaceShape6.iog.og[0].gco"
 		;
@@ -14076,6 +14038,7 @@ connectAttr "place2dTexture2.vc1" "file2.vc1";
 connectAttr "place2dTexture2.o" "file2.uv";
 connectAttr "place2dTexture2.ofs" "file2.fs";
 connectAttr "file2.oa" "bump2d1.bv";
+connectAttr "polyCube1.out" "polyTweakUV6.ip";
 connectAttr "lambert1SG.pa" ":renderPartition.st" -na;
 connectAttr "FLOWERPOTUNIT6YS:lambert1SG.pa" ":renderPartition.st" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
@@ -14105,6 +14068,7 @@ connectAttr "nighttableys:polySurfaceShape5.iog.og[0]" ":initialShadingGroup.dsm
 		 -na;
 connectAttr "nighttableys:polySurfaceShape6.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
+connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId13.msg" ":initialShadingGroup.gn" -na;
 connectAttr "Sofays:groupId19.msg" ":initialShadingGroup.gn" -na;
 connectAttr "Sofays:groupId20.msg" ":initialShadingGroup.gn" -na;
