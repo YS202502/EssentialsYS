@@ -1,11 +1,15 @@
 //Maya ASCII 2025ff03 scene
 //Name: FINALSCENEYS.ma
-//Last modified: Thu, Jul 31, 2025 01:31:40 PM
+//Last modified: Fri, Aug 01, 2025 04:00:17 PM
 //Codeset: 1252
 file -rdi 1 -ns "FINALSCENETABLE" -rfn "FINALSCENETABLERN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/FINALSCENETABLE.ma";
+file -rdi 1 -ns "TENTACLEFINALYS" -rfn "TENTACLEFINALYSRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/TENTACLEFINALYS.ma";
 file -r -ns "FINALSCENETABLE" -dr 1 -rfn "FINALSCENETABLERN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/FINALSCENETABLE.ma";
+file -r -ns "TENTACLEFINALYS" -dr 1 -rfn "TENTACLEFINALYSRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Gitreposys/EssentialsYS/DAGV1100and1200/Maya//assets/TENTACLEFINALYS.ma";
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.5";
@@ -15,22 +19,22 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "DDB86B61-4A47-FCA1-AFA8-4BA63B89C435";
+fileInfo "UUID" "F39F4FEA-465C-F312-BC0E-0F80EBDC0D68";
 createNode transform -s -n "persp";
 	rename -uid "329A834C-4FAF-EF62-2132-ADBCED9B8B6F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 29.343891517500477 11.886030578616419 19.777794551748897 ;
-	setAttr ".r" -type "double3" -12.600000000000195 55.999999999989818 -1.4219398447842892e-15 ;
+	setAttr ".t" -type "double3" 31.81394477731363 18.342381339249375 20.574517382713307 ;
+	setAttr ".r" -type "double3" -25.800000000187143 -1741.200000000094 0 ;
 	setAttr ".rpt" -type "double3" 1.3834937266735491e-15 4.7553024235514592e-16 8.4431419237752327e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "24CFF4FD-49B7-0E92-66AF-EC945E8CC8EC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 34.069737693265843;
+	setAttr ".coi" 41.506678001610425;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1.4774962503602416 0.60989227542924596 -0.011435508728027332 ;
+	setAttr ".tp" -type "double3" -4.8108017766135216 3.488725999636233 8.0282929516814718 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "DA142707-40AD-9A42-914D-D49C2DFEA063";
@@ -142,6 +146,18 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.20215758681297302 0.30158300028955953 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape2" -p "pCube2";
+	rename -uid "2A5A8AB6-4581-DED5-C9AC-B18823C14CD2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 3 "f[2]" "f[6]" "f[13]";
@@ -155,30 +171,30 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 7 "f[4]" "f[18]" "f[26]" "f[34]" "f[42]" "f[50]" "f[58]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 9 "f[1]" "f[9]" "f[12]" "f[19:21]" "f[27:29]" "f[35:37]" "f[43:45]" "f[51:53]" "f[59:61]";
-	setAttr ".pv" -type "double2" 0.98277741670608521 0.15226170420646667 ;
+	setAttr ".pv" -type "double2" 0.48947007954120636 0.2460019439458847 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 84 ".uvst[0].uvsp[0:83]" -type "float2" 0.042665094 0.021510571
-		 0.029535919 0.076963454 0.00056874752 0.34712622 0.0010103285 0.40845007 0.13663581
-		 0.34621599 0.13642174 0.40751332 0.9785012 0.053322911 0.92653996 0.43620858 0.97215396
-		 0.13087243 0.96792763 0.073720396 0.1738995 0.029858112 0.16809103 0.092045128 0.025873303
-		 0.17786554 0.15617064 0.19967151 0.13718939 0.23953839 0 0.24044295 0.93316597 0.40226287
-		 0.97206175 0.16451436 0.16446367 0.1265527 0.025907457 0.11036023 0.00041916966 0.31258601
-		 0.13684854 0.31168646 0.94712645 0.33127725 0.96555483 0.23126352 0.85505056 0.067629457
-		 0.85654575 0.041642129 0.85446423 0.12938291 0.85394448 0.16412115 0.85392469 0.23773777
-		 0.83297789 0.30863932 0.81962454 0.37972948 0.8132779 0.41371429 0.72020864 0.066204727
-		 0.7207517 0.040109754 0.71886587 0.12808007 0.71811819 0.16300887 0.71658206 0.23603272
-		 0.69790405 0.28442326 0.68641067 0.35579997 0.68092358 0.38992465 0.55703282 0.061405987
-		 0.55810392 0.035329938 0.55428958 0.12307632 0.55271316 0.15787572 0.54941112 0.23063308
-		 0.5322594 0.26073527 0.52367449 0.33246294 0.51959354 0.36676267 0.43754935 0.054665804
-		 0.4393959 0.028624624 0.43331912 0.11623263 0.43095726 0.15098906 0.42599109 0.22366899
-		 0.40839377 0.248712 0.40303737 0.32071179 0.4004437 0.35514805 0.29684451 0.042925745
-		 0.29929876 0.016879827 0.29129067 0.10452038 0.28818059 0.13932675 0.28146031 0.21205848
-		 0.263188 0.24130724 0.26081392 0.3134301 0.25965115 0.34793782 0.15201437 0.22530109
-		 0.27904451 0.23811203 0.42418045 0.24971187 0.54830056 0.25671887 0.71607989 0.2621367
-		 0.85524714 0.2637316 0.17586428 0.0033478439 0.25766626 0.40917355 0.39590821 0.41620713
-		 0.51224715 0.42751443 0.67114389 0.45031834 0.80191278 0.47381213 0.91465443 0.49622172
-		 1 0.16772443 0.97743958 0.2512005 0 0.11123073 0.010747135 0.19688815 0.0056782365
-		 0.069607735 0.99936193 0.12681845 0.032983005 0;
+	setAttr -s 84 ".uvst[0].uvsp[0:83]" -type "float2" 0.27980173 0.081725374
+		 0.27348024 0.1084249 0.25953311 0.23850328 0.25974572 0.26802957 0.32504687 0.23806503
+		 0.32494378 0.26757854 0.73038948 0.097042426 0.70537108 0.28139478 0.72733343 0.13438109
+		 0.72529852 0.10686344 0.34298864 0.08574456 0.34019196 0.11568645 0.27171677 0.1570074
+		 0.33445251 0.16750656 0.32531339 0.18670173 0.25925925 0.18713726 0.70856142 0.26505056
+		 0.72728896 0.15057905 0.33844548 0.13230121 0.27173322 0.12450483 0.25946108 0.22187281
+		 0.3251493 0.22143969 0.7152831 0.2308723 0.72415602 0.18271753 0.67095029 0.10393077
+		 0.6716702 0.091418356 0.67066795 0.13366391 0.67041773 0.15038973 0.67040819 0.18583477
+		 0.66032267 0.21997255 0.65389329 0.25420114 0.65083754 0.2705642 0.60602641 0.10324478
+		 0.60628784 0.09068054 0.60537988 0.13303661 0.60501987 0.14985418 0.60428023 0.18501382
+		 0.59528714 0.20831296 0.58975327 0.24267954 0.58711135 0.25910994 0.52746028 0.10093427
+		 0.52797598 0.088379145 0.52613944 0.13062739 0.52538043 0.14738266 0.52379054 0.182414
+		 0.51553231 0.19690764 0.51139885 0.2314432 0.50943393 0.24795786 0.46993116 0.097689003
+		 0.47082025 0.085150659 0.46789438 0.1273323 0.46675721 0.14406687 0.46436608 0.17906091
+		 0.45589331 0.19111866 0.4533143 0.22578523 0.4520655 0.24236563 0.4021844 0.092036381
+		 0.40336606 0.079495758 0.39951032 0.12169306 0.39801288 0.13845168 0.39477718 0.17347066
+		 0.38597941 0.18755341 0.38483632 0.22227922 0.38427648 0.23889405 0.33245134 0.17984673
+		 0.39361402 0.18601497 0.4634943 0.19160007 0.52325583 0.19497383 0.60403848 0.19758239
+		 0.67104495 0.19835031 0.34393466 0.072980344 0.38332078 0.26837793 0.44988173 0.27176446
+		 0.50589675 0.27720872 0.58240259 0.28818837 0.64536542 0.2995002 0.69964844 0.31029001
+		 0.74074078 0.15212464 0.72987831 0.19231682 0.25925925 0.12492397 0.2644338 0.16616642
+		 0.26199323 0.10488327 0.74043351 0.13242917 0.27513996 0.071368426;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -382,6 +398,18 @@ createNode mesh -n "pasted__pCubeShape2" -p "pasted__pCube2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.14923894689723044 0.69186151992344114 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape3" -p "pasted__pCube2";
+	rename -uid "D71F0D67-4C39-C1B3-4764-7AB712A71742";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 3 "f[2]" "f[6]" "f[13]";
@@ -395,7 +423,7 @@ createNode mesh -n "pasted__pCubeShape2" -p "pasted__pCube2";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 7 "f[4]" "f[18]" "f[26]" "f[34]" "f[42]" "f[50]" "f[58]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 9 "f[1]" "f[9]" "f[12]" "f[19:21]" "f[27:29]" "f[35:37]" "f[43:45]" "f[51:53]" "f[59:61]";
-	setAttr ".pv" -type "double2" 0.35054506361484528 0.099310668651014566 ;
+	setAttr ".pv" -type "double2" 0.27469447255134583 0.34260827302932739 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 86 ".uvst[0].uvsp[0:85]" -type "float2" 0.30518422 0.19862133
 		 0.12573569 0.036357589 0.34143803 0.12493512 0.3137947 0.19381453 0.43004879 0.16478078
@@ -619,6 +647,18 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.48360443908233119 0.51645464439090449 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape1" -p "pPlane1";
+	rename -uid "2135E39D-40D0-B836-1282-2F892766A2F2";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr -s 5 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "e[5625:5661]";
@@ -630,7 +670,7 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".gtag[3].gtagcmp" -type "componentList" 0;
 	setAttr ".gtag[4].gtagnm" -type "string" "rim";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 111 "e[0:2]" "e[4]" "e[6]" "e[8]" "e[10]" "e[12]" "e[14]" "e[16]" "e[18]" "e[20]" "e[22]" "e[24]" "e[26]" "e[28]" "e[30]" "e[32]" "e[34]" "e[36]" "e[38]" "e[40]" "e[42]" "e[44]" "e[46]" "e[48]" "e[50]" "e[52]" "e[54]" "e[56]" "e[58]" "e[60]" "e[62]" "e[64]" "e[66]" "e[68]" "e[70]" "e[72]" "e[76]" "e[151]" "e[226]" "e[301]" "e[376]" "e[451]" "e[526]" "e[601]" "e[676]" "e[751]" "e[826]" "e[901]" "e[976]" "e[1051]" "e[1126]" "e[1201]" "e[1276]" "e[1351]" "e[1426]" "e[1501]" "e[1576]" "e[1651]" "e[1726]" "e[1801]" "e[1876]" "e[1951]" "e[2026]" "e[2101]" "e[2176]" "e[2251]" "e[2326]" "e[2401]" "e[2476]" "e[2551]" "e[2626]" "e[2701]" "e[2776]" "e[2851]" "e[2926]" "e[3001]" "e[3076]" "e[3151]" "e[3226]" "e[3301]" "e[3376]" "e[3451]" "e[3526]" "e[3601]" "e[3676]" "e[3751]" "e[3826]" "e[3901]" "e[3976]" "e[4051]" "e[4126]" "e[4201]" "e[4276]" "e[4351]" "e[4426]" "e[4501]" "e[4576]" "e[4651]" "e[4726]" "e[4801]" "e[4876]" "e[4951]" "e[5026]" "e[5101]" "e[5176]" "e[5251]" "e[5326]" "e[5401]" "e[5476]" "e[5551]" "e[5625:5661]";
-	setAttr ".pv" -type "double2" 0.5 0.42780794203281403 ;
+	setAttr ".pv" -type "double2" 0.53699976205825806 0.4302356168627739 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 3673 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0 0 0.026666667 0 0.053333335
@@ -10582,15 +10622,15 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "96C41721-40A0-EC51-9E7B-5BA2E919290B";
+	rename -uid "B043BA86-4F8D-E8F6-774D-468E0B878BF0";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "BCEA70C8-4749-F1A0-FC97-06BD7D0AC9B6";
+	rename -uid "FAABF755-4C79-CC46-A3D9-46B7E8278E9F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F7C2B975-46FE-A506-FA2B-00AFC2C37C02";
+	rename -uid "2DEFE11C-41BE-8B0E-9E68-2DB5C94C655E";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "ABB0C012-402A-2539-2A27-1699B5164E79";
+	rename -uid "6D69ED96-4ED6-872B-662A-3B89CFEB1660";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
@@ -10598,7 +10638,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "34ECA57B-4907-8EB6-B7C0-C0818F7B33BD";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "AE94E49C-4F49-5F5B-4B56-6998333A5CD1";
+	rename -uid "6DC56776-49BB-58B7-5E51-A4A876F6107A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5E46DA77-46E8-16AE-680B-96827BECE798";
 	setAttr ".g" yes;
@@ -10633,16 +10673,16 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 492\n            -height 363\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 492\n            -height 362\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
-		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 492\n            -height 362\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n"
 		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 991\n            -height 772\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n"
 		+ "            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n"
@@ -10666,8 +10706,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 991\\n    -height 772\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 991\\n    -height 772\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 991\\n    -height 772\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 991\\n    -height 772\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -10689,6 +10729,3171 @@ createNode reference -n "FINALSCENETABLERN";
 		2 "|FINALSCENETABLE:pCube1" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "TENTACLEFINALYSRN";
+	rename -uid "B305BC6C-4D98-DFB5-BB96-15BC0D564333";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"TENTACLEFINALYSRN"
+		"TENTACLEFINALYSRN" 0
+		"TENTACLEFINALYSRN" 747
+		2 "|TENTACLEFINALYS:pCylinder1" "translate" " -type \"double3\" -5.0434423959173742 -1.21044705356554094 9.31570811335737581"
+		
+		2 "|TENTACLEFINALYS:pCylinder1" "rotate" " -type \"double3\" -0.90777498241297561 0.13652781663361491 -1.52079113953365819"
+		
+		2 "|TENTACLEFINALYS:pCylinder1" "rotatePivot" " -type \"double3\" 0.13235643013177212 4.83253058937897073 -0.15814252085236169"
+		
+		2 "|TENTACLEFINALYS:pCylinder1" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		
+		2 "|TENTACLEFINALYS:pCylinder1" "scalePivot" " -type \"double3\" 0.13235643013177212 4.83253058937897073 -0.15814252085236169"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts" " -s 182"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[0]" 
+		" -type \"float3\" 0.84863429999999995 6.7740197000000002 7.62741570000000024"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[1]" 
+		" -type \"float3\" 0.87708092000000004 6.76012419999999992 7.639502"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[2]" 
+		" -type \"float3\" 0.91415935999999998 6.75147389999999969 7.65542220000000029"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[3]" 
+		" -type \"float3\" 0.95626770999999999 6.74891229999999975 7.67369460000000014"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[4]" 
+		" -type \"float3\" 0.99929743999999998 6.75268509999999988 7.69256019999999996"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[5]" 
+		" -type \"float3\" 1.03902960000000011 6.76241489999999956 7.710146"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[6]" 
+		" -type \"float3\" 1.0715513000000001 6.77714440000000007 7.72465660000000032"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[7]" 
+		" -type \"float3\" 1.09364689999999998 6.7954283000000002 7.734581"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[8]" 
+		" -type \"float3\" 1.103127 6.8154754999999998 7.73886970000000041"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[9]" 
+		" -type \"float3\" 1.09650439999999993 6.83093790000000034 7.73598150000000029"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[10]" 
+		" -type \"float3\" 1.08192339999999998 6.84771969999999985 7.72950119999999963"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[11]" 
+		" -type \"float3\" 1.03271510000000011 6.88859509999999986 7.70721339999999966"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[12]" 
+		" -type \"float3\" 0.98092562000000005 6.92216680000000029 7.68337350000000008"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[13]" 
+		" -type \"float3\" 0.92932563999999995 6.94077159999999971 7.65993169999999957"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[14]" 
+		" -type \"float3\" 0.88313030999999997 6.94259019999999971 7.639647"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[15]" 
+		" -type \"float3\" 0.84689157999999998 6.92742870000000011 7.62457180000000001"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[16]" 
+		" -type \"float3\" 0.82404177999999995 6.89674190000000031 7.61582709999999974"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[17]" 
+		" -type \"float3\" 0.81659985000000002 6.85350509999999957 7.613627"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[18]" 
+		" -type \"float3\" 0.82754254000000005 6.81170269999999967 7.61864570000000008"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[19]" 
+		" -type \"float3\" 0.83157300999999995 6.79179379999999977 7.62025449999999971"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[20]" 
+		" -type \"float3\" -1.46728919999999996 1.47655249999999993 -0.78377151"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[21]" 
+		" -type \"float3\" -1.28915460000000004 1.48938349999999997 -0.62545079000000003"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[22]" 
+		" -type \"float3\" -1.04061929999999991 1.49814259999999999 -0.45473012000000002"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[23]" 
+		" -type \"float3\" -0.74601172999999998 1.5019724000000001 -0.28832113999999998"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[24]" 
+		" -type \"float3\" -0.43417001 1.50049809999999995 -0.14251272000000001"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[25]" 
+		" -type \"float3\" -0.13561943000000001 1.49386409999999992 -0.031577877999999997"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[26]" 
+		" -type \"float3\" 0.12041584 1.48271939999999991 0.033624433000000002"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[27]" 
+		" -type \"float3\" 0.30887321000000001 1.46815540000000011 0.046711757999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[28]" 
+		" -type \"float3\" 0.41130530999999998 1.4515975000000001 0.0064028538999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[29]" 
+		" -type \"float3\" 0.39176213999999998 1.4382782999999999 -0.076329187000000007"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[30]" 
+		" -type \"float3\" 0.31844171999999998 1.4235336999999999 -0.19342366999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[31]" 
+		" -type \"float3\" 0.044260914999999998 1.38709159999999998 -0.52870839999999997"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[32]" 
+		" -type \"float3\" -0.25992464999999998 1.35672830000000011 -0.84544522"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[33]" 
+		" -type \"float3\" -0.59026175999999997 1.33902750000000004 -1.1056026000000001"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[34]" 
+		" -type \"float3\" -0.91441505999999995 1.33572219999999997 -1.28371429999999997"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[35]" 
+		" -type \"float3\" -1.20065379999999999 1.347136 -1.36234560000000005"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[36]" 
+		" -type \"float3\" -1.42095940000000009 1.37215139999999991 -1.33379960000000009"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[37]" 
+		" -type \"float3\" -1.55376639999999999 1.40831970000000006 -1.20087060000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[38]" 
+		" -type \"float3\" -1.55120539999999996 1.4439746 -1.0039537999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[39]" 
+		" -type \"float3\" -1.55758519999999989 1.46090570000000008 -0.91419452000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[40]" 
+		" -type \"float3\" 1.01336219999999999 6.80700210000000006 7.80030629999999991"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[41]" 
+		" -type \"float3\" -0.56995028000000003 1.44778610000000008 -0.49877559999999999"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[42]" 
+		" -type \"float3\" -0.94657743000000005 2.23758629999999981 -0.31180763"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[43]" 
+		" -type \"float3\" -1.21536460000000002 2.23405480000000001 -0.46383597999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[44]" 
+		" -type \"float3\" -1.44218810000000008 2.22600670000000012 -0.61994152999999996"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[45]" 
+		" -type \"float3\" -1.60484479999999996 2.21422860000000021 -0.76484333999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[46]" 
+		" -type \"float3\" -1.68741230000000009 2.19987490000000019 -0.88435763000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[47]" 
+		" -type \"float3\" -1.68180930000000006 2.18434980000000012 -0.96678536999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[48]" 
+		" -type \"float3\" -1.68460150000000008 2.15165469999999992 -1.14757559999999992"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[49]" 
+		" -type \"float3\" -1.5639190999999999 2.11849739999999986 -1.26996470000000006"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[50]" 
+		" -type \"float3\" -1.3632785999999999 2.09557290000000007 -1.29674080000000003"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[51]" 
+		" -type \"float3\" -1.10232060000000009 2.08512569999999986 -1.22528290000000006"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[52]" 
+		" -type \"float3\" -0.80658883000000003 2.08817820000000021 -1.06258579999999991"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[53]" 
+		" -type \"float3\" -0.50503211999999997 2.10443120000000006 -0.82457566000000004"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[54]" 
+		" -type \"float3\" -0.22716849 2.13229420000000003 -0.53455012999999996"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[55]" 
+		" -type \"float3\" 0.02340267 2.165729 -0.22741803999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[56]" 
+		" -type \"float3\" 0.090473600000000001 2.17925449999999987 -0.1200977"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[57]" 
+		" -type \"float3\" 0.10847104 2.19146919999999978 -0.044188554999999997"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[58]" 
+		" -type \"float3\" 0.015245528 2.206646 -0.0069157504000000002"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[59]" 
+		" -type \"float3\" -0.15647707999999999 2.2199886000000002 -0.018446758000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[60]" 
+		" -type \"float3\" -0.38988729999999999 2.23019120000000015 -0.077652580999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[61]" 
+		" -type \"float3\" -0.66213732999999997 2.23625490000000005 -0.17873786"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[62]" 
+		" -type \"float3\" -1.24286410000000003 3.32427550000000016 -0.34650313999999999"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[63]" 
+		" -type \"float3\" -1.47350789999999998 3.32118510000000011 -0.47728758999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[64]" 
+		" -type \"float3\" -1.66825760000000001 3.3141866000000002 -0.61180294000000002"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[65]" 
+		" -type \"float3\" -1.80804959999999992 3.3039651000000001 -0.73688191000000003"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[66]" 
+		" -type \"float3\" -1.8792 3.2915211000000002 -0.84028064999999996"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[67]" 
+		" -type \"float3\" -1.87474450000000004 3.2780727999999999 -0.91187805"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[68]" 
+		" -type \"float3\" -1.87787850000000001 3.24974970000000019 -1.06884540000000006"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[69]" 
+		" -type \"float3\" -1.77510710000000005 3.22104070000000009 -1.17566419999999994"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[70]" 
+		" -type \"float3\" -1.60351719999999998 3.20120570000000004 -1.19982560000000005"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[71]" 
+		" -type \"float3\" -1.3799049000000001 3.19218590000000013 -1.138965"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[72]" 
+		" -type \"float3\" -1.12615909999999997 3.1948645 -0.99903934999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[73]" 
+		" -type \"float3\" -0.86711817999999996 3.20897910000000008 -0.79374582000000005"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[74]" 
+		" -type \"float3\" -0.62813896000000002 3.23314829999999986 -0.54317987000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[75]" 
+		" -type \"float3\" -0.41244491999999999 3.26214119999999985 -0.27763622999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[76]" 
+		" -type \"float3\" -0.35460620999999998 3.27386569999999999 -0.18475485"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[77]" 
+		" -type \"float3\" -0.33889204000000001 3.28444890000000012 -0.11892477999999999"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[78]" 
+		" -type \"float3\" -0.41851744000000002 3.297585 -0.086137249999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[79]" 
+		" -type \"float3\" -0.56551856 3.30912329999999999 -0.095369175"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[80]" 
+		" -type \"float3\" -0.76550585000000004 3.31793430000000011 -0.14571666999999999"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[81]" 
+		" -type \"float3\" -0.99890327000000001 3.32315540000000009 -0.23225158000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[82]" 
+		" -type \"float3\" -1.6086897 4.660327 -0.42877423999999997"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[83]" 
+		" -type \"float3\" -1.788602 4.66021730000000023 -0.52818905999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[84]" 
+		" -type \"float3\" -1.94144249999999996 4.661005 -0.62877773999999997"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[85]" 
+		" -type \"float3\" -2.052259 4.6622849000000004 -0.72107368999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[86]" 
+		" -type \"float3\" -2.11018779999999984 4.663518 -0.79644245000000002"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[87]" 
+		" -type \"float3\" -2.10951969999999989 4.66423990000000011 -0.84776545000000003"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[88]" 
+		" -type \"float3\" -2.11766670000000001 4.66279939999999993 -0.96327167999999996"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[89]" 
+		" -type \"float3\" -2.04311849999999984 4.657351 -1.04342789999999996"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[90]" 
+		" -type \"float3\" -1.91297880000000009 4.651125 -1.062273"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[91]" 
+		" -type \"float3\" -1.74030069999999992 4.64764789999999994 -1.01570329999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[92]" 
+		" -type \"float3\" -1.5422636999999999 4.64892289999999964 -0.90726161000000005"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[93]" 
+		" -type \"float3\" -1.33830490000000002 4.654563 -0.74799061"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[94]" 
+		" -type \"float3\" -1.14820720000000009 4.66193870000000032 -0.55520718999999996"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[95]" 
+		" -type \"float3\" -0.97515881000000004 4.66707610000000006 -0.35418864999999999"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[96]" 
+		" -type \"float3\" -0.92797768000000003 4.66796589999999956 -0.28513541999999997"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[97]" 
+		" -type \"float3\" -0.91374968999999995 4.66810939999999963 -0.23725502000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[98]" 
+		" -type \"float3\" -0.97314595999999998 4.6672248999999999 -0.21635230999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[99]" 
+		" -type \"float3\" -1.08518770000000009 4.66546150000000015 -0.22802752000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[100]" 
+		" -type \"float3\" -1.23891219999999991 4.66332720000000034 -0.27079104999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[101]" 
+		" -type \"float3\" -1.41928959999999993 4.66144279999999966 -0.34006198999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[102]" 
+		" -type \"float3\" -1.57161749999999989 5.75405980000000028 0.48573147999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[103]" 
+		" -type \"float3\" -1.71325090000000002 5.75632189999999966 0.41164070000000003"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[104]" 
+		" -type \"float3\" -1.83532439999999997 5.7619214000000003 0.33433439999999998"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[105]" 
+		" -type \"float3\" -1.92594489999999996 5.77012440000000026 0.26102315999999998"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[106]" 
+		" -type \"float3\" -1.97628920000000008 5.77987859999999998 0.19847964000000001"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[107]" 
+		" -type \"float3\" -1.981449 5.79000659999999989 0.15253401"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[108]" 
+		" -type \"float3\" -2.00021620000000011 5.80954359999999959 0.049534380000000003"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[109]" 
+		" -type \"float3\" -1.95528469999999999 5.82677560000000039 -0.029387619"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[110]" 
+		" -type \"float3\" -1.86330850000000003 5.83699320000000021 -0.058308523000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[111]" 
+		" -type \"float3\" -1.73307009999999995 5.84100909999999995 -0.031827461000000001"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[112]" 
+		" -type \"float3\" -1.57726560000000005 5.83951089999999962 0.048774644999999998"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[113]" 
+		" -type \"float3\" -1.41123890000000007 5.83254 0.17523544999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[114]" 
+		" -type \"float3\" -1.25144879999999992 5.81953530000000008 0.33325660000000001"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[115]" 
+		" -type \"float3\" -1.10326140000000006 5.80181219999999964 0.49979118"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[116]" 
+		" -type \"float3\" -1.0613033999999999 5.79396630000000012 0.55792772999999996"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[117]" 
+		" -type \"float3\" -1.04564860000000004 5.78652479999999958 0.59975725000000002"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[118]" 
+		" -type \"float3\" -1.0864666999999999 5.77672909999999984 0.62349301999999995"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[119]" 
+		" -type \"float3\" -1.16915089999999999 5.76757 0.62231839"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[120]" 
+		" -type \"float3\" -1.2855582000000001 5.76013660000000005 0.59669291999999996"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[121]" 
+		" -type \"float3\" -1.42424750000000011 5.75540830000000003 0.54952455"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[122]" 
+		" -type \"float3\" -0.99130629999999997 6.64147849999999984 2.468874"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[123]" 
+		" -type \"float3\" -1.101503 6.63836 2.42348410000000003"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[124]" 
+		" -type \"float3\" -1.20851719999999996 6.64123250000000009 2.370549"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[125]" 
+		" -type \"float3\" -1.30190889999999992 6.64980029999999989 2.31513519999999984"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[126]" 
+		" -type \"float3\" -1.372601 6.6631393000000001 2.26239370000000006"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[127]" 
+		" -type \"float3\" -1.41374120000000003 6.67981960000000008 2.21716330000000017"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[128]" 
+		" -type \"float3\" -1.42134540000000009 6.69808390000000031 2.183619"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[129]" 
+		" -type \"float3\" -1.4435176999999999 6.73557849999999991 2.10824079999999991"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[130]" 
+		" -type \"float3\" -1.41841339999999994 6.77282190000000028 2.04947109999999988"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[131]" 
+		" -type \"float3\" -1.35564240000000003 6.7981796000000001 2.026701"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[132]" 
+		" -type \"float3\" -1.26093340000000009 6.81010150000000003 2.04432919999999996"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[133]" 
+		" -type \"float3\" -1.14336180000000009 6.80800249999999973 2.10180450000000008"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[134]" 
+		" -type \"float3\" -1.0145187 6.792069 2.19324969999999997"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[135]" 
+		" -type \"float3\" -0.88734614999999994 6.76325230000000044 2.30813410000000019"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[136]" 
+		" -type \"float3\" -0.76767962999999995 6.72728820000000027 2.429245"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[137]" 
+		" -type \"float3\" -0.73284393999999997 6.71226020000000023 2.47157189999999982"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[138]" 
+		" -type \"float3\" -0.71809745000000003 6.69832420000000006 2.50215630000000022"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[139]" 
+		" -type \"float3\" -0.74501759000000001 6.68021770000000004 2.51999880000000021"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[140]" 
+		" -type \"float3\" -0.80383115999999999 6.66361049999999988 2.51991750000000003"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[141]" 
+		" -type \"float3\" -0.88871931999999998 6.65021750000000011 2.50218989999999986"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[142]" 
+		" -type \"float3\" -0.22196098 7.03893949999999968 4.83078149999999962"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[143]" 
+		" -type \"float3\" -0.30011295999999998 7.03456070000000011 4.7985711000000002"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[144]" 
+		" -type \"float3\" -0.37647124999999998 7.03731010000000001 4.762742"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[145]" 
+		" -type \"float3\" -0.44358635000000002 7.04692079999999965 4.72673369999999959"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[146]" 
+		" -type \"float3\" -0.49494096999999998 7.06242560000000008 4.69389530000000033"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[147]" 
+		" -type \"float3\" -0.52556687999999996 7.08225820000000006 4.66722440000000027"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[148]" 
+		" -type \"float3\" -0.53250854999999997 7.10442779999999985 4.649159"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[149]" 
+		" -type \"float3\" -0.55158532000000005 7.15065479999999987 4.60786720000000027"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[150]" 
+		" -type \"float3\" -0.53726673000000003 7.19803860000000029 4.57841159999999991"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[151]" 
+		" -type \"float3\" -0.49521235000000002 7.23139 4.57054090000000013"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[152]" 
+		" -type \"float3\" -0.42915151000000001 7.24780650000000026 4.58650019999999969"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[153]" 
+		" -type \"float3\" -0.34534723000000001 7.24591259999999959 4.62554930000000031"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[154]" 
+		" -type \"float3\" -0.25206329999999999 7.22591640000000002 4.68371959999999987"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[155]" 
+		" -type \"float3\" -0.15872317999999999 7.18955370000000027 4.75425909999999963"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[156]" 
+		" -type \"float3\" -0.070203802999999995 7.14488409999999963 4.82729389999999992"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[157]" 
+		" -type \"float3\" -0.044064760000000001 7.12642 4.85221049999999998"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[158]" 
+		" -type \"float3\" -0.032342060999999998 7.10932779999999998 4.86938759999999959"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[159]" 
+		" -type \"float3\" -0.049930005999999999 7.08703419999999973 4.87665840000000017"
+		
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[160]" 
+		" -type \"float3\" -0.090378337000000003 7.066577 4.87203880000000034"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[161]" 
+		" -type \"float3\" -0.14967638 7.04998829999999987 4.85615630000000031"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[162]" 
+		" -type \"float3\" 0.74259262999999998 6.90895270000000039 7.07568739999999963"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[163]" 
+		" -type \"float3\" 0.69548695999999999 6.89846130000000013 7.05612710000000032"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[164]" 
+		" -type \"float3\" 0.64447385000000001 6.89429240000000032 7.03417349999999963"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[165]" 
+		" -type \"float3\" 0.59455544000000005 6.89686489999999974 7.01201010000000036"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[166]" 
+		" -type \"float3\" 0.55060220000000004 6.90593340000000033 6.99176929999999963"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[167]" 
+		" -type \"float3\" 0.51688308000000005 6.9206076000000003 6.97533609999999982"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[168]" 
+		" -type \"float3\" 0.49666062 6.93944259999999957 6.96420189999999995"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[169]" 
+		" -type \"float3\" 0.49188443999999998 6.96058030000000016 6.95935959999999998"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[170]" 
+		" -type \"float3\" 0.47891104000000001 7.00491189999999975 6.94717930000000017"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[171]" 
+		" -type \"float3\" 0.48772377 7.05076889999999956 6.94330639999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[172]" 
+		" -type \"float3\" 0.51480055000000002 7.08333160000000017 6.94906380000000024"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[173]" 
+		" -type \"float3\" 0.55775355999999998 7.09948870000000021 6.96470549999999999"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[174]" 
+		" -type \"float3\" 0.61251789000000001 7.09771820000000009 6.98915769999999981"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[175]" 
+		" -type \"float3\" 0.67369710999999999 7.07820990000000005 7.01994369999999979"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[176]" 
+		" -type \"float3\" 0.73510408000000005 7.04284619999999961 7.053463"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[177]" 
+		" -type \"float3\" 0.79344939999999997 6.99969149999999996 7.08618210000000026"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[178]" 
+		" -type \"float3\" 0.81073660000000003 6.98194119999999963 7.09641120000000036"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[179]" 
+		" -type \"float3\" 0.81858819999999999 6.9655541999999997 7.1021504000000002"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[180]" 
+		" -type \"float3\" 0.80734855000000005 6.94423149999999989 7.09999559999999974"
+		2 "|TENTACLEFINALYS:pCylinder1|TENTACLEFINALYS:pCylinderShape1" "pnts[181]" 
+		" -type \"float3\" 0.78115064000000001 6.924727 7.09084369999999975"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1" "translate" 
+		" -type \"double3\" -7.47704155981662044 -0.99174304178486006 -6.76113408584371722"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1" "rotatePivot" 
+		" -type \"double3\" 0.13235643013177195 4.83253058937897073 -0.15814252085236166"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1" "scalePivot" 
+		" -type \"double3\" 0.13235643013177195 4.83253058937897073 -0.15814252085236166"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts" " -s 182"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[0]" " -type \"float3\" -0.49203133999999998 7.5625233999999999 5.65613369999999982"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[1]" " -type \"float3\" -0.46730941999999998 7.55549620000000033 5.66140840000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[2]" " -type \"float3\" -0.43228820000000001 7.55215549999999958 5.67476179999999975"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[3]" " -type \"float3\" -0.39039629999999997 7.55283019999999983 5.69488720000000015"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[4]" " -type \"float3\" -0.34573376 7.5574545999999998 5.71981479999999998"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[5]" " -type \"float3\" -0.30267232999999999 7.56557230000000036 5.74710370000000026"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[6]" " -type \"float3\" -0.26542719999999997 7.57639029999999991 5.77408409999999961"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[7]" " -type \"float3\" -0.23764484999999999 7.58885339999999964 5.79811380000000032"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[8]" " -type \"float3\" -0.22204447999999999 7.60173650000000034 5.81684059999999992"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[9]" " -type \"float3\" -0.22406727000000001 7.61093 5.82407240000000037"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[10]" " -type \"float3\" -0.23369545 7.620513 5.82810589999999973"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[11]" " -type \"float3\" -0.27078056 7.64313130000000029 5.83093259999999969"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[12]" " -type \"float3\" -0.31250650000000002 7.66110749999999996 5.82746839999999988"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[13]" " -type \"float3\" -0.35870331999999999 7.66982979999999959 5.81369260000000043"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[14]" " -type \"float3\" -0.40484916999999998 7.66844509999999957 5.79095319999999969"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[15]" " -type \"float3\" -0.44642746 7.65708829999999985 5.76147559999999981"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[16]" " -type \"float3\" -0.47936677999999999 7.63686989999999977 5.72814610000000002"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[17]" " -type \"float3\" -0.50044416999999997 7.60977359999999958 5.69422769999999989"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[18]" " -type \"float3\" -0.50214164999999999 7.58459280000000025 5.67104630000000043"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[19]" " -type \"float3\" -0.50403326999999998 7.57254839999999962 5.65945479999999979"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[20]" " -type \"float3\" -1.46728919999999996 1.47655249999999993 -0.78377151"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[21]" " -type \"float3\" -1.28915460000000004 1.48938349999999997 -0.62545079000000003"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[22]" " -type \"float3\" -1.04061929999999991 1.49814259999999999 -0.45473012000000002"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[23]" " -type \"float3\" -0.74601172999999998 1.5019724000000001 -0.28832113999999998"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[24]" " -type \"float3\" -0.43417001 1.50049809999999995 -0.14251272000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[25]" " -type \"float3\" -0.13561943000000001 1.49386409999999992 -0.031577877999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[26]" " -type \"float3\" 0.12041584 1.48271939999999991 0.033624433000000002"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[27]" " -type \"float3\" 0.30887321000000001 1.46815540000000011 0.046711757999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[28]" " -type \"float3\" 0.41130530999999998 1.4515975000000001 0.0064028538999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[29]" " -type \"float3\" 0.39176213999999998 1.4382782999999999 -0.076329187000000007"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[30]" " -type \"float3\" 0.31844171999999998 1.4235336999999999 -0.19342366999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[31]" " -type \"float3\" 0.044260914999999998 1.38709159999999998 -0.52870839999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[32]" " -type \"float3\" -0.25992464999999998 1.35672830000000011 -0.84544522"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[33]" " -type \"float3\" -0.59026175999999997 1.33902750000000004 -1.1056026000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[34]" " -type \"float3\" -0.91441505999999995 1.33572219999999997 -1.28371429999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[35]" " -type \"float3\" -1.20065379999999999 1.347136 -1.36234560000000005"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[36]" " -type \"float3\" -1.42095940000000009 1.37215139999999991 -1.33379960000000009"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[37]" " -type \"float3\" -1.55376639999999999 1.40831970000000006 -1.20087060000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[38]" " -type \"float3\" -1.55120539999999996 1.4439746 -1.0039537999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[39]" " -type \"float3\" -1.55758519999999989 1.46090570000000008 -0.91419452000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[40]" " -type \"float3\" -0.33768150000000002 7.59952740000000038 5.83098839999999985"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[41]" " -type \"float3\" -0.56995028000000003 1.44778610000000008 -0.49877559999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[42]" " -type \"float3\" -0.94657743000000005 2.23758629999999981 -0.31180763"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[43]" " -type \"float3\" -1.21536460000000002 2.23405480000000001 -0.46383597999999998"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[44]" " -type \"float3\" -1.44218810000000008 2.22600670000000012 -0.61994152999999996"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[45]" " -type \"float3\" -1.60484479999999996 2.21422860000000021 -0.76484333999999998"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[46]" " -type \"float3\" -1.71008840000000006 2.21474029999999988 -0.94015872"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[47]" " -type \"float3\" -1.75659670000000001 2.23564650000000009 -1.14785849999999989"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[48]" " -type \"float3\" -1.87287129999999991 2.292613 -1.58798090000000003"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[49]" " -type \"float3\" -1.87447750000000002 2.37066080000000001 -1.97079460000000006"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[50]" " -type \"float3\" -1.76357720000000007 2.43814589999999987 -2.17719320000000005"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[51]" " -type \"float3\" -1.5476802999999999 2.475539 -2.19274209999999981"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[52]" " -type \"float3\" -1.24593369999999992 2.47163319999999986 -2.01917789999999986"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[53]" " -type \"float3\" -0.88767678000000005 2.4276428000000001 -1.67174880000000003"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[54]" " -type \"float3\" -0.50970530999999997 2.356822 -1.17851529999999993"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[55]" " -type \"float3\" -0.14101189 2.28630919999999982 -0.61530625999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[56]" " -type \"float3\" -0.026861168000000001 2.26233549999999983 -0.40079206000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[57]" " -type \"float3\" 0.033562198000000001 2.24276089999999995 -0.22567128"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[58]" " -type \"float3\" -0.0064811599000000001 2.22086879999999987 -0.060406680999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[59]" " -type \"float3\" -0.15647707999999999 2.2199886000000002 -0.018446758000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[60]" " -type \"float3\" -0.38988729999999999 2.23019120000000015 -0.077652580999999998"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[61]" " -type \"float3\" -0.66213732999999997 2.23625490000000005 -0.17873786"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[62]" " -type \"float3\" -1.757259 3.88955330000000021 -1.31472290000000003"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[63]" " -type \"float3\" -1.99216039999999994 3.89386749999999981 -1.44996459999999994"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[64]" " -type \"float3\" -2.20286079999999984 3.91161819999999993 -1.60508080000000009"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[65]" " -type \"float3\" -2.36885829999999986 3.94195889999999993 -1.76413510000000007"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[66]" " -type \"float3\" -2.47412710000000002 3.98311519999999986 -1.9107364"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[67]" " -type \"float3\" -2.50858829999999999 4.03210069999999998 -2.02992030000000012"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[68]" " -type \"float3\" -2.59464030000000001 4.14322609999999969 -2.27989940000000013"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[69]" " -type \"float3\" -2.57986810000000011 4.27089739999999995 -2.47448559999999995"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[70]" " -type \"float3\" -2.47238369999999996 4.36982919999999986 -2.55626059999999988"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[71]" " -type \"float3\" -2.28184489999999984 4.42231509999999961 -2.52482059999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[72]" " -type \"float3\" -2.02633980000000014 4.41847420000000035 -2.38756820000000003"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[73]" " -type \"float3\" -1.73060619999999998 4.35897489999999976 -2.15665029999999991"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[74]" " -type \"float3\" -1.42374519999999993 4.25490860000000026 -1.84830450000000002"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[75]" " -type \"float3\" -1.12545570000000006 4.13710779999999989 -1.5004035"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[76]" " -type \"float3\" -1.03381970000000001 4.09160569999999968 -1.37011620000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[77]" " -type \"float3\" -0.98698825000000001 4.05105589999999971 -1.267817"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[78]" " -type \"float3\" -1.02622780000000002 4.00024029999999975 -1.18455090000000007"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[79]" " -type \"float3\" -1.13660680000000003 3.95585109999999984 -1.1453141"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[80]" " -type \"float3\" -1.30723330000000004 3.92133019999999988 -1.15483760000000002"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[81]" " -type \"float3\" -1.5211851999999999 3.8988472999999999 -1.213037"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[82]" " -type \"float3\" -2.2403455000000001 6.17585419999999985 -0.55578417000000002"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[83]" " -type \"float3\" -2.41980459999999997 6.1783671 -0.64960461999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[84]" " -type \"float3\" -2.5771434000000002 6.19596769999999974 -0.74199420000000005"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[85]" " -type \"float3\" -2.69692279999999984 6.22730880000000031 -0.82329494000000003"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[86]" " -type \"float3\" -2.76740530000000007 6.269865 -0.88479859000000005"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[87]" " -type \"float3\" -2.78170319999999993 6.31996969999999969 -0.91987114999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[88]" " -type \"float3\" -2.82105760000000005 6.42863939999999978 -0.99271171999999996"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[89]" " -type \"float3\" -2.78007559999999998 6.54821540000000013 -1.01938939999999989"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[90]" " -type \"float3\" -2.67515560000000008 6.63830469999999995 -0.99555302000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[91]" " -type \"float3\" -2.51697749999999987 6.686666 -0.92936032999999996"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[92]" " -type \"float3\" -2.32121939999999993 6.68646860000000043 -0.83066982"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[93]" " -type \"float3\" -2.1068446999999999 6.63769049999999972 -0.70853876999999998"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[94]" " -type \"float3\" -1.89433279999999993 6.54715779999999992 -0.57056927999999996"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[95]" " -type \"float3\" -1.6924764000000001 6.43928670000000025 -0.42377329000000002"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[96]" " -type \"float3\" -1.6329537999999999 6.39571570000000023 -0.37293619"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[97]" " -type \"float3\" -1.6068597 6.3556108 -0.33932421000000001"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[98]" " -type \"float3\" -1.6496964999999999 6.3029875999999998 -0.33246221999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[99]" " -type \"float3\" -1.74585820000000003 6.25489470000000036 -0.35327607"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[100]" " -type \"float3\" -1.8859885999999999 6.21567150000000002 -0.40039712"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[101]" " -type \"float3\" -2.05638670000000001 6.18861249999999963 -0.4699778"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[102]" " -type \"float3\" -2.05873490000000015 7.37673950000000023 1.15216"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[103]" " -type \"float3\" -2.19870039999999989 7.37625360000000008 1.08156340000000006"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[104]" " -type \"float3\" -2.318953 7.38753559999999965 1.01939059999999992"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[105]" " -type \"float3\" -2.40766929999999979 7.409647 0.97211987"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[106]" " -type \"float3\" -2.45611140000000017 7.44067960000000017 0.94488627000000003"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[107]" " -type \"float3\" -2.45950530000000001 7.47784609999999983 0.94079321999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[108]" " -type \"float3\" -2.47371410000000003 7.557292 0.93209576999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[109]" " -type \"float3\" -2.42385859999999997 7.64444880000000015 0.96040314000000004"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[110]" " -type \"float3\" -2.32862929999999979 7.71031430000000029 1.01362909999999995"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[111]" " -type \"float3\" -2.19785740000000018 7.74688909999999975 1.08284960000000008"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[112]" " -type \"float3\" -2.04462389999999994 7.74961949999999966 1.1590898999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[113]" " -type \"float3\" -1.88381730000000003 7.71814779999999967 1.23513619999999991"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[114]" " -type \"float3\" -1.73072709999999996 7.6564015999999997 1.30614889999999995"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[115]" " -type \"float3\" -1.58892849999999997 7.58097170000000009 1.37447710000000001"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[116]" " -type \"float3\" -1.54900609999999994 7.54981849999999977 1.39469920000000003"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[117]" " -type \"float3\" -1.53477609999999998 7.52054739999999988 1.402732"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[118]" " -type \"float3\" -1.57649639999999991 7.480782 1.38403279999999995"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[119]" " -type \"float3\" -1.65930880000000003 7.44336610000000043 1.34554759999999995"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[120]" " -type \"float3\" -1.77517060000000004 7.4118075000000001 1.29062929999999998"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[121]" " -type \"float3\" -1.91279409999999994 7.388938 1.22413839999999996"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[122]" " -type \"float3\" -1.484939 7.89539909999999967 2.98844049999999983"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[123]" " -type \"float3\" -1.59640310000000007 7.88515809999999995 2.93104530000000008"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[124]" " -type \"float3\" -1.70205030000000002 7.88261180000000028 2.87754459999999979"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[125]" " -type \"float3\" -1.79152050000000007 7.8880056999999999 2.83323409999999987"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[126]" " -type \"float3\" -1.85601759999999993 7.90088420000000013 2.80267169999999988"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[127]" " -type \"float3\" -1.889182 7.9201031000000004 2.78915120000000005"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[128]" " -type \"float3\" -1.88773229999999992 7.94389439999999958 2.79426459999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[129]" " -type \"float3\" -1.89005339999999999 7.99430420000000019 2.80420449999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[130]" " -type \"float3\" -1.84344820000000009 8.05018809999999974 2.84237649999999986"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[131]" " -type \"float3\" -1.76492570000000004 8.09306909999999924 2.89454270000000013"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[132]" " -type \"float3\" -1.66254370000000007 8.11806960000000011 2.95347880000000007"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[133]" " -type \"float3\" -1.54653810000000003 8.12230680000000049 3.01213769999999981"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[134]" " -type \"float3\" -1.42821749999999992 8.10531040000000047 3.06485919999999989"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[135]" " -type \"float3\" -1.31887329999999992 8.06908420000000071 3.10789319999999991"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[136]" " -type \"float3\" -1.219676 8.02373889999999967 3.14516280000000004"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[137]" " -type \"float3\" -1.19285109999999994 8.00458910000000046 3.15407539999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[138]" " -type \"float3\" -1.18525250000000004 7.98615310000000012 3.15391779999999988"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[139]" " -type \"float3\" -1.22105210000000008 7.96002149999999986 3.13095429999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[140]" " -type \"float3\" -1.28764630000000002 7.93463229999999964 3.09324"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[141]" " -type \"float3\" -1.37855949999999994 7.91240450000000006 3.04423790000000016"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[142]" " -type \"float3\" -0.97814350999999999 7.85920910000000017 4.33879180000000009"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[143]" " -type \"float3\" -1.05848190000000009 7.85143660000000043 4.29602669999999964"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[144]" " -type \"float3\" -1.134274 7.84833240000000032 4.25642489999999984"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[145]" " -type \"float3\" -1.19809370000000004 7.85020209999999974 4.22388980000000025"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[146]" " -type \"float3\" -1.24367059999999996 7.85689119999999974 4.20172309999999971"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[147]" " -type \"float3\" -1.2665147000000001 7.86780070000000009 4.19225790000000043"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[148]" " -type \"float3\" -1.26436539999999997 7.88191269999999999 4.196569"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[149]" " -type \"float3\" -1.263746 7.91161110000000001 4.20458649999999956"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[150]" " -type \"float3\" -1.22792410000000007 7.94510939999999977 4.23293690000000034"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[151]" " -type \"float3\" -1.1698518 7.9713516000000002 4.27126029999999979"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[152]" " -type \"float3\" -1.0954337999999999 7.98747010000000035 4.31468730000000011"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[153]" " -type \"float3\" -1.0120842000000001 7.99169450000000037 4.35828590000000027"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[154]" " -type \"float3\" -0.92794602999999998 7.9835900999999998 4.39781479999999991"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[155]" " -type \"float3\" -0.85109794000000005 7.964108 4.43012949999999961"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[156]" " -type \"float3\" -0.78201801000000004 7.93904880000000013 4.45767969999999991"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[157]" " -type \"float3\" -0.76367574999999999 7.928205 4.46407129999999963"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[158]" " -type \"float3\" -0.75909227000000001 7.91746660000000002 4.46365929999999977"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[159]" " -type \"float3\" -0.78597950999999999 7.90150590000000008 4.446106"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[160]" " -type \"float3\" -0.83490819000000005 7.88547659999999961 4.41752959999999995"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[161]" " -type \"float3\" -0.90111357000000003 7.87092110000000034 4.38060860000000041"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[162]" " -type \"float3\" -0.44898447000000002 7.61667819999999995 5.37908079999999966"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[163]" " -type \"float3\" -0.50013191000000001 7.607141 5.34676170000000006"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[164]" " -type \"float3\" -0.55309032999999996 7.6015568 5.3171128999999997"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[165]" " -type \"float3\" -0.60267568000000005 7.60047289999999975 5.29303740000000023"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[166]" " -type \"float3\" -0.64403432999999999 7.60399479999999972 5.27689270000000032"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[167]" " -type \"float3\" -0.67311805000000002 7.61177779999999959 5.270257"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[168]" " -type \"float3\" -0.68707943000000005 7.62306020000000029 5.27378180000000008"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[169]" " -type \"float3\" -0.68455261000000001 7.63673879999999983 5.28712180000000043"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[170]" " -type \"float3\" -0.68194007999999995 7.66531559999999956 5.31374980000000008"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[171]" " -type \"float3\" -0.65634996000000001 7.69621420000000001 5.35315229999999964"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[172]" " -type \"float3\" -0.61688863999999999 7.719398 5.39215949999999999"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[173]" " -type \"float3\" -0.56741839999999999 7.7325974000000004 5.42695379999999972"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[174]" " -type \"float3\" -0.51278250999999997 7.73451950000000021 5.45412780000000019"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[175]" " -type \"float3\" -0.45832938000000001 7.72497749999999961 5.47102209999999989"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[176]" " -type \"float3\" -0.40938701999999999 7.7049006999999996 5.4759840999999998"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[177]" " -type \"float3\" -0.36604890000000001 7.67952630000000003 5.47361990000000009"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[178]" " -type \"float3\" -0.35488638 7.6687284 5.46922160000000002"
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[179]" " -type \"float3\" -0.35271334999999998 7.65831570000000017 5.46097520000000003"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[180]" " -type \"float3\" -0.37148177999999998 7.64358230000000027 5.439127"
+		
+		2 "|TENTACLEFINALYS:group14|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[181]" " -type \"float3\" -0.40465458999999998 7.62923530000000039 5.41090819999999972"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1" "translate" 
+		" -type \"double3\" 7.12530835081111746 -1.25146986301467322 7.63814662225675978"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1" "rotatePivot" 
+		" -type \"double3\" 0.13235643013177187 5.29266808472926797 -0.15814252085236191"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1" "scalePivot" 
+		" -type \"double3\" 0.13235643013177187 5.29266808472926797 -0.15814252085236191"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts" " -s 182"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[0]" " -type \"float3\" 0.84863429999999995 7.23415759999999963 7.62741570000000024"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[1]" " -type \"float3\" 0.87708092000000004 7.22026159999999972 7.639502"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[2]" " -type \"float3\" 0.91415935999999998 7.21161169999999974 7.65542220000000029"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[3]" " -type \"float3\" 0.95626770999999999 7.20905020000000007 7.67369460000000014"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[4]" " -type \"float3\" 0.99929743999999998 7.21282289999999993 7.69256019999999996"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[5]" " -type \"float3\" 1.03902960000000011 7.22255230000000026 7.710146"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[6]" " -type \"float3\" 1.0715513000000001 7.23728179999999988 7.72465660000000032"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[7]" " -type \"float3\" 1.09364689999999998 7.25556559999999973 7.734581"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[8]" " -type \"float3\" 1.103127 7.27561280000000021 7.73886970000000041"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[9]" " -type \"float3\" 1.09650439999999993 7.29107570000000038 7.73598150000000029"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[10]" " -type \"float3\" 1.08192339999999998 7.3078574999999999 7.72950119999999963"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[11]" " -type \"float3\" 1.03271510000000011 7.3487328999999999 7.70721339999999966"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[12]" " -type \"float3\" 0.98092562000000005 7.38230420000000009 7.68337350000000008"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[13]" " -type \"float3\" 0.92932563999999995 7.40090939999999975 7.65993169999999957"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[14]" " -type \"float3\" 0.88313030999999997 7.40272810000000003 7.639647"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[15]" " -type \"float3\" 0.84689157999999998 7.38756660000000043 7.62457180000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[16]" " -type \"float3\" 0.82404177999999995 7.35687919999999984 7.61582709999999974"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[17]" " -type \"float3\" 0.81659985000000002 7.31364250000000027 7.613627"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[18]" " -type \"float3\" 0.82754254000000005 7.27184010000000036 7.61864570000000008"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[19]" " -type \"float3\" 0.83157300999999995 7.25193119999999958 7.62025449999999971"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[20]" " -type \"float3\" -1.46728919999999996 1.93669010000000008 -0.78377151"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[21]" " -type \"float3\" -1.28915460000000004 1.9495210999999999 -0.62545079000000003"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[22]" " -type \"float3\" -1.04061929999999991 1.95828019999999992 -0.45473012000000002"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[23]" " -type \"float3\" -0.74601172999999998 1.96211 -0.28832113999999998"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[24]" " -type \"float3\" -0.43417001 1.96063570000000009 -0.14251272000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[25]" " -type \"float3\" -0.13561943000000001 1.95400170000000006 -0.031577877999999997"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[26]" " -type \"float3\" 0.12041584 1.942857 0.033624433000000002"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[27]" " -type \"float3\" 0.30887321000000001 1.928293 0.046711757999999999"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[28]" " -type \"float3\" 0.41130530999999998 1.91173510000000002 0.0064028538999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[29]" " -type \"float3\" 0.39176213999999998 1.89841590000000005 -0.076329187000000007"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[30]" " -type \"float3\" 0.31844171999999998 1.88367130000000005 -0.19342366999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[31]" " -type \"float3\" 0.044260914999999998 1.8472291999999999 -0.52870839999999997"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[32]" " -type \"float3\" -0.25992464999999998 1.81686590000000003 -0.84544522"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[33]" " -type \"float3\" -0.59026175999999997 1.79916509999999996 -1.1056026000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[34]" " -type \"float3\" -0.91441505999999995 1.7958597999999999 -1.28371429999999997"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[35]" " -type \"float3\" -1.20065379999999999 1.80727360000000004 -1.36234560000000005"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[36]" " -type \"float3\" -1.42095940000000009 1.832289 -1.33379960000000009"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[37]" " -type \"float3\" -1.55376639999999999 1.86845729999999999 -1.20087060000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[38]" " -type \"float3\" -1.55120539999999996 1.90411219999999992 -1.0039537999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[39]" " -type \"float3\" -1.55758519999999989 1.92104330000000001 -0.91419452000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[40]" " -type \"float3\" 1.01336219999999999 7.26713939999999958 7.80030629999999991"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[41]" " -type \"float3\" -0.56995028000000003 1.9079237 -0.49877559999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[42]" " -type \"float3\" -0.94657743000000005 2.69772390000000017 -0.31180763"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[43]" " -type \"float3\" -1.21536460000000002 2.69419239999999993 -0.46383597999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[44]" " -type \"float3\" -1.44218810000000008 2.68614439999999988 -0.61994152999999996"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[45]" " -type \"float3\" -1.60484479999999996 2.67436620000000014 -0.76484333999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[46]" " -type \"float3\" -1.68741230000000009 2.66001250000000011 -0.88435763000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[47]" " -type \"float3\" -1.68180930000000006 2.64448740000000004 -0.96678536999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[48]" " -type \"float3\" -1.68460150000000008 2.61179229999999984 -1.14757559999999992"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[49]" " -type \"float3\" -1.5639190999999999 2.578635 -1.26996470000000006"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[50]" " -type \"float3\" -1.3632785999999999 2.55571059999999983 -1.29674080000000003"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[51]" " -type \"float3\" -1.10232060000000009 2.54526329999999978 -1.22528290000000006"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[52]" " -type \"float3\" -0.80658883000000003 2.54831580000000013 -1.06258579999999991"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[53]" " -type \"float3\" -0.50503211999999997 2.56456879999999998 -0.82457566000000004"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[54]" " -type \"float3\" -0.22716849 2.59243179999999995 -0.53455012999999996"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[55]" " -type \"float3\" 0.02340267 2.6258667 -0.22741803999999999"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[56]" " -type \"float3\" 0.090473600000000001 2.6393920999999998 -0.1200977"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[57]" " -type \"float3\" 0.10847104 2.651607 -0.044188554999999997"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[58]" " -type \"float3\" 0.015245528 2.66678360000000003 -0.0069157504000000002"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[59]" " -type \"float3\" -0.15647707999999999 2.68012620000000013 -0.018446758000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[60]" " -type \"float3\" -0.38988729999999999 2.69032880000000008 -0.077652580999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[61]" " -type \"float3\" -0.66213732999999997 2.69639249999999997 -0.17873786"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[62]" " -type \"float3\" -1.24286410000000003 3.78441310000000009 -0.34650313999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[63]" " -type \"float3\" -1.47350789999999998 3.78132249999999992 -0.47728758999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[64]" " -type \"float3\" -1.66825760000000001 3.77432420000000013 -0.61180294000000002"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[65]" " -type \"float3\" -1.80804959999999992 3.76410270000000002 -0.73688191000000003"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[66]" " -type \"float3\" -1.8792 3.75165870000000012 -0.84028064999999996"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[67]" " -type \"float3\" -1.87474450000000004 3.73821039999999982 -0.91187805"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[68]" " -type \"float3\" -1.87787850000000001 3.70988749999999978 -1.06884540000000006"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[69]" " -type \"float3\" -1.77510710000000005 3.68117859999999997 -1.17566419999999994"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[70]" " -type \"float3\" -1.60351719999999998 3.66134309999999985 -1.19982560000000005"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[71]" " -type \"float3\" -1.3799049000000001 3.65232350000000006 -1.138965"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[72]" " -type \"float3\" -1.12615909999999997 3.65500209999999992 -0.99903934999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[73]" " -type \"float3\" -0.86711817999999996 3.66911670000000001 -0.79374582000000005"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[74]" " -type \"float3\" -0.62813896000000002 3.69328589999999979 -0.54317987000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[75]" " -type \"float3\" -0.41244491999999999 3.7222786000000001 -0.27763622999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[76]" " -type \"float3\" -0.35460620999999998 3.7340030999999998 -0.18475485"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[77]" " -type \"float3\" -0.33889204000000001 3.74458650000000004 -0.11892477999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[78]" " -type \"float3\" -0.41851744000000002 3.75772260000000013 -0.086137249999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[79]" " -type \"float3\" -0.56551856 3.76926089999999991 -0.095369175"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[80]" " -type \"float3\" -0.76550585000000004 3.77807190000000004 -0.14571666999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[81]" " -type \"float3\" -0.99890327000000001 3.7832927999999999 -0.23225158000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[82]" " -type \"float3\" -1.6086897 5.12046479999999971 -0.42877423999999997"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[83]" " -type \"float3\" -1.788602 5.12035510000000027 -0.52818905999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[84]" " -type \"float3\" -1.94144249999999996 5.12114289999999972 -0.62877773999999997"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[85]" " -type \"float3\" -2.052259 5.12242219999999993 -0.72107368999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[86]" " -type \"float3\" -2.11018779999999984 5.12365530000000025 -0.79644245000000002"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[87]" " -type \"float3\" -2.10951969999999989 5.12437729999999991 -0.84776545000000003"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[88]" " -type \"float3\" -2.11766670000000001 5.12293719999999997 -0.96327167999999996"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[89]" " -type \"float3\" -2.04311849999999984 5.11748889999999967 -1.04342789999999996"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[90]" " -type \"float3\" -1.91297880000000009 5.11126229999999993 -1.062273"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[91]" " -type \"float3\" -1.74030069999999992 5.10778569999999998 -1.01570329999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[92]" " -type \"float3\" -1.5422636999999999 5.10906030000000033 -0.90726161000000005"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[93]" " -type \"float3\" -1.33830490000000002 5.11470029999999998 -0.74799061"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[94]" " -type \"float3\" -1.14820720000000009 5.122076 -0.55520718999999996"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[95]" " -type \"float3\" -0.97515881000000004 5.127214 -0.35418864999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[96]" " -type \"float3\" -0.92797768000000003 5.1281036999999996 -0.28513541999999997"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[97]" " -type \"float3\" -0.91374968999999995 5.12824729999999995 -0.23725502000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[98]" " -type \"float3\" -0.97314595999999998 5.12736229999999971 -0.21635230999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[99]" " -type \"float3\" -1.08518770000000009 5.12559939999999958 -0.22802752000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[100]" " -type \"float3\" -1.23891219999999991 5.12346460000000015 -0.27079104999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[101]" " -type \"float3\" -1.41928959999999993 5.12158059999999971 -0.34006198999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[102]" " -type \"float3\" -1.57161749999999989 6.21419720000000009 0.48573147999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[103]" " -type \"float3\" -1.71325090000000002 6.21645930000000035 0.41164070000000003"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[104]" " -type \"float3\" -1.83532439999999997 6.22205920000000035 0.33433439999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[105]" " -type \"float3\" -1.92594489999999996 6.2302622999999997 0.26102315999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[106]" " -type \"float3\" -1.97628920000000008 6.240016 0.19847964000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[107]" " -type \"float3\" -1.981449 6.250144 0.15253401"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[108]" " -type \"float3\" -2.00021620000000011 6.26968149999999991 0.049534380000000003"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[109]" " -type \"float3\" -1.95528469999999999 6.28691289999999992 -0.029387619"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[110]" " -type \"float3\" -1.86330850000000003 6.29713109999999965 -0.058308523000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[111]" " -type \"float3\" -1.73307009999999995 6.301147 -0.031827461000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[112]" " -type \"float3\" -1.57726560000000005 6.29964830000000031 0.048774644999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[113]" " -type \"float3\" -1.41123890000000007 6.29267790000000016 0.17523544999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[114]" " -type \"float3\" -1.25144879999999992 6.27967310000000012 0.33325660000000001"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[115]" " -type \"float3\" -1.10326140000000006 6.26194950000000006 0.49979118"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[116]" " -type \"float3\" -1.0613033999999999 6.25410410000000017 0.55792772999999996"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[117]" " -type \"float3\" -1.04564860000000004 6.2466621 0.59975725000000002"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[118]" " -type \"float3\" -1.0864666999999999 6.236867 0.62349301999999995"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[119]" " -type \"float3\" -1.16915089999999999 6.22770790000000041 0.62231839"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[120]" " -type \"float3\" -1.2855582000000001 6.22027440000000009 0.59669291999999996"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[121]" " -type \"float3\" -1.42424750000000011 6.21554569999999984 0.54952455"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[122]" " -type \"float3\" -0.99130629999999997 7.10161589999999965 2.468874"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[123]" " -type \"float3\" -1.101503 7.09849740000000029 2.42348410000000003"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[124]" " -type \"float3\" -1.20851719999999996 7.1013698999999999 2.370549"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[125]" " -type \"float3\" -1.30190889999999992 7.10993769999999969 2.31513519999999984"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[126]" " -type \"float3\" -1.372601 7.12327669999999991 2.26239370000000006"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[127]" " -type \"float3\" -1.41374120000000003 7.13995740000000012 2.21716330000000017"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[128]" " -type \"float3\" -1.42134540000000009 7.15822119999999984 2.183619"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[129]" " -type \"float3\" -1.4435176999999999 7.19571589999999972 2.10824079999999991"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[130]" " -type \"float3\" -1.41841339999999994 7.23295970000000032 2.04947109999999988"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[131]" " -type \"float3\" -1.35564240000000003 7.258317 2.026701"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[132]" " -type \"float3\" -1.26093340000000009 7.27023889999999984 2.04432919999999996"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[133]" " -type \"float3\" -1.14336180000000009 7.26813980000000015 2.10180450000000008"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[134]" " -type \"float3\" -1.0145187 7.25220679999999973 2.19324969999999997"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[135]" " -type \"float3\" -0.88734614999999994 7.22338959999999997 2.30813410000000019"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[136]" " -type \"float3\" -0.76767962999999995 7.18742560000000008 2.429245"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[137]" " -type \"float3\" -0.73284393999999997 7.17239760000000004 2.47157189999999982"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[138]" " -type \"float3\" -0.71809745000000003 7.15846159999999987 2.50215630000000022"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[139]" " -type \"float3\" -0.74501759000000001 7.14035509999999984 2.51999880000000021"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[140]" " -type \"float3\" -0.80383115999999999 7.1237478000000003 2.51991750000000003"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[141]" " -type \"float3\" -0.88871931999999998 7.11035540000000044 2.50218989999999986"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[142]" " -type \"float3\" -0.22196098 7.4990768000000001 4.83078149999999962"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[143]" " -type \"float3\" -0.30011295999999998 7.49469850000000015 4.7985711000000002"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[144]" " -type \"float3\" -0.37647124999999998 7.497448 4.762742"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[145]" " -type \"float3\" -0.44358635000000002 7.50705810000000007 4.72673369999999959"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[146]" " -type \"float3\" -0.49494096999999998 7.522563 4.69389530000000033"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[147]" " -type \"float3\" -0.52556687999999996 7.54239559999999987 4.66722440000000027"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[148]" " -type \"float3\" -0.53250854999999997 7.56456570000000017 4.649159"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[149]" " -type \"float3\" -0.55158532000000005 7.61079219999999967 4.60786720000000027"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[150]" " -type \"float3\" -0.53726673000000003 7.65817640000000033 4.57841159999999991"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[151]" " -type \"float3\" -0.49521235000000002 7.69152740000000001 4.57054090000000013"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[152]" " -type \"float3\" -0.42915151000000001 7.70794390000000007 4.58650019999999969"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[153]" " -type \"float3\" -0.34534723000000001 7.70604990000000001 4.62554930000000031"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[154]" " -type \"float3\" -0.25206329999999999 7.68605420000000006 4.68371959999999987"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[155]" " -type \"float3\" -0.15872317999999999 7.6496915999999997 4.75425909999999963"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[156]" " -type \"float3\" -0.070203802999999995 7.60502150000000032 4.82729389999999992"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[157]" " -type \"float3\" -0.044064760000000001 7.58655740000000023 4.85221049999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[158]" " -type \"float3\" -0.032342060999999998 7.56946560000000002 4.86938759999999959"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[159]" " -type \"float3\" -0.049930005999999999 7.54717160000000042 4.87665840000000017"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[160]" " -type \"float3\" -0.090378337000000003 7.52671430000000008 4.87203880000000034"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[161]" " -type \"float3\" -0.14967638 7.51012609999999992 4.85615630000000031"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[162]" " -type \"float3\" 0.74259262999999998 7.3690901000000002 7.07568739999999963"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[163]" " -type \"float3\" 0.69548695999999999 7.35859869999999994 7.05612710000000032"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[164]" " -type \"float3\" 0.64447385000000001 7.35443020000000036 7.03417349999999963"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[165]" " -type \"float3\" 0.59455544000000005 7.35700230000000044 7.01201010000000036"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[166]" " -type \"float3\" 0.55060220000000004 7.36607069999999986 6.99176929999999963"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[167]" " -type \"float3\" 0.51688308000000005 7.38074489999999983 6.97533609999999982"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[168]" " -type \"float3\" 0.49666062 7.39958 6.96420189999999995"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[169]" " -type \"float3\" 0.49188443999999998 7.4207181999999996 6.95935959999999998"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[170]" " -type \"float3\" 0.47891104000000001 7.46504969999999979 6.94717930000000017"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[171]" " -type \"float3\" 0.48772377 7.51090619999999998 6.94330639999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[172]" " -type \"float3\" 0.51480055000000002 7.54346940000000021 6.94906380000000024"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[173]" " -type \"float3\" 0.55775355999999998 7.55962659999999964 6.96470549999999999"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[174]" " -type \"float3\" 0.61251789000000001 7.5578555999999999 6.98915769999999981"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[175]" " -type \"float3\" 0.67369710999999999 7.53834719999999958 7.01994369999999979"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[176]" " -type \"float3\" 0.73510408000000005 7.502984 7.053463"
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[177]" " -type \"float3\" 0.79344939999999997 7.4598293 7.08618210000000026"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[178]" " -type \"float3\" 0.81073660000000003 7.44207860000000032 7.09641120000000036"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[179]" " -type \"float3\" 0.81858819999999999 7.42569160000000039 7.1021504000000002"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[180]" " -type \"float3\" 0.80734855000000005 7.40436940000000021 7.09999559999999974"
+		
+		2 "|TENTACLEFINALYS:group15|TENTACLEFINALYS:pasted__pCylinder1|TENTACLEFINALYS:pasted__pCylinderShape1" 
+		"pnts[181]" " -type \"float3\" 0.78115064000000001 7.3848647999999999 7.09084369999999975"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1" 
+		"translate" " -type \"double3\" 7.41480120356616279 2.46615511299165791 -8.32164021166119916"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1" 
+		"rotatePivot" " -type \"double3\" 0.44348293100114011 5.10850218864483629 -0.17413756464008751"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1" 
+		"scalePivot" " -type \"double3\" 0.44348293100114011 5.10850218864483629 -0.17413756464008751"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts" " -s 182"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[0]" " -type \"float3\" -0.53195196 8.45790859999999967 4.38439849999999964"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[1]" " -type \"float3\" -0.50201845 8.44825359999999925 4.40521809999999991"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[2]" " -type \"float3\" -0.46370134000000002 8.44196510000000089 4.42715410000000009"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[3]" " -type \"float3\" -0.42073106999999998 8.43967250000000035 4.44813159999999996"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[4]" " -type \"float3\" -0.37730279999999999 8.44160270000000068 4.46613120000000041"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[5]" " -type \"float3\" -0.33766961000000001 8.44755549999999999 4.479373"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[6]" " -type \"float3\" -0.30572775000000002 8.45693209999999951 4.486496"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[7]" " -type \"float3\" -0.28462395000000001 8.46879009999999965 4.48672149999999981"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[8]" " -type \"float3\" -0.27644511999999999 8.48195549999999976 4.47995379999999965"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[9]" " -type \"float3\" -0.28427741000000001 8.49227239999999917 4.46813389999999977"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[10]" " -type \"float3\" -0.30027342000000001 8.5035381000000001 4.45174930000000035"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[11]" " -type \"float3\" -0.35308051000000001 8.53104019999999963 4.40497259999999979"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[12]" " -type \"float3\" -0.40793464000000002 8.55363660000000081 4.36072490000000013"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[13]" " -type \"float3\" -0.46156978999999998 8.566412 4.32530160000000041"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[14]" " -type \"float3\" -0.50861681000000003 8.56820959999999943 4.3026074999999997"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[15]" " -type \"float3\" -0.54444378999999998 8.5588589000000006 4.29494190000000042"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[16]" " -type \"float3\" -0.56561786000000003 8.53918080000000046 4.30274680000000043"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[17]" " -type \"float3\" -0.57021493000000001 8.51095010000000052 4.32467839999999981"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[18]" " -type \"float3\" -0.55613405000000005 8.48322109999999974 4.35364530000000016"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[19]" " -type \"float3\" -0.55059378999999997 8.469965 4.36664959999999969"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[20]" " -type \"float3\" -1.15616260000000004 1.75252429999999992 -0.79976654000000003"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[21]" " -type \"float3\" -0.97802811999999995 1.7653551999999999 -0.64144582000000006"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[22]" " -type \"float3\" -0.72949277999999995 1.77411439999999998 -0.47072518000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[23]" " -type \"float3\" -0.43488520000000003 1.77794420000000009 -0.30431616"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[24]" " -type \"float3\" -0.12304354000000001 1.7764698000000001 -0.15850777999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[25]" " -type \"float3\" 0.17550706999999999 1.76983570000000001 -0.047572906999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[26]" " -type \"float3\" 0.43154234000000002 1.7586911999999999 0.017629388999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[27]" " -type \"float3\" 0.61999970999999998 1.7441272000000001 0.030716717000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[28]" " -type \"float3\" 0.72243177999999997 1.72756909999999997 -0.0095921792000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[29]" " -type \"float3\" 0.70288861000000002 1.71425010000000011 -0.092324219999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[30]" " -type \"float3\" 0.62956816000000004 1.69950540000000005 -0.20941876000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[31]" " -type \"float3\" 0.35538742000000001 1.66306339999999997 -0.54470342000000005"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[32]" " -type \"float3\" 0.051201894999999997 1.6327 -0.86144030000000005"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[33]" " -type \"float3\" -0.27913532000000002 1.61499930000000003 -1.12159760000000008"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[34]" " -type \"float3\" -0.60328859000000001 1.611694 -1.29970940000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[35]" " -type \"float3\" -0.88952737999999998 1.62310770000000004 -1.37834060000000003"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[36]" " -type \"float3\" -1.10983290000000001 1.64812310000000006 -1.34979460000000007"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[37]" " -type \"float3\" -1.24263989999999991 1.68429150000000005 -1.21686570000000005"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[38]" " -type \"float3\" -1.2400789000000001 1.71994639999999999 -1.0199488000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[39]" " -type \"float3\" -1.24645859999999997 1.73687740000000002 -0.93018961"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[40]" " -type \"float3\" -0.38570905 8.51324080000000016 4.52952720000000042"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[41]" " -type \"float3\" -0.25882380999999999 1.72375769999999995 -0.51477063000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[42]" " -type \"float3\" -0.63545096000000001 2.5135578999999999 -0.32780269000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[43]" " -type \"float3\" -0.90423805000000002 2.51002670000000006 -0.47983098000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[44]" " -type \"float3\" -1.13106170000000006 2.50197819999999993 -0.63593661999999995"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[45]" " -type \"float3\" -1.2937183000000001 2.49020049999999982 -0.78083842999999997"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[46]" " -type \"float3\" -1.3762858 2.47584679999999979 -0.90035259999999995"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[47]" " -type \"float3\" -1.37068269999999992 2.46032170000000017 -0.98278045999999997"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[48]" " -type \"float3\" -1.37347510000000006 2.42762639999999985 -1.1635705999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[49]" " -type \"float3\" -1.25279260000000003 2.39446929999999991 -1.28595970000000004"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[50]" " -type \"float3\" -1.05215229999999993 2.37154480000000012 -1.31273580000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[51]" " -type \"float3\" -0.79119402000000005 2.36109759999999991 -1.24127790000000005"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[52]" " -type \"float3\" -0.49546235999999999 2.36414979999999986 -1.07858089999999995"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[53]" " -type \"float3\" -0.19390558999999999 2.380403 -0.84057068999999995"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[54]" " -type \"float3\" 0.083958 2.40826580000000012 -0.55054515999999998"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[55]" " -type \"float3\" 0.33452922000000002 2.44170089999999984 -0.24341304999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[56]" " -type \"float3\" 0.40160012 2.45522639999999992 -0.13609273999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[57]" " -type \"float3\" 0.41959760000000002 2.46744109999999983 -0.060183558999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[58]" " -type \"float3\" 0.32637202999999998 2.48261790000000016 -0.022910796000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[59]" " -type \"float3\" 0.15464942000000001 2.4959604999999998 -0.034441799000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[60]" " -type \"float3\" -0.078760787999999998 2.50616290000000008 -0.093647614000000004"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[61]" " -type \"float3\" -0.35101083 2.51222659999999998 -0.19473289999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[62]" " -type \"float3\" -0.93173766000000002 3.60024709999999981 -0.36249819"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[63]" " -type \"float3\" -1.1623813999999999 3.59715680000000004 -0.49328264999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[64]" " -type \"float3\" -1.35713109999999992 3.59015819999999986 -0.62779795999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[65]" " -type \"float3\" -1.49692310000000006 3.57993670000000019 -0.75287687999999997"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[66]" " -type \"float3\" -1.56807340000000006 3.56749269999999985 -0.85627567999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[67]" " -type \"float3\" -1.56361810000000001 3.55404469999999995 -0.92787313000000005"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[68]" " -type \"float3\" -1.56675209999999998 3.52572149999999995 -1.08484040000000004"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[69]" " -type \"float3\" -1.46398070000000002 3.49701260000000014 -1.19165919999999992"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[70]" " -type \"float3\" -1.29239060000000006 3.47717739999999997 -1.21582070000000009"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[71]" " -type \"float3\" -1.06877840000000002 3.46815780000000018 -1.15496"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[72]" " -type \"float3\" -0.81503254000000003 3.47083619999999993 -1.0150344"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[73]" " -type \"float3\" -0.55599177 3.484951 -0.80974089999999999"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[74]" " -type \"float3\" -0.31701243000000001 3.50912 -0.55917501000000003"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[75]" " -type \"float3\" -0.10131846 3.5381130999999999 -0.29363123000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[76]" " -type \"float3\" -0.043479785 3.54983739999999992 -0.20074992"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[77]" " -type \"float3\" -0.027765622 3.56042080000000016 -0.13491985000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[78]" " -type \"float3\" -0.10739092 3.57355670000000014 -0.10213228000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[79]" " -type \"float3\" -0.25439209000000002 3.58509490000000008 -0.11136425"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[80]" " -type \"float3\" -0.45437938 3.59390590000000021 -0.16171172"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[81]" " -type \"float3\" -0.68777674 3.59912710000000002 -0.24824661000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[82]" " -type \"float3\" -1.32395590000000007 5.038784 -0.40842741999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[83]" " -type \"float3\" -1.504106 5.03627680000000044 -0.51108962000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[84]" " -type \"float3\" -1.65639709999999996 5.03066869999999966 -0.61702436000000005"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[85]" " -type \"float3\" -1.76592149999999992 5.0225067000000001 -0.71586203999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[86]" " -type \"float3\" -1.82195770000000001 5.01259139999999981 -0.79792750000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[87]" " -type \"float3\" -1.81902169999999996 5.00189210000000006 -0.85518788999999995"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[88]" " -type \"float3\" -1.82260789999999995 4.97935679999999969 -0.98061883000000005"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[89]" " -type \"float3\" -1.743547 4.95653629999999978 -1.066826"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[90]" " -type \"float3\" -1.61041319999999999 4.94079069999999998 -1.0875265999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[91]" " -type \"float3\" -1.43623860000000003 4.93366050000000023 -1.040694"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[92]" " -type \"float3\" -1.238073 4.93584439999999969 -0.93091279000000005"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[93]" " -type \"float3\" -1.03531379999999995 4.94712830000000015 -0.768929"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[94]" " -type \"float3\" -0.84780884000000001 4.96640779999999982 -0.57059877999999997"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[95]" " -type \"float3\" -0.67828458999999997 4.98952010000000001 -0.36010912"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[96]" " -type \"float3\" -0.63266723999999996 4.99886039999999987 -0.28634185000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[97]" " -type \"float3\" -0.61997575000000005 5.00728419999999996 -0.23385426000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[98]" " -type \"float3\" -0.68159723000000005 5.01771930000000044 -0.20700404"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[99]" " -type \"float3\" -0.79587262999999997 5.02686879999999991 -0.21319257999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[100]" " -type \"float3\" -0.95161538999999995 5.03383730000000007 -0.25181362000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[101]" " -type \"float3\" -1.13358040000000004 5.0379429 -0.31908702999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[102]" " -type \"float3\" -1.59372589999999992 6.017355 -0.47814777000000003"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[103]" " -type \"float3\" -1.73631479999999994 6.01710610000000035 -0.55762064"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[104]" " -type \"float3\" -1.85757660000000002 6.01733969999999996 -0.63842756000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[105]" " -type \"float3\" -1.94564310000000007 6.01781460000000035 -0.71289921000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[106]" " -type \"float3\" -1.99187910000000001 6.01821330000000021 -0.77399724999999997"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[107]" " -type \"float3\" -1.99173120000000003 6.01827239999999986 -0.81590253000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[108]" " -type \"float3\" -1.9989927999999999 6.016448 -0.90964310999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[109]" " -type \"float3\" -1.94082010000000005 6.012043 -0.97473723000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[110]" " -type \"float3\" -1.83841490000000007 6.007452 -0.990363"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[111]" " -type \"float3\" -1.70200909999999994 6.00503110000000007 -0.95352143"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[112]" " -type \"float3\" -1.54512859999999996 6.00609160000000042 -0.86714804000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[113]" " -type \"float3\" -1.3831601 6.01034359999999968 -0.73998200999999997"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[114]" " -type \"float3\" -1.23184190000000005 6.01600740000000034 -0.58561397000000004"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[115]" " -type \"float3\" -1.09389479999999994 6.02032089999999975 -0.42406463999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[116]" " -type \"float3\" -1.05616840000000001 6.02126789999999978 -0.36832428"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[117]" " -type \"float3\" -1.04457369999999994 6.02167220000000025 -0.32943019000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[118]" " -type \"float3\" -1.09120539999999999 6.02143430000000013 -0.31170263999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[119]" " -type \"float3\" -1.17958089999999993 6.02054739999999988 -0.31992789999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[120]" " -type \"float3\" -1.30105540000000008 6.019321 -0.35307719999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[121]" " -type \"float3\" -1.44375260000000005 6.01814560000000043 -0.40765681999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[122]" " -type \"float3\" -1.48372069999999989 7.01244740000000011 0.30239490000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[123]" " -type \"float3\" -1.59621480000000004 7.0117168000000003 0.25313585999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[124]" " -type \"float3\" -1.70444449999999992 7.013319 0.19542535999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[125]" " -type \"float3\" -1.79783810000000011 7.01705739999999967 0.13480669000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[126]" " -type \"float3\" -1.86728369999999999 7.02244660000000032 0.077001399999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[127]" " -type \"float3\" -1.906005 7.02879909999999963 0.027433181000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[128]" " -type \"float3\" -1.91022010000000009 7.035358 -0.0092120841000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[129]" " -type \"float3\" -1.92504539999999991 7.04804370000000002 -0.090700917000000006"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[130]" " -type \"float3\" -1.891144 7.05924990000000019 -0.15283974"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[131]" " -type \"float3\" -1.82115730000000009 7.06591419999999992 -0.17550616999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[132]" " -type \"float3\" -1.7218294999999999 7.06851240000000036 -0.15496647"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[133]" " -type \"float3\" -1.60286309999999999 7.06744959999999978 -0.092465117999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[134]" " -type \"float3\" -1.47595689999999991 7.062747 0.0056421333000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[135]" " -type \"float3\" -1.35364309999999999 7.05408 0.12859747999999999"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[136]" " -type \"float3\" -1.24002860000000004 7.04236030000000035 0.25884207999999997"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[137]" " -type \"float3\" -1.20776989999999995 7.0372009000000002 0.30456966000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[138]" " -type \"float3\" -1.19559780000000004 7.03233239999999959 0.33769812999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[139]" " -type \"float3\" -1.22646619999999995 7.02598430000000018 0.35713062000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[140]" " -type \"float3\" -1.28931520000000011 7.02010060000000014 0.35728072999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[141]" " -type \"float3\" -1.37796680000000005 7.0153812999999996 0.33833981000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[142]" " -type \"float3\" -1.17461449999999989 7.867064 1.86617680000000008"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[143]" " -type \"float3\" -1.25418310000000011 7.86547570000000018 1.83299980000000007"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[144]" " -type \"float3\" -1.33167309999999994 7.86767340000000015 1.79340309999999992"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[145]" " -type \"float3\" -1.39952019999999999 7.87342980000000026 1.75119329999999995"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[146]" " -type \"float3\" -1.45111309999999993 7.88212009999999985 1.71035059999999994"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[147]" " -type \"float3\" -1.48143449999999999 7.8928193999999996 1.67469990000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[148]" " -type \"float3\" -1.48753690000000005 7.9044118000000001 1.64760050000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[149]" " -type \"float3\" -1.50472680000000003 7.9282427000000002 1.58748730000000005"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[150]" " -type \"float3\" -1.4876183999999999 7.95179939999999963 1.54020109999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[151]" " -type \"float3\" -1.442886 7.96773859999999967 1.52109120000000009"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[152]" " -type \"float3\" -1.37470610000000004 7.97505620000000004 1.53319640000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[153]" " -type \"float3\" -1.28966209999999992 7.97337439999999997 1.57594949999999989"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[154]" " -type \"float3\" -1.19612560000000001 7.9628325000000002 1.64500679999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[155]" " -type \"float3\" -1.10341909999999999 7.94408509999999968 1.73273370000000004"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[156]" " -type \"float3\" -1.015847 7.92081549999999979 1.82615149999999993"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[157]" " -type \"float3\" -0.99018740999999999 7.91114090000000036 1.85918779999999995"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[158]" " -type \"float3\" -0.97907065999999998 7.90223030000000026 1.88347390000000003"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[159]" " -type \"float3\" -0.99792086999999996 7.89081 1.8989126999999999"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[160]" " -type \"float3\" -1.03986170000000011 7.88045880000000043 1.90098889999999998"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[161]" " -type \"float3\" -1.10075710000000004 7.87224959999999996 1.8896497000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[162]" " -type \"float3\" -0.55342477999999995 8.37133030000000034 3.8312835999999999"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[163]" " -type \"float3\" -0.60073673999999999 8.36524580000000029 3.81588979999999989"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[164]" " -type \"float3\" -0.65234285999999997 8.3632401999999999 3.79460260000000016"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[165]" " -type \"float3\" -0.70318979000000004 8.36552619999999969 3.76952769999999981"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[166]" " -type \"float3\" -0.74831325000000004 8.37187669999999962 3.74307940000000006"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[167]" " -type \"float3\" -0.78332007000000003 8.38164710000000035 3.71775769999999994"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[168]" " -type \"float3\" -0.80480896999999996 8.39385219999999954 3.69593550000000004"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[169]" " -type \"float3\" -0.81069374000000005 8.4072685000000007 3.679671"
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[170]" " -type \"float3\" -0.82594597000000003 8.43526269999999911 3.64351249999999993"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[171]" " -type \"float3\" -0.81900059999999997 8.46368030000000005 3.61563010000000018"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[172]" " -type \"float3\" -0.79283356999999999 8.48344039999999922 3.60505340000000007"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[173]" " -type \"float3\" -0.74983454000000005 8.49282649999999961 3.61353450000000009"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[174]" " -type \"float3\" -0.69412810000000003 8.49105450000000062 3.64062639999999993"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[175]" " -type \"float3\" -0.63119906000000003 8.47829439999999934 3.68358279999999993"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[176]" " -type \"float3\" -0.56734388999999996 8.45565129999999954 3.73766230000000022"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[177]" " -type \"float3\" -0.50616324000000001 8.42800620000000045 3.7950273000000001"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[178]" " -type \"float3\" -0.48778120000000003 8.41665079999999932 3.81521029999999994"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[179]" " -type \"float3\" -0.47903040000000002 8.40623659999999973 3.829901"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[180]" " -type \"float3\" -0.48941447999999999 8.39290809999999965 3.8387513000000002"
+		
+		2 "|TENTACLEFINALYS:group16|TENTACLEFINALYS:pasted__group15|TENTACLEFINALYS:pasted__pasted__pCylinder1|TENTACLEFINALYS:pasted__pasted__pCylinderShape1" 
+		"pnts[181]" " -type \"float3\" -0.51505714999999996 8.3808726999999994 3.83919640000000006"
+		
+		2 "|TENTACLEFINALYS:pCylinder2" "translate" " -type \"double3\" -5.13742138423927486 1.41254966607270438 9.14222428052886116";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode polyPlanarProj -n "polyPlanarProj1";
+	rename -uid "B2F717CF-403D-8895-F435-1C9CAC791D71";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:2999]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -7.0476640462875366 0.73380279541015625 -0.011435508728027344 ;
+	setAttr ".ro" -type "double3" 0 90 0 ;
+	setAttr ".ps" -type "double2" 25.080360412597656 2.0248603820800781 ;
+	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+createNode polySplitRing -n "polySplitRing1";
+	rename -uid "295F49CC-47A9-0B5B-0058-5AAE4B537899";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 223 "e[5662:5663]" "e[5665]" "e[5667]" "e[5669]" "e[5671]" "e[5673]" "e[5675]" "e[5677]" "e[5679]" "e[5681]" "e[5683]" "e[5685]" "e[5687]" "e[5689]" "e[5691]" "e[5693]" "e[5695]" "e[5697]" "e[5699]" "e[5701]" "e[5703]" "e[5705]" "e[5707]" "e[5709]" "e[5711]" "e[5713]" "e[5715]" "e[5717]" "e[5719]" "e[5721]" "e[5723]" "e[5725]" "e[5727]" "e[5729]" "e[5731]" "e[5733]" "e[5735]" "e[5737]" "e[5739]" "e[5741]" "e[5743]" "e[5745]" "e[5747]" "e[5749]" "e[5751]" "e[5753]" "e[5755]" "e[5757]" "e[5759]" "e[5761]" "e[5763]" "e[5765]" "e[5767]" "e[5769]" "e[5771]" "e[5773]" "e[5775]" "e[5777]" "e[5779]" "e[5781]" "e[5783]" "e[5785]" "e[5787]" "e[5789]" "e[5791]" "e[5793]" "e[5795]" "e[5797]" "e[5799]" "e[5801]" "e[5803]" "e[5805]" "e[5807]" "e[5809]" "e[5811]" "e[5813]" "e[5815]" "e[5817]" "e[5819]" "e[5821]" "e[5823]" "e[5825]" "e[5827]" "e[5829]" "e[5831]" "e[5833]" "e[5835]" "e[5837]" "e[5839]" "e[5841]" "e[5843]" "e[5845]" "e[5847]" "e[5849]" "e[5851]" "e[5853]" "e[5855]" "e[5857]" "e[5859]" "e[5861]" "e[5863]" "e[5865]" "e[5867]" "e[5869]" "e[5871]" "e[5873]" "e[5875]" "e[5877]" "e[5879]" "e[5881]" "e[5883]" "e[5885]" "e[5887]" "e[5889]" "e[5891]" "e[5893]" "e[5895]" "e[5897]" "e[5899]" "e[5901]" "e[5903]" "e[5905]" "e[5907]" "e[5909]" "e[5911]" "e[5913]" "e[5915]" "e[5917]" "e[5919]" "e[5921]" "e[5923]" "e[5925]" "e[5927]" "e[5929]" "e[5931]" "e[5933]" "e[5935]" "e[5937]" "e[5939]" "e[5941]" "e[5943]" "e[5945]" "e[5947]" "e[5949]" "e[5951]" "e[5953]" "e[5955]" "e[5957]" "e[5959]" "e[5961]" "e[5963]" "e[5965]" "e[5967]" "e[5969]" "e[5971]" "e[5973]" "e[5975]" "e[5977]" "e[5979]" "e[5981]" "e[5983]" "e[5985]" "e[5987]" "e[5989]" "e[5991]" "e[5993]" "e[5995]" "e[5997]" "e[5999]" "e[6001]" "e[6003]" "e[6005]" "e[6007]" "e[6009]" "e[6011]" "e[6013]" "e[6015]" "e[6017]" "e[6019]" "e[6021]" "e[6023]" "e[6025]" "e[6027]" "e[6029]" "e[6031]" "e[6033]" "e[6035]" "e[6037]" "e[6039]" "e[6041]" "e[6043]" "e[6045]" "e[6047]" "e[6049]" "e[6051]" "e[6053]" "e[6055]" "e[6057]" "e[6059]" "e[6061]" "e[6063]" "e[6065]" "e[6067]" "e[6069]" "e[6071]" "e[6073]" "e[6075]" "e[6077]" "e[6079]" "e[6081]" "e[6083]" "e[6085]" "e[6087]" "e[6089]" "e[6091]" "e[6093]" "e[6095]" "e[6097]" "e[6099]" "e[6101]" "e[6103]" "e[6105]" "e[6107]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".wt" 0.49556908011436462;
+	setAttr ".re" 5701;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyMapCut -n "polyMapCut1";
+	rename -uid "22A9F225-4C9D-F431-CBFC-C5B5B7185EC3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 223 "e[6112]" "e[6114]" "e[6116]" "e[6118]" "e[6120]" "e[6122]" "e[6124]" "e[6126]" "e[6128]" "e[6130]" "e[6132]" "e[6134]" "e[6136]" "e[6138]" "e[6140]" "e[6142]" "e[6144]" "e[6146]" "e[6148]" "e[6150]" "e[6152]" "e[6154]" "e[6156]" "e[6158]" "e[6160]" "e[6162]" "e[6164]" "e[6166]" "e[6168]" "e[6170]" "e[6172]" "e[6174]" "e[6176]" "e[6178]" "e[6180]" "e[6182]" "e[6184]" "e[6186]" "e[6188]" "e[6190]" "e[6192]" "e[6194]" "e[6196]" "e[6198]" "e[6200]" "e[6202]" "e[6204]" "e[6206]" "e[6208]" "e[6210]" "e[6212]" "e[6214]" "e[6216]" "e[6218]" "e[6220]" "e[6222]" "e[6224]" "e[6226]" "e[6228]" "e[6230]" "e[6232]" "e[6234]" "e[6236]" "e[6238]" "e[6240]" "e[6242]" "e[6244]" "e[6246]" "e[6248]" "e[6250]" "e[6252]" "e[6254]" "e[6256]" "e[6258]" "e[6260]" "e[6262]" "e[6264]" "e[6266]" "e[6268]" "e[6270]" "e[6272]" "e[6274]" "e[6276]" "e[6278]" "e[6280]" "e[6282]" "e[6284]" "e[6286]" "e[6288]" "e[6290]" "e[6292]" "e[6294]" "e[6296]" "e[6298]" "e[6300]" "e[6302]" "e[6304]" "e[6306]" "e[6308]" "e[6310]" "e[6312]" "e[6314]" "e[6316]" "e[6318]" "e[6320]" "e[6322]" "e[6324]" "e[6326]" "e[6328]" "e[6330]" "e[6332]" "e[6334]" "e[6336]" "e[6338]" "e[6340]" "e[6342]" "e[6344]" "e[6346]" "e[6348]" "e[6350]" "e[6352]" "e[6354]" "e[6356]" "e[6358]" "e[6360]" "e[6362]" "e[6364]" "e[6366]" "e[6368]" "e[6370]" "e[6372]" "e[6374]" "e[6376]" "e[6378]" "e[6380]" "e[6382]" "e[6384]" "e[6386]" "e[6388]" "e[6390]" "e[6392]" "e[6394]" "e[6396]" "e[6398]" "e[6400]" "e[6402]" "e[6404]" "e[6406]" "e[6408]" "e[6410]" "e[6412]" "e[6414]" "e[6416]" "e[6418]" "e[6420]" "e[6422]" "e[6424]" "e[6426]" "e[6428]" "e[6430]" "e[6432]" "e[6434]" "e[6436]" "e[6438]" "e[6440]" "e[6442]" "e[6444]" "e[6446]" "e[6448]" "e[6450]" "e[6452]" "e[6454]" "e[6456]" "e[6458]" "e[6460]" "e[6462]" "e[6464]" "e[6466]" "e[6468]" "e[6470]" "e[6472]" "e[6474]" "e[6476]" "e[6478]" "e[6480]" "e[6482]" "e[6484]" "e[6486]" "e[6488]" "e[6490]" "e[6492]" "e[6494]" "e[6496]" "e[6498]" "e[6500]" "e[6502]" "e[6504]" "e[6506]" "e[6508]" "e[6510]" "e[6512]" "e[6514]" "e[6516]" "e[6518]" "e[6520]" "e[6522]" "e[6524]" "e[6526]" "e[6528]" "e[6530]" "e[6532]" "e[6534]" "e[6536]" "e[6538]" "e[6540]" "e[6542]" "e[6544]" "e[6546]" "e[6548]" "e[6550]" "e[6552]" "e[6554]" "e[6556:6557]";
+createNode polyTweakUV -n "polyTweakUV1";
+	rename -uid "E69CB2E6-40A4-3B8C-0B46-24817F09011F";
+	setAttr ".uopa" yes;
+	setAttr -s 3560 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.55881703 -0.34720367 0.55577481 -0.34670883
+		 0.54219943 -0.35088104 0.54596102 -0.35049301 0.5522452 -0.34640795 0.53838921 -0.35082597
+		 0.54838192 -0.3462705 0.53449172 -0.35081798 0.54432273 -0.34629053 0.5304774 -0.35091084
+		 0.54014921 -0.34643942 0.52636868 -0.35109347 0.53590763 -0.34668499 0.52219236 -0.35134131
+		 0.53162509 -0.34699839 0.51797009 -0.35163003 0.52731836 -0.34735459 0.51371753 -0.35193855
+		 0.52083522 -0.34793955 0.50730073 -0.35240144 0.51650292 -0.3483271 0.50301045 -0.35268289
+		 0.51216823 -0.34870118 0.49871475 -0.35293037 0.50783432 -0.34904712 0.49441677 -0.35370737
+		 0.50350285 -0.34935528 0.49011958 -0.35470206 0.49917543 -0.34961528 0.48582453 -0.35538775
+		 0.49701363 -0.34972388 0.48367929 -0.35563308 0.49053931 -0.34996444 0.47724989 -0.35603577
+		 0.48838425 -0.35001069 0.47511035 -0.35607606 0.48193234 -0.35005027 0.46870118 -0.35595411
+		 0.4797858 -0.35002798 0.46656898 -0.35583931 0.47336072 -0.34985846 0.46018356 -0.35527807
+		 0.46908855 -0.34965974 0.45593783 -0.35471231 0.46695644 -0.34953552 0.45381844 -0.35436481
+		 0.46270028 -0.34924155 0.44958669 -0.35352236 0.45845523 -0.3488912 0.44536522 -0.35245186
+		 0.4542217 -0.34849232 0.4411546 -0.35110778 0.45000044 -0.34805363 0.43695587 -0.35002106
+		 0.44579291 -0.34758574 0.43277055 -0.34951168 0.44160134 -0.34710068 0.42860046 -0.34901553
+		 0.4353449 -0.34637636 0.42237785 -0.34832865 0.43120354 -0.34591752 0.41826236 -0.34793299
+		 0.42709243 -0.34550005 0.41417903 -0.34760684 0.42302373 -0.34514576 0.41013873 -0.34736854
+		 0.4190163 -0.34488136 0.40615743 -0.34723753 0.41510147 -0.34473687 0.40224892 -0.34723037
+		 0.41133308 -0.34475166 0.39843124 -0.34735578 0.40780205 -0.34499687 0.39467764 -0.34756869
+		 0.40547827 -0.34548539 0.39150238 -0.34743911 0.52902961 -0.35504669 0.53275514 -0.35436589
+		 0.52492416 -0.35529715 0.52088165 -0.35541922 0.51682222 -0.35554951 0.51271927 -0.35571486
+		 0.5085718 -0.35590845 0.50438744 -0.35611373 0.50017583 -0.35631448 0.49381691 -0.35701245
+		 0.48956531 -0.35840267 0.48530704 -0.35934192 0.48104352 -0.35990661 0.47677961 -0.36017448
+		 0.47251773 -0.36021572 0.47038797 -0.36016971 0.46400246 -0.35984367 0.46187681 -0.35969096
+		 0.45550674 -0.35915583 0.45338684 -0.35895985 0.44703549 -0.35833198 0.44281042 -0.35787112
+		 0.44070083 -0.35762101 0.43648699 -0.35706288 0.43228161 -0.35639328 0.42808539 -0.35556263
+		 0.42389938 -0.3545112 0.41972521 -0.35317153 0.4155646 -0.35147053 0.40935171 -0.35049397
+		 0.40523976 -0.35023242 0.4011552 -0.35006243 0.39710262 -0.3499952 0.3930935 -0.35004264
+		 0.38910377 -0.35019511 0.38512489 -0.35042065 0.38108122 -0.35055739 0.37743145 -0.350339
+		 0.51590008 -0.3592543 0.51946777 -0.35852069 0.5116421 -0.35967344 0.50746995 -0.3598842
+		 0.50333744 -0.36001664 0.4992075 -0.36012322 0.49506259 -0.36021596 0.49089631 -0.36029083
+		 0.48671344 -0.36178261 0.48039889 -0.36334366 0.47618067 -0.36375171 0.47195429 -0.36376494
+		 0.46772471 -0.36347872 0.46349195 -0.36297756 0.45925874 -0.36234313 0.45714265 -0.36199802
+		 0.45079547 -0.3609429 0.44868147 -0.36060625 0.44234329 -0.35970622 0.44023281 -0.35945302
+		 0.43390632 -0.35885161 0.42969498 -0.35857433 0.42759115 -0.35846561 0.42338717 -0.35828716
+		 0.41918898 -0.35812384 0.4149974 -0.35791951 0.41081345 -0.35760754 0.40663829 -0.35711116
+		 0.40247375 -0.35634559 0.39624566 -0.35449022 0.39211643 -0.35296983 0.38800669 -0.3530007
+		 0.38390514 -0.35313529 0.37981087 -0.35336691 0.37572756 -0.35367996 0.37160608 -0.35401005
+		 0.36740696 -0.35422784 0.36327115 -0.35405856 0.50275069 -0.36340541 0.50618243 -0.36274177
+		 0.49842715 -0.36385185 0.49417675 -0.36407083 0.48998272 -0.36415845 0.48581856 -0.36416823
+		 0.48166496 -0.36524099 0.4775013 -0.36661953 0.47333053 -0.36727804 0.46705782 -0.3671729
+		 0.46286577 -0.36653644 0.45866668 -0.36557859 0.45446268 -0.36440688 0.45025489 -0.3631199
+		 0.44604498 -0.36180931 0.44393978 -0.36117059 0.43762186 -0.35942584 0.4355163 -0.35892528
+		 0.42919958 -0.35774177 0.42709491 -0.35746473 0.42078167 -0.35700613 0.41657543 -0.35700148
+		 0.41447318 -0.35708147 0.41027015 -0.35738271 0.40606967 -0.35782987 0.40187293 -0.35835999
+		 0.39768043 -0.35889679 0.39349288 -0.35935253 0.38931316 -0.35962969 0.38304797 -0.35947615
+		 0.37888381 -0.35883158 0.37472123 -0.35761315 0.37056655 -0.35684115 0.36640158 -0.35726184
+		 0.36221737 -0.35772759 0.3579877 -0.35817009 0.35369629 -0.35848147 0.34907326 -0.35845834
+		 0.4895789 -0.36735803 0.4929572 -0.36683327 0.48523813 -0.36772603 0.48095509 -0.36787218
+		 0.47672197 -0.36787969 0.47252956 -0.36980933 0.46835762 -0.37076777 0.46420041 -0.37089556
+		 0.46004048 -0.37033099 0.45379061 -0.36848074 0.44961682 -0.3667677 0.44543719 -0.36482078
+		 0.44125181 -0.36276096 0.43706158 -0.36069983 0.43286753 -0.35873944 0.43076932 -0.3578251
+		 0.42446882 -0.35546285 0.42236781 -0.35482818 0.41606018 -0.35346526 0.41395724 -0.35320312
+		 0.4076443 -0.35301286 0.40343463 -0.35337085 0.40132952 -0.35368556 0.39711857 -0.3545596
+		 0.39290705 -0.35571104 0.38869596 -0.35706788 0.38448644 -0.35854274 0.38027608 -0.36003608
+		 0.37606648 -0.36143559 0.36975673 -0.36309141 0.36555046 -0.36371094 0.36134014 -0.36378211
+		 0.35712257 -0.36316305 0.35288712 -0.36170393 0.34862411 -0.36228484 0.34432048 -0.36282629
+		 0.33997425 -0.36323208 0.33490601 -0.36330312 0.47640038 -0.3709771 0.47983417 -0.37063164
+		 0.47206825 -0.37120205 0.46777222 -0.37199849 0.46352831 -0.37372965 0.45932317 -0.37433213
+		 0.45514458 -0.3739664 0.45098239 -0.37279123 0.44682553 -0.37096411 0.44058776 -0.36733741
+		 0.4364244 -0.36454469 0.43225527 -0.36161965 0.42808014 -0.35869569 0.42389882 -0.35589653
+		 0.41971168 -0.35333353 0.41761601 -0.35217124 0.41131985 -0.34928602 0.40921897 -0.34855253
+		 0.40290767 -0.34712225 0.4008019 -0.34691423 0.39447701 -0.34711236 0.39025578 -0.34791261;
+	setAttr ".uvtk[250:499]" 0.38814402 -0.34850127 0.38391787 -0.35002428 0.37968785
+		 -0.35195237 0.37545538 -0.35420305 0.37121975 -0.35667735 0.36698377 -0.35926217
+		 0.3627446 -0.36183161 0.35638103 -0.3653546 0.35213202 -0.36726779 0.34787405 -0.36865157
+		 0.34360236 -0.36934477 0.33930957 -0.36918062 0.3349885 -0.36798793 0.33063582 -0.3678152
+		 0.3262575 -0.36826581 0.32083234 -0.36835927 0.46323308 -0.37418085 0.46683848 -0.37402052
+		 0.45891953 -0.37544388 0.45463532 -0.37707633 0.45039064 -0.37741381 0.44618052 -0.37662774
+		 0.44199663 -0.3748942 0.43782964 -0.37238938 0.43367055 -0.36928934 0.42743409 -0.36389738
+		 0.4232724 -0.36004883 0.41910499 -0.35618025 0.41493061 -0.35243756 0.41074896 -0.34895426
+		 0.40655944 -0.34584922 0.40446186 -0.34447116 0.39815667 -0.34116477 0.39605162 -0.3403675
+		 0.38972428 -0.33897454 0.38761213 -0.33885485 0.38126469 -0.33953875 0.37702549 -0.34084052
+		 0.37490398 -0.34173042 0.37065616 -0.3439526 0.36640429 -0.34669954 0.36214745 -0.34987897
+		 0.35788614 -0.35338014 0.35362104 -0.35707647 0.34935117 -0.36082786 0.34293678 -0.36622351
+		 0.33864969 -0.36942738 0.33435148 -0.37211674 0.33003739 -0.37411398 0.32570279 -0.37523776
+		 0.32134369 -0.3753044 0.31696033 -0.37413079 0.31256217 -0.37333733 0.30691528 -0.37337524
+		 0.45009172 -0.3783409 0.45397696 -0.37694019 0.44580218 -0.37994319 0.4415358 -0.38011569
+		 0.43729758 -0.37900895 0.43308648 -0.37680262 0.42889738 -0.37368685 0.42472318 -0.36985439
+		 0.42055678 -0.36549753 0.41431016 -0.35838765 0.4101415 -0.35352689 0.4059667 -0.34876674
+		 0.401784 -0.34426302 0.39759263 -0.34015685 0.39339194 -0.33657318 0.39128822 -0.33501107
+		 0.38496226 -0.33137661 0.38284928 -0.33054465 0.37649632 -0.32926959 0.37437463 -0.32926208
+		 0.36799669 -0.33049268 0.36373642 -0.33232528 0.36160368 -0.33352834 0.35733342 -0.33646625
+		 0.35305759 -0.34004086 0.34877634 -0.34414893 0.34449017 -0.34866852 0.34019893 -0.35346085
+		 0.33590233 -0.35837275 0.3294459 -0.36559933 0.32512999 -0.37006277 0.32080221 -0.37402624
+		 0.3164593 -0.37729782 0.31209821 -0.37968308 0.30771735 -0.38098818 0.30331868 -0.38102227
+		 0.29891032 -0.37960356 0.29316729 -0.37812132 0.43697655 -0.38244146 0.44118932 -0.38078696
+		 0.43271813 -0.3825478 0.42846999 -0.38123327 0.42423865 -0.37866575 0.4200255 -0.37503749
+		 0.41582853 -0.37055272 0.41164291 -0.36541861 0.40746313 -0.35984236 0.40119478 -0.3510868
+		 0.39701083 -0.34526926 0.39282012 -0.33967596 0.38862056 -0.33447033 0.38441157 -0.32979959
+		 0.38019228 -0.32579201 0.3780787 -0.32407135 0.37172323 -0.32017595 0.36959964 -0.31932777
+		 0.36321452 -0.31821388 0.3610819 -0.31832737 0.35467139 -0.32011634 0.35038882 -0.32247645
+		 0.3482452 -0.32398707 0.34395343 -0.32762223 0.33965614 -0.33199745 0.33535412 -0.33699936
+		 0.33104748 -0.34249598 0.32673624 -0.34833795 0.32242 -0.3543604 0.31593496 -0.36334068
+		 0.31160071 -0.36901337 0.30725572 -0.37420338 0.30289751 -0.37870699 0.29852396 -0.38231903
+		 0.29413486 -0.38483578 0.28973338 -0.38605863 0.28532791 -0.38580161 0.27969986 -0.38375419
+		 0.42390224 -0.38480908 0.42846274 -0.38462037 0.41966695 -0.38341385 0.41543046 -0.38061553
+		 0.41120049 -0.37660009 0.40698063 -0.37157387 0.40277052 -0.36575443 0.3985675 -0.35936242
+		 0.39436808 -0.35261673 0.38806733 -0.34229749 0.38386074 -0.33557898 0.37964684 -0.32920617
+		 0.37542358 -0.3233487 0.37119132 -0.31815702 0.36694854 -0.31376141 0.36482319 -0.31189674
+		 0.35843176 -0.30776781 0.35629669 -0.30690759 0.34987795 -0.30594832 0.34773451 -0.30617589
+		 0.34129316 -0.30848461 0.33699134 -0.31133312 0.33483845 -0.31312841 0.33052921 -0.31740922
+		 0.32621604 -0.32252556 0.32189932 -0.32835704 0.31757945 -0.33476347 0.31325626 -0.3415857
+		 0.30892947 -0.34865016 0.3024309 -0.35928589 0.29808939 -0.36610895 0.29373884 -0.37247413
+		 0.28937724 -0.37816721 0.28500277 -0.38297337 0.28061607 -0.38668162 0.27622229 -0.3890838
+		 0.27182311 -0.38999599 0.26647335 -0.38912731 0.41087008 -0.38563448 0.41578722 -0.38689369
+		 0.40664101 -0.38275892 0.40240461 -0.37850422 0.39816713 -0.37307507 0.39393315 -0.36669225
+		 0.38970372 -0.35958511 0.38547733 -0.35198575 0.38125181 -0.34412295 0.37491015 -0.33231574
+		 0.37067488 -0.3247413 0.36643344 -0.31762749 0.3621833 -0.31114787 0.35792303 -0.30545479
+		 0.35365388 -0.30067927 0.35151592 -0.29867047 0.34508902 -0.29428869 0.34294283 -0.29340369
+		 0.33649367 -0.29254311 0.33434093 -0.29285985 0.3278749 -0.29560035 0.32355928 -0.29886764
+		 0.32140023 -0.30090982 0.31708041 -0.30575722 0.31275862 -0.31153256 0.30843526 -0.31810993
+		 0.30411065 -0.32534224 0.29978457 -0.33306438 0.29545656 -0.34109443 0.28895891 -0.35328549
+		 0.28462005 -0.36120325 0.28027371 -0.36869949 0.27591795 -0.37555069 0.27155241 -0.38153273
+		 0.26717514 -0.38643068 0.26278961 -0.39003104 0.25840947 -0.39212614 0.2534593 -0.39249653
+		 0.39786232 -0.38516003 0.40307635 -0.38783807 0.39362496 -0.38084203 0.38937604 -0.37517363
+		 0.38512161 -0.36837679 0.38086581 -0.36068588 0.37661064 -0.35233957 0.37235561 -0.34357947
+		 0.36809903 -0.33464307 0.36171103 -0.32140023 0.35744539 -0.31299442 0.35317224 -0.30515426
+		 0.3488926 -0.29805464 0.34460545 -0.29184979 0.34031123 -0.28667158 0.33816165 -0.28450185
+		 0.33170363 -0.2797994 0.32954836 -0.27886075 0.32307613 -0.27799648 0.32091707 -0.27836412
+		 0.31443644 -0.28140861 0.31011429 -0.28500301 0.30795306 -0.28724509 0.30363059 -0.29256397
+		 0.29930842 -0.29890364 0.29498702 -0.30613476 0.29066616 -0.31410652 0.28634566 -0.32264882
+		 0.28202444 -0.33157438 0.27553982 -0.34523576 0.27121124 -0.35420722 0.26687649 -0.36280888
+		 0.26253307 -0.37080771 0.2581794 -0.37797493 0.25381687 -0.38408023 0.24944696 -0.38891119
+		 0.24507806 -0.39226073 0.24063088 -0.39393252 0.38485909 -0.3836537 0.39027065 -0.38771933
+		 0.38059977 -0.37793869 0.37632754 -0.37090415 0.37204731 -0.362786 0.36776292 -0.35383075;
+	setAttr ".uvtk[500:749]" 0.36347726 -0.34428364 0.35919037 -0.33439559 0.35490203
+		 -0.32440811 0.34846312 -0.30974954 0.34416577 -0.30050939 0.33986366 -0.2919268 0.33555698
+		 -0.28417891 0.33124578 -0.27742118 0.3269307 -0.27178603 0.32477191 -0.26942438 0.31829134
+		 -0.26429087 0.31613028 -0.26325721 0.30964574 -0.26225346 0.30748421 -0.26262337
+		 0.30100089 -0.26582175 0.29668048 -0.26964158 0.29452115 -0.27203351 0.29020423 -0.2777254
+		 0.28588974 -0.28453606 0.28157771 -0.29233497 0.27726787 -0.30096918 0.27295935 -0.31026572
+		 0.26865128 -0.32003289 0.26218766 -0.3351118 0.25787365 -0.34512264 0.25355366 -0.35482687
+		 0.24922594 -0.36398858 0.24488884 -0.37236959 0.24054289 -0.37973517 0.23618951 -0.38586515
+		 0.23183437 -0.39055127 0.22791739 -0.39362472 0.37183872 -0.38138193 0.37731647 -0.38680893
+		 0.36754739 -0.37431246 0.36324322 -0.36595351 0.35893133 -0.35654849 0.35461533 -0.34635514
+		 0.35029596 -0.33563036 0.34597561 -0.324624 0.34165406 -0.3135851 0.3351689 -0.29748327
+		 0.33084324 -0.28737622 0.32651609 -0.27800626 0.3221876 -0.26955301 0.31785846 -0.26217431
+		 0.31352916 -0.25600439 0.31136471 -0.25340793 0.30487323 -0.24770559 0.30271047 -0.24652784
+		 0.29622608 -0.24523364 0.29406625 -0.24555467 0.28759238 -0.24875511 0.28328159 -0.2527031
+		 0.28112775 -0.2551983 0.27682334 -0.26117557 0.27252296 -0.26837856 0.26822585 -0.27667683
+		 0.26393184 -0.28591794 0.25963947 -0.29592675 0.2553477 -0.30650932 0.24890758 -0.32299143
+		 0.24460919 -0.33405131 0.24030501 -0.34488791 0.23599333 -0.35525709 0.23167279 -0.36491245
+		 0.22734362 -0.37361389 0.2230072 -0.38113362 0.21866794 -0.38726169 0.2152424 -0.39184457
+		 0.3587822 -0.37858313 0.36417574 -0.38535649 0.35445163 -0.37018758 0.3501116 -0.36052519
+		 0.34576526 -0.34985501 0.3414157 -0.33843178 0.33706442 -0.32651943 0.33271277 -0.31437653
+		 0.32836175 -0.30225545 0.32183743 -0.28464288 0.3174898 -0.27360934 0.31314439 -0.26338249
+		 0.30880168 -0.25414571 0.30446261 -0.24606006 0.30012769 -0.23926388 0.29796195 -0.23638581
+		 0.29147246 -0.22996913 0.28931221 -0.22859843 0.28284001 -0.22686924 0.28068578 -0.22709472
+		 0.274232 -0.23016565 0.26993677 -0.23416297 0.26779133 -0.23672502 0.26350421 -0.2429233
+		 0.25922143 -0.25046563 0.25494242 -0.2592234 0.25066552 -0.26904422 0.24638988 -0.27975279
+		 0.24211378 -0.2911523 0.23569573 -0.30907112 0.23141123 -0.3212201 0.22712058 -0.33324414
+		 0.22282252 -0.34488899 0.21851635 -0.35590118 0.21420234 -0.3660323 0.20988221 -0.37504715
+		 0.20555997 -0.38273245 0.20252036 -0.38893133 0.34567156 -0.37543601 0.35083359 -0.38356286
+		 0.34130263 -0.3657307 0.336927 -0.35477012 0.33254758 -0.34281963 0.32816711 -0.33014399
+		 0.32378727 -0.3170113 0.31940976 -0.3036862 0.31503585 -0.29042667 0.3084839 -0.27120084
+		 0.30412263 -0.25916308 0.29976779 -0.24799575 0.29542011 -0.23788767 0.2910803 -0.22900589
+		 0.28674841 -0.22149341 0.28458577 -0.21828903 0.27811056 -0.21102883 0.27595657 -0.20942439
+		 0.26950678 -0.20714568 0.26736102 -0.20724098 0.26093441 -0.21009032 0.25665838 -0.2140881
+		 0.2545225 -0.21669646 0.25025427 -0.22308309 0.2459899 -0.2309439 0.24172781 -0.24015318
+		 0.23746675 -0.25055939 0.23320515 -0.26198655 0.22894149 -0.27423495 0.22253932 -0.29366189
+		 0.21826403 -0.30696398 0.21398231 -0.32024902 0.20969337 -0.33325487 0.2053974 -0.34571761
+		 0.2010954 -0.35737962 0.19678928 -0.36799675 0.19248356 -0.37734848 0.18966784 -0.38525826
+		 0.33249688 -0.3720637 0.3373028 -0.38156253 0.32809573 -0.36103052 0.32368901 -0.34874541
+		 0.31928173 -0.33547872 0.31487659 -0.32150286 0.31047559 -0.30709153 0.30608049 -0.29251701
+		 0.30169252 -0.278045 0.29512709 -0.25708526 0.29076198 -0.24396001 0.28640747 -0.23176883
+		 0.28206408 -0.22070827 0.27773216 -0.21095274 0.27341175 -0.20265225 0.27125591 -0.19908805
+		 0.26480475 -0.19089469 0.26265958 -0.18903048 0.25623864 -0.18613733 0.25410274 -0.18608548
+		 0.24770617 -0.18867625 0.24344933 -0.19266191 0.24132258 -0.1953142 0.23707165 -0.20189229
+		 0.23282252 -0.2100852 0.22857381 -0.21977024 0.22432372 -0.23079668 0.22007087 -0.24298714
+		 0.2158137 -0.25613946 0.20941783 -0.27717417 0.20514543 -0.29170495 0.20086616 -0.30633456
+		 0.19658054 -0.32078952 0.19228925 -0.3347953 0.18799436 -0.34808213 0.18369825 -0.36039442
+		 0.17940505 -0.3714996 0.17661573 -0.3811931 0.31926137 -0.36851186 0.32361695 -0.37940747
+		 0.3148331 -0.35610253 0.31040353 -0.34244043 0.30597726 -0.32779783 0.301557 -0.31245393
+		 0.29714477 -0.29669064 0.29274222 -0.28078884 0.28835073 -0.26502413 0.28178734 -0.24221306
+		 0.27742815 -0.22792704 0.27308303 -0.21464528 0.26875222 -0.20257407 0.26443565 -0.19189593
+		 0.26013249 -0.18276912 0.25798589 -0.17882961 0.25156438 -0.16967274 0.24942942 -0.16754362
+		 0.24303895 -0.16403455 0.24091274 -0.16383928 0.2345435 -0.16619545 0.23030247 -0.17019425
+		 0.22818287 -0.17290606 0.22394426 -0.17971167 0.21970481 -0.18828012 0.21546282 -0.19849059
+		 0.21121672 -0.21019323 0.20696506 -0.22320898 0.20270666 -0.23733209 0.19630556 -0.26008278
+		 0.19202854 -0.2759183 0.18774463 -0.2919696 0.1834553 -0.30795151 0.17916238 -0.32357639
+		 0.17486848 -0.33856028 0.17057611 -0.35263234 0.16628791 -0.36554259 0.16331907 -0.37705988
+		 0.30596271 -0.36473805 0.3098453 -0.37708312 0.30152079 -0.35089117 0.29708099 -0.3357833
+		 0.29264808 -0.31969172 0.28822461 -0.30290359 0.28381282 -0.28571111 0.27941415 -0.26840717
+		 0.27502981 -0.25127965 0.26848304 -0.22652735 0.26413834 -0.21103348 0.25980991 -0.19662783
+		 0.25549752 -0.18352559 0.25120056 -0.17191865 0.24691814 -0.16197231 0.24478173 -0.15766594
+		 0.23839052 -0.14758691 0.23626508 -0.14521155 0.22990102 -0.14115372 0.22778262 -0.14084014
+		 0.22143312 -0.14304325 0.21720172 -0.14711335 0.2150858 -0.14991477 0.2108521 -0.15700898
+		 0.20661433 -0.16601542 0.20237084 -0.17681535 0.19812018 -0.18925877 0.19386111 -0.20316496;
+	setAttr ".uvtk[750:999]" 0.18959327 -0.21832372 0.18317474 -0.24288534 0.17888536
+		 -0.26008648 0.17458957 -0.27761716 0.17028959 -0.29517847 0.16598804 -0.31246847
+		 0.1616884 -0.32918638 0.15739231 -0.34504336 0.15309985 -0.35976905 0.14976521 -0.3731057
+		 0.29261261 -0.36065155 0.29606402 -0.37450296 0.2881726 -0.34529465 0.28373742 -0.3286671
+		 0.27931175 -0.3110525 0.27489829 -0.29274935 0.27049869 -0.27406305 0.26611471 -0.25530082
+		 0.26174691 -0.23676632 0.25522858 -0.21003367 0.25090402 -0.19332722 0.24659666 -0.17780842
+		 0.24230555 -0.16370443 0.23802938 -0.15121427 0.23376663 -0.1405082 0.2316397 -0.13586959
+		 0.22527386 -0.12498507 0.22315569 -0.12240574 0.21680929 -0.11792883 0.21469532 -0.11754069
+		 0.20835395 -0.11971763 0.20412381 -0.12393931 0.20200713 -0.12686846 0.19776934 -0.13432458
+		 0.1935243 -0.14383695 0.18927039 -0.15528914 0.18500644 -0.16853133 0.18073177 -0.18338081
+		 0.17644633 -0.19962253 0.16999938 -0.22605474 0.16569091 -0.24465333 0.16137649 -0.26368731
+		 0.15705939 -0.28284341 0.15274264 -0.30180401 0.14842929 -0.32025057 0.14412244 -0.33787209
+		 0.13982256 -0.35437196 0.13597615 -0.3694784 0.27923009 -0.35612756 0.28235388 -0.37153929
+		 0.27480829 -0.33919245 0.27039284 -0.32097989 0.26598811 -0.30178386 0.26159662 -0.28191656
+		 0.25721973 -0.26169902 0.25285929 -0.24145733 0.24851526 -0.22151233 0.24203141 -0.19282851
+		 0.23772968 -0.17495461 0.23344389 -0.15838936 0.22917286 -0.14336798 0.2249148 -0.13009498
+		 0.22066773 -0.11874214 0.21854742 -0.11383072 0.21219714 -0.10232648 0.21008249 -0.099605054
+		 0.20374127 -0.094888359 0.20162715 -0.094481617 0.19528009 -0.096784562 0.19104171
+		 -0.1012443 0.1889196 -0.10433981 0.18466873 -0.11222574 0.18040748 -0.1223006 0.17613471
+		 -0.13445053 0.17184988 -0.14852676 0.16755252 -0.16434452 0.16324301 -0.18168524
+		 0.15675937 -0.20999302 0.15242662 -0.22998004 0.14808871 -0.25049752 0.143749 -0.27121884
+		 0.13941152 -0.29180831 0.1350798 -0.31192893 0.13075627 -0.33124858 0.12644091 -0.34944659
+		 0.12201152 -0.36621624 0.26584101 -0.35103863 0.26878875 -0.36805338 0.26145175 -0.33247811
+		 0.25706932 -0.31264108 0.25269675 -0.29183549 0.24833682 -0.27039033 0.24399014 -0.24864687
+		 0.23965724 -0.22694911 0.2353396 -0.20563878 0.22889154 -0.17511566 0.22461094 -0.15617606
+		 0.22034344 -0.13868538 0.21608761 -0.1228849 0.21184136 -0.10897991 0.20760237 -0.097139508
+		 0.20548488 -0.092036217 0.19913669 -0.080150574 0.1970209 -0.077362746 0.19067033
+		 -0.072613209 0.18855132 -0.072248012 0.18218429 -0.074828953 0.17792857 -0.079602331
+		 0.17579676 -0.082894295 0.1715246 -0.091256231 0.16723992 -0.10192207 0.16294187
+		 -0.11478248 0.15863045 -0.1296905 0.15430588 -0.14646158 0.14996906 -0.16487291 0.14344321
+		 -0.19499448 0.13908334 -0.21631373 0.13471939 -0.23824792 0.13035502 -0.26045543
+		 0.12599432 -0.28258437 0.12164122 -0.30427891 0.11729844 -0.32518667 0.11296602 -0.34496313
+		 0.10794956 -0.36325794 0.2524749 -0.34529322 0.25542516 -0.36392945 0.24812849 -0.3250944
+		 0.24378793 -0.30363244 0.239455 -0.28123194 0.23512997 -0.25824291 0.23081513 -0.23502712
+		 0.22651102 -0.21195097 0.22221835 -0.18937595 0.2158006 -0.15720639 0.21153541 -0.13735434
+		 0.20727929 -0.11910895 0.20303056 -0.10271314 0.19878723 -0.088368028 0.19454701
+		 -0.076233 0.19242726 -0.071032971 0.18606637 -0.059035152 0.18394442 -0.056262165
+		 0.17757012 -0.051688641 0.17544161 -0.051421493 0.16904195 -0.054404885 0.16476162
+		 -0.059538811 0.16261673 -0.063041002 0.15831757 -0.071887046 0.15400475 -0.083129734
+		 0.14967829 -0.09666726 0.14533763 -0.11235818 0.14098404 -0.13001892 0.13661851 -0.1494253
+		 0.13005151 -0.18122306 0.12566531 -0.20377025 0.12127614 -0.22700657 0.1168877 -0.25057662
+		 0.11250443 -0.27411264 0.10813022 -0.29724175 0.10376821 -0.31959158 0.099419482
+		 -0.34079653 0.093889728 -0.36045569 0.23916031 -0.33886319 0.24229398 -0.35910565
+		 0.23486026 -0.31706446 0.23056425 -0.29402441 0.22627087 -0.27009374 0.22198059 -0.24564569
+		 0.21769477 -0.22106554 0.21341468 -0.19674143 0.20914085 -0.17305322 0.20274206 -0.13950065
+		 0.19848336 -0.1189324 0.1942292 -0.1001403 0.18997778 -0.083363861 0.18572713 -0.068794578
+		 0.18147554 -0.056576163 0.17934863 -0.051380605 0.17296071 -0.039544791 0.17082812
+		 -0.036865205 0.16441794 -0.032653511 0.16227628 -0.032528102 0.15583517 -0.035987824
+		 0.15152581 -0.041486174 0.14936627 -0.04518804 0.14503735 -0.054476351 0.14069505
+		 -0.066229969 0.13633943 -0.080358952 0.13197093 -0.096730679 0.12759039 -0.11516652
+		 0.12319926 -0.13544169 0.11659665 -0.16870984 0.11218826 -0.19233689 0.10777817 -0.21672048
+		 0.10336996 -0.24149214 0.098967709 -0.26626998 0.094575584 -0.29066473 0.09019722
+		 -0.31428689 0.08583466 -0.33675128 0.079934187 -0.3576085 0.22591414 -0.33182174
+		 0.22939554 -0.35360283 0.22166176 -0.3085044 0.21740635 -0.28398424 0.21314682 -0.25863963
+		 0.20888385 -0.23286967 0.2046189 -0.20708252 0.20035364 -0.18168634 0.19608904 -0.15707773
+		 0.18969379 -0.12245709 0.18543126 -0.10139486 0.18116833 -0.08228308 0.17690374 -0.065354168
+		 0.17263611 -0.050783962 0.16836376 -0.038692862 0.16622527 -0.033600509 0.15979885
+		 -0.022182256 0.15765239 -0.019664675 0.15119846 -0.015956432 0.14904185 -0.015996844
+		 0.14255504 -0.019937545 0.13821578 -0.025750726 0.13604146 -0.029613703 0.13168412
+		 -0.039245456 0.12731466 -0.05138728 0.12293375 -0.065967739 0.11854184 -0.082867563
+		 0.11413996 -0.10191602 0.10972948 -0.12289113 0.10310162 -0.15736619 0.098678328
+		 -0.18189266 0.094254568 -0.20724024 0.089833498 -0.23302846 0.085418858 -0.25886267
+		 0.081014402 -0.28433949 0.07662411 -0.30905408 0.072251216 -0.33260363 0.066174641
+		 -0.3545031 0.21275228 -0.32434267 0.21669707 -0.34753567 0.20853628 -0.29963201 0.20431043
+		 -0.27377635 0.20007303 -0.24718122 0.19582535 -0.22026958 0.19156954 -0.19347087
+		 0.18730728 -0.16721064 0.18304016 -0.1419 0.17663158 -0.10654941 0.17235436 -0.085221469
+		 0.1680726 -0.066016972;
+	setAttr ".uvtk[1000:1249]" 0.16378583 -0.049156725 0.1594929 -0.034796536 0.15519287
+		 -0.023028225 0.15303995 -0.018128008 0.14656816 -0.0073466599 0.14440627 -0.0050437152
+		 0.13790609 -0.0019239783 0.13573422 -0.0021319687 0.12920357 -0.0064781308 0.12483724
+		 -0.01249823 0.12265026 -0.016454637 0.1182691 -0.026272476 0.11387856 -0.038625419
+		 0.10947923 -0.053467572 0.10507164 -0.070699185 0.10065676 -0.090161026 0.096235752
+		 -0.11163527 0.089596339 -0.14701697 0.085167445 -0.17224424 0.080739178 -0.19835919
+		 0.076314107 -0.22497077 0.071895137 -0.251672 0.067485347 -0.2780475 0.063088492
+		 -0.30367917 0.058708683 -0.32814962 0.052678958 -0.35095674 0.19966878 -0.3166849
+		 0.20414159 -0.34112483 0.19547375 -0.29075092 0.19126137 -0.26374441 0.18703087 -0.2360972
+		 0.18278399 -0.20825364 0.17852338 -0.18066102 0.17425139 -0.15375903 0.16996987 -0.12796921
+		 0.16353185 -0.092218816 0.1592306 -0.070838392 0.15492226 -0.051747382 0.15060659
+		 -0.035152256 0.14628328 -0.021186262 0.14195214 -0.0099075139 0.13978364 -0.0052742362
+		 0.13326557 0.0046953484 0.1310886 0.0067469701 0.12454536 0.0092529282 0.12236013
+		 0.0088998601 0.11579312 0.0043030307 0.11140605 -0.0017580092 0.10920989 -0.0057115257
+		 0.10481293 -0.015505105 0.10040999 -0.027844727 0.096001461 -0.042720377 0.091587946
+		 -0.060057253 0.087170072 -0.079709828 0.082748748 -0.10146719 0.076112941 -0.13744384
+		 0.071688369 -0.16317199 0.067265108 -0.18986174 0.062845185 -0.21711101 0.058430448
+		 -0.24450217 0.054022446 -0.27160853 0.049624398 -0.29800099 0.045240417 -0.32325059
+		 0.039481118 -0.3468582 0.18664791 -0.30918437 0.19164839 -0.33467442 0.18245389 -0.2822271
+		 0.1782365 -0.25428054 0.17399599 -0.22579934 0.16973503 -0.1972453 0.16545631 -0.16907877
+		 0.16116263 -0.14175004 0.15685625 -0.11568806 0.15037616 -0.079828233 0.14604436
+		 -0.058574975 0.14170453 -0.03976509 0.1373571 -0.023592263 0.13300253 -0.010167569
+		 0.12864108 0.00048848987 0.12645775 0.004795216 0.11989821 0.013820194 0.11770852
+		 0.015597843 0.11113118 0.017514072 0.10893605 0.017058335 0.10234462 0.01243975 0.097945832
+		 0.0065559372 0.09574528 0.0027265772 0.091342449 -0.0067878664 0.086937256 -0.01885578
+		 0.082530119 -0.033513129 0.078121066 -0.05071491 0.073710591 -0.07033211 0.069298983
+		 -0.092159092 0.062681213 -0.12843317 0.058269933 -0.15447873 0.053860083 -0.18157047
+		 0.049453035 -0.20929541 0.045050457 -0.23722468 0.040650144 -0.2649228 0.03625603
+		 -0.29194957 0.031868771 -0.31786937 0.02657564 -0.34219974 0.17366298 -0.30221897
+		 0.17912456 -0.32854897 0.16944934 -0.27445382 0.16520901 -0.24578749 0.16094305 -0.21669145
+		 0.15665439 -0.18763961 0.15234621 -0.15910126 0.14802136 -0.13153356 0.14368288 -0.10537046
+		 0.13715236 -0.069625825 0.13278814 -0.04862994 0.12841645 -0.03021878 0.12403861
+		 -0.014577836 0.11965562 -0.0017975271 0.11526819 0.0081358179 0.11307301 0.012069367
+		 0.1064823 0.020041548 0.10428382 0.021528564 0.097685494 0.022906266 0.095485345
+		 0.02240517 0.088884361 0.018054806 0.084484346 0.012610875 0.082284726 0.0090473518
+		 0.077886537 9.9271536e-05 0.073489636 -0.01142022 0.069094002 -0.025602132 0.064699292
+		 -0.042434394 0.060305387 -0.061803907 0.055912018 -0.083508313 0.049323633 -0.1198239
+		 0.044932976 -0.14603394 0.040542439 -0.17338799 0.036153272 -0.20146173 0.031764403
+		 -0.229816 0.027378455 -0.25800246 0.022992983 -0.28557473 0.018611744 -0.3120876
+		 0.013918117 -0.33709484 0.16068275 -0.29617077 0.16647682 -0.32313591 0.15643139
+		 -0.26781231 0.15215279 -0.23863761 0.14784887 -0.2091272 0.14352287 -0.17976326 0.13917704
+		 -0.15101829 0.13481535 -0.12335521 0.13044043 -0.097211778 0.12385996 -0.06172356
+		 0.11946441 -0.04105562 0.11506422 -0.023103625 0.11066113 -0.0080509484 0.10625646
+		 0.004022263 0.1018511 0.013160907 0.099648319 0.016681276 0.093040884 0.023488604
+		 0.090838686 0.024662696 0.08423505 0.025546812 0.082035042 0.025064848 0.075440452
+		 0.021320127 0.071049601 0.016617917 0.068855971 0.013477407 0.064472318 0.0054014549
+		 0.060093224 -0.0052911341 0.055717647 -0.018755227 0.05134505 -0.03501004 0.046974838
+		 -0.05395332 0.042605579 -0.075381219 0.036053315 -0.11154288 0.031685427 -0.13780817
+		 0.027318493 -0.16532654 0.022950426 -0.19366318 0.01858063 -0.22236694 0.01420857
+		 -0.25098032 0.0098326355 -0.27904934 0.0054536015 -0.30612701 0.0014396459 -0.33177537
+		 0.14767611 -0.29138738 0.15362373 -0.31880277 0.14337368 -0.26263231 0.1390468 -0.23313336
+		 0.13469638 -0.20337325 0.13032648 -0.17383786 0.12594062 -0.14500386 0.12154116 -0.11733434
+		 0.11713155 -0.091272533 0.11050531 -0.056088269 0.10608407 -0.035759062 0.10166264
+		 -0.018268198 0.097242862 -0.0038100779 0.092826143 0.007532917 0.088413097 0.015823029
+		 0.086208232 0.018890284 0.079600193 0.024380587 0.077399835 0.025196575 0.070806742
+		 0.025578998 0.068612039 0.025178693 0.062038541 0.022419356 0.057665974 0.01879748
+		 0.055482626 0.016249739 0.051121533 0.0093572959 0.046767175 -0.00024923682 0.042417496
+		 -0.012788504 0.038071722 -0.028303415 0.033727854 -0.046692461 0.029385924 -0.067741215
+		 0.022872999 -0.10362977 0.018529668 -0.12988669 0.014184907 -0.15751849 0.0098372251
+		 -0.186076 0.0054855496 -0.21509571 0.001128152 -0.24411111 -0.0032363981 -0.27266127
+		 -0.0076078624 -0.30030018 -0.010972723 -0.32658774 0.13461681 -0.28814858 0.14050904
+		 -0.31585985 0.13025536 -0.25915712 0.12587461 -0.22947441 0.12147684 -0.19958498
+		 0.11706366 -0.16996817 0.1126383 -0.14110276 0.10820416 -0.11345619 0.10376487 -0.087477982
+		 0.097103849 -0.052556932 0.09266606 -0.0325194 0.088233419 -0.015438706 0.083807714
+		 -0.0015341341 0.079389907 0.0090900883 0.074980512 0.016491674 0.072778881 0.019060157
+		 0.066186428 0.023001038 0.063992918 0.023369513 0.057424664 0.02312877 0.055239558
+		 0.022862338 0.048698783 0.021522008 0.044351161 0.019362949 0.042181015 0.017586611
+		 0.03784734 0.012177847 0.033520937 0.0038753971 0.029200315 -0.0075899065 0.024882734
+		 -0.022265494 0.020566583 -0.040035218 0.016250312 -0.060662419 0.0097732693 -0.096240699
+		 0.0054514557 -0.12247559 0.0011259466 -0.15021271 -0.0032042712 -0.17898753 -0.0075405091
+		 -0.20832421;
+	setAttr ".uvtk[1250:1499]" -0.011883959 -0.23774652 -0.016235575 -0.26678795
+		 -0.020594284 -0.29500467 -0.023432121 -0.32193714 0.12148137 -0.2866289 0.12710997
+		 -0.31452447 0.11706479 -0.25752276 0.11263358 -0.22774978 0.10819028 -0.1977908 0.10373754
+		 -0.16812545 0.099278815 -0.1392327 0.094817609 -0.11158401 0.090357557 -0.08563894
+		 0.08367718 -0.050865144 0.079233952 -0.031024724 0.074801624 -0.014257342 0.070381403
+		 -0.00082287192 0.065973788 0.0091299638 0.061578512 0.01562085 0.0593853 0.017640911
+		 0.052821994 0.019693099 0.050639302 0.019454144 0.044106454 0.0182667 0.041933954
+		 0.018169366 0.035433114 0.018782638 0.031113505 0.018528961 0.028957874 0.017706893
+		 0.024653435 0.014045916 0.02035591 0.007194899 0.016062647 -0.0031284988 0.011771023
+		 -0.016945153 0.007478714 -0.034101903 0.0031840801 -0.054327995 -0.0032648295 -0.08963722
+		 -0.0075707287 -0.11587927 -0.01188235 -0.1437498 -0.01620017 -0.17276837 -0.020524845
+		 -0.202447 -0.024856433 -0.23229925 -0.029194221 -0.26185328 -0.033534035 -0.2906664
+		 -0.036030397 -0.31824583 0.10825966 -0.28689879 0.11344041 -0.3149007 0.10379771
+		 -0.2577402 0.099323414 -0.22791494 0.094842866 -0.19789773 0.090359837 -0.16816717
+		 0.085877962 -0.13920346 0.08140073 -0.11148506 0.076931611 -0.08548218 0.070249975
+		 -0.050686657 0.065813303 -0.030915707 0.061392844 -0.014330178 0.056988835 -0.0012433827
+		 0.052601129 0.0081289038 0.048228532 0.013726197 0.04604739 0.015158914 0.039522558
+		 0.014894031 0.037353098 0.013790809 0.030861318 0.01098492 0.028702497 0.011070631
+		 0.022244096 0.01439359 0.017952949 0.016561709 0.015811205 0.016862832 0.011533737
+		 0.015128396 0.0072613955 0.0097654089 0.0029909015 0.00054654479 -0.0012806356 -0.012480766
+		 -0.0055555701 -0.029105395 -0.0098357201 -0.049010575 -0.016267881 -0.084159195 -0.020565256
+		 -0.11047009 -0.024869964 -0.13852662 -0.029181764 -0.16783294 -0.033500001 -0.19788808
+		 -0.037823305 -0.22819699 -0.042149171 -0.25828117 -0.046472535 -0.28769392 -0.048872754
+		 -0.31591362 0.094959453 -0.28890771 0.099558897 -0.31696278 0.090458646 -0.25970572
+		 0.085952975 -0.22981791 0.081447937 -0.19971032 0.076947793 -0.16985972 0.072456121
+		 -0.1407496 0.067976326 -0.11286658 0.063511282 -0.086695015 0.056846976 -0.051684201
+		 0.052428216 -0.031838357 0.048029542 -0.015281349 0.043650568 -0.0023848116 0.039289802
+		 0.0065531358 0.034945667 0.011356734 0.03277868 0.012210213 0.026296198 0.0092424378
+		 0.024140239 0.0069216713 0.017689347 0.0011961758 0.015543997 0.0014561713 0.0091256499
+		 0.0087371692 0.0048594177 0.013871215 0.0027292371 0.01539769 -0.0015268922 0.015593015
+		 -0.0057810545 0.011592947 -0.010036588 0.0033153519 -0.014296532 -0.0090864599 -0.018563032
+		 -0.02532813 -0.022837743 -0.045042098 -0.0292667 -0.080186576 -0.033564135 -0.10664621
+		 -0.037869856 -0.13495082 -0.04218255 -0.16459031 -0.04650037 -0.19505244 -0.050820634
+		 -0.22583242 -0.055140302 -0.25644451 -0.059455678 -0.28643304 -0.06201379 -0.315265
+		 0.081576474 -0.29248351 0.085544981 -0.32059258 0.077055901 -0.26321322 0.072535992
+		 -0.23321916 0.068023264 -0.202961 0.063522071 -0.17291509 0.059035927 -0.14357026
+		 0.054567754 -0.11542219 0.050119787 -0.08897081 0.043489754 -0.053556979 0.039098084
+		 -0.033494085 0.034728557 -0.01680547 0.030380368 -0.0039155781 0.026050717 0.0047992691
+		 0.021736324 0.0090396926 0.019583911 0.0094225928 0.013141751 0.0037662312 0.010997921
+		 -8.2403421e-05 0.0045814812 -0.011212796 0.0024485588 -0.010809332 -0.00393641 0.0027332529
+		 -0.008184582 0.011115454 -0.010307044 0.013781957 -0.014550805 0.015600078 -0.018796444
+		 0.012630187 -0.023047119 0.0049973056 -0.027305603 -0.0070276856 -0.031573921 -0.023089468
+		 -0.035853013 -0.042774737 -0.042292878 -0.07809335 -0.046599075 -0.10478371 -0.050913736
+		 -0.13339254 -0.055234656 -0.1633978 -0.059558794 -0.19427794 -0.063882932 -0.22551928
+		 -0.068203732 -0.25662547 -0.07252197 -0.28713566 -0.075473055 -0.31652528 0.068124801
+		 -0.29737586 0.071499944 -0.32555765 0.063606054 -0.26798695 0.059092313 -0.23782642
+		 0.054590583 -0.20734926 0.050105363 -0.17703305 0.045640081 -0.14737266 0.041196823
+		 -0.11887485 0.036777407 -0.092052877 0.030194461 -0.056084663 0.025835991 -0.035684377
+		 0.021499783 -0.018715113 0.017183244 -0.0056372583 0.01288417 0.003121607 0.0085984468
+		 0.0071769282 0.0064593852 0.0073355362 5.1647425e-05 -4.0829182e-05 -0.0020829141
+		 -0.0051563084 -0.0084799528 -0.025810093 -0.01059866 -0.025312603 -0.0169622 -0.0016806722
+		 -0.021202266 0.009145312 -0.023322493 0.01252269 -0.027565002 0.015242092 -0.031813234
+		 0.012758456 -0.036070049 0.0053615496 -0.040337861 -0.0065955222 -0.04461807 -0.022710502
+		 -0.048911199 -0.042540401 -0.055375203 -0.078205496 -0.059697792 -0.10519329 -0.064028844
+		 -0.13414106 -0.068365142 -0.1645184 -0.072702274 -0.19579688 -0.07703732 -0.22745515
+		 -0.081367716 -0.25899071 -0.085691676 -0.28991741 -0.089222834 -0.31976002 0.054629445
+		 -0.30327696 0.057531744 -0.33156031 0.050133318 -0.27371651 0.045645744 -0.24333428
+		 0.041173398 -0.21258254 0.036720127 -0.18194157 0.032289058 -0.1519137 0.027881086
+		 -0.1230157 0.023498565 -0.095772207 0.016970634 -0.059159696 0.012645781 -0.038340241
+		 0.0083417594 -0.020973057 0.0040553808 -0.0075281262 -0.00021705031 0.0015593469
+		 -0.0044791102 0.0058993921 -0.0066078305 0.0061829314 -0.012989879 -0.00089070201
+		 -0.015117228 -0.0059290528 -0.021500647 -0.026409119 -0.023616076 -0.025875151 -0.029976308
+		 -0.0022273958 -0.034221232 0.0085366294 -0.036345363 0.011861436 -0.040598333 0.01443737
+		 -0.044860303 0.011764519 -0.049133748 0.0041399524 -0.053420484 -0.0080765188 -0.057721421
+		 -0.024475843 -0.062036678 -0.04461053 -0.068535432 -0.080759436 -0.07288067 -0.108082
+		 -0.077233896 -0.13737005 -0.081590936 -0.16809043 -0.085948035 -0.19970857 -0.090300485
+		 -0.2316996 -0.094645366 -0.26355249 -0.098982021 -0.29477495 -0.10320282 -0.32490164
+		 0.041119635 -0.30986089 0.043721467 -0.33827049 0.036666662 -0.28009802 0.032223344
+		 -0.24946474 0.027795315 -0.21841548 0.023385912 -0.18743537 0.018998861 -0.1570323
+		 0.014633775 -0.12773269 0.010289818 -0.10006937 0.0038149357 -0.062803596 -0.00047767162
+		 -0.041535646 -0.0047537386 -0.023703009 -0.0090162754 -0.0097578168 -0.013269097
+		 -9.7960234e-05 -0.017516017 0.0049613342 -0.019638538 0.0057034716 -0.026007593 0.00091853738
+		 -0.028132468 -0.0027069449;
+	setAttr ".uvtk[1500:1749]" -0.034509599 -0.013357908 -0.036634147 -0.012858003
+		 -0.043010533 0.00073304772 -0.047271013 0.0089335963 -0.049404234 0.011448078 -0.053677917
+		 0.012851916 -0.057962939 0.0093373582 -0.062261507 0.0010494888 -0.066574797 -0.011721551
+		 -0.07090281 -0.028602272 -0.075245604 -0.049163967 -0.081784233 -0.085874707 -0.086157009
+		 -0.11352795 -0.090536103 -0.14311573 -0.094917938 -0.1741059 -0.099297926 -0.20596476
+		 -0.10367176 -0.23816533 -0.10803586 -0.27019161 -0.11238879 -0.30154508 -0.11731899
+		 -0.33175832 0.027638376 -0.31683379 0.030157596 -0.34538001 0.023238569 -0.2868759
+		 0.018850923 -0.25600463 0.014476866 -0.22468285 0.01011923 -0.19339946 0.0057775974
+		 -0.16267096 0.0014543533 -0.13302657 -0.0028514564 -0.10500249 -0.0092796087 -0.067163318
+		 -0.013547391 -0.045477599 -0.017803848 -0.027174652 -0.02205205 -0.012667835 -0.026295394
+		 -0.0022880733 -0.030537546 0.0037654862 -0.032659233 0.0051674172 -0.039031088 0.0035302266
+		 -0.041158497 0.0015493035 -0.047549844 -0.0034625828 -0.049683154 -0.0030691326 -0.056091964
+		 0.0042520687 -0.060376987 0.0090968236 -0.062523469 0.010387532 -0.066825435 0.0099452361
+		 -0.071139917 0.0051101968 -0.075468525 -0.0041702688 -0.079811677 -0.017713487 -0.084170088
+		 -0.035208046 -0.088542387 -0.056262821 -0.095123932 -0.093536586 -0.099523351 -0.12146956
+		 -0.10392821 -0.15127197 -0.10833466 -0.18241805 -0.11273819 -0.21437927 -0.11713439
+		 -0.24662943 -0.12151951 -0.27865249 -0.12589198 -0.30994612 -0.13145179 -0.34002727
+		 0.014216602 -0.32397348 0.016878515 -0.35263044 0.0098775923 -0.29386967 0.0055484176
+		 -0.26283342 0.0012301207 -0.23132057 -0.0030777156 -0.19982953 -0.0073749721 -0.16888076
+		 -0.011660993 -0.1390062 -0.015936166 -0.1107395 -0.02233094 -0.072492272 -0.026584238
+		 -0.050478309 -0.030832231 -0.031765878 -0.035077542 -0.016718179 -0.039323062 -0.0055914819
+		 -0.04357177 0.0015260279 -0.045698285 0.0036251768 -0.052089632 0.0049726292 -0.054225028
+		 0.0042779073 -0.060646161 0.0023063123 -0.062791571 0.0025362 -0.069242761 0.0058555529
+		 -0.073557958 0.0076477155 -0.075720057 0.0076530203 -0.080053553 0.0051285848 -0.084400162
+		 -0.0012618899 -0.088760301 -0.01171127 -0.093133911 -0.026137501 -0.097521231 -0.044296831
+		 -0.1019209 -0.065843761 -0.10854048 -0.10359982 -0.11296317 -0.13171428 -0.1173901
+		 -0.16160421 -0.12181747 -0.19275516 -0.12624106 -0.22464649 -0.13065684 -0.25675851
+		 -0.13506036 -0.28857332 -0.1394491 -0.3195793 -0.14547919 -0.34927565 0.00087493658
+		 -0.33114988 0.0038893521 -0.35984248 -0.003403157 -0.30101889 -0.0076740682 -0.26993567
+		 -0.011941433 -0.23836829 -0.016206235 -0.20682029 -0.020468354 -0.17581294 -0.024727494
+		 -0.14587539 -0.028983325 -0.11753327 -0.035362661 -0.079114497 -0.039613903 -0.056910843
+		 -0.04386574 -0.037906021 -0.04812023 -0.022412091 -0.052379519 -0.010619342 -0.056645811
+		 -0.002538383 -0.058782265 0.00017684698 -0.065207824 0.0039002225 -0.067355618 0.0040785596
+		 -0.073817417 0.0037144944 -0.075977489 0.003745608 -0.082475588 0.0042865202 -0.086822793
+		 0.0036015436 -0.089000925 0.0024529621 -0.093365833 -0.0020648837 -0.097742543 -0.010018855
+		 -0.10213107 -0.021656305 -0.10653102 -0.036962926 -0.11094213 -0.055752486 -0.11536339
+		 -0.077723533 -0.12201074 -0.11580178 -0.12644964 -0.14395855 -0.1308912 -0.17377476
+		 -0.13533156 -0.20474385 -0.1397665 -0.23635025 -0.14419232 -0.26808411 -0.14860527
+		 -0.29944032 -0.15300274 -0.32992202 -0.15928796 -0.35901922 -0.012376994 -0.33835468
+		 -0.0088375509 -0.36694178 -0.016596049 -0.30835548 -0.020818084 -0.27739891 -0.02504611
+		 -0.24596436 -0.029280752 -0.21455733 -0.033521533 -0.18369624 -0.037767351 -0.1539025
+		 -0.042017668 -0.12568685 -0.048401713 -0.087380469 -0.052663535 -0.065157682 -0.056931183
+		 -0.046014816 -0.061205909 -0.030219287 -0.065489098 -0.017912477 -0.069782004 -0.0090646148
+		 -0.071932539 -0.0058671832 -0.078402326 -0.00043421984 -0.080565199 0.00029832125
+		 -0.087073192 0.00073987246 -0.089248762 0.00056290627 -0.095793113 -0.00093176961
+		 -0.10016982 -0.0035410821 -0.10236198 -0.0056420863 -0.10675359 -0.011884242 -0.11115468
+		 -0.021242827 -0.11556464 -0.033955902 -0.1199832 -0.050039738 -0.12440991 -0.069347471
+		 -0.12884369 -0.09161523 -0.13550393 -0.12978432 -0.13994722 -0.15779026 -0.14439015
+		 -0.18731193 -0.14883058 -0.21786873 -0.15326577 -0.24896835 -0.15769258 -0.2801148
+		 -0.16210812 -0.31081453 -0.16650915 -0.34057948 -0.17281106 -0.3689051 -0.025529861
+		 -0.34568486 -0.021363467 -0.37395886 -0.029707104 -0.3160136 -0.033897042 -0.28539816
+		 -0.038102746 -0.25432125 -0.042324156 -0.22328614 -0.046559334 -0.19280365 -0.050807208
+		 -0.16338135 -0.055066079 -0.13551077 -0.06147413 -0.097618312 -0.065758035 -0.075557321
+		 -0.070051774 -0.056444854 -0.074355587 -0.040511936 -0.078669712 -0.027869254 -0.082995102
+		 -0.018476099 -0.085161909 -0.014935464 -0.091680214 -0.0083499253 -0.093858823 -0.0072790086
+		 -0.10041235 -0.0064662993 -0.10260212 -0.0068350732 -0.10918614 -0.0098339021 -0.11358598
+		 -0.013886184 -0.1157887 -0.016725749 -0.12019902 -0.02434358 -0.12461531 -0.034847051
+		 -0.12903702 -0.048430234 -0.1334639 -0.065110892 -0.13789402 -0.084750921 -0.1423267
+		 -0.10711274 -0.14897858 -0.14504924 -0.15341365 -0.17270266 -0.1578474 -0.20174065
+		 -0.16227809 -0.23170258 -0.16670406 -0.2621139 -0.17112401 -0.29249433 -0.17553532
+		 -0.32236484 -0.17993528 -0.35125068 -0.1860193 -0.37866578 -0.038598984 -0.35331073
+		 -0.033768713 -0.38103524 -0.042755574 -0.32420012 -0.046934485 -0.29416654 -0.051137537
+		 -0.2636933 -0.055363148 -0.23327602 -0.059609458 -0.20341226 -0.063873813 -0.1745903
+		 -0.06815432 -0.14727911 -0.074602649 -0.11008826 -0.07891719 -0.088359445 -0.08324407
+		 -0.06943509 -0.087582216 -0.053519756 -0.09193109 -0.040708333 -0.096290037 -0.030966848
+		 -0.098473415 -0.027197927 -0.10503823 -0.019861192 -0.10723129 -0.018582791 -0.11382306
+		 -0.017600864 -0.11602387 -0.018120617 -0.1226359 -0.022184104 -0.12704957 -0.027261406
+		 -0.12925783 -0.030634493 -0.13367622 -0.03925845 -0.13809572 -0.050585836 -0.14251541
+		 -0.064750403 -0.14693533 -0.081758946 -0.15135519 -0.10149762 -0.15577489 -0.12375167
+		 -0.16240296 -0.16119082 -0.16682041 -0.18832256 -0.1712361 -0.21671273 -0.17564887
+		 -0.2459202 -0.18005747 -0.27548882 -0.18446368 -0.30495581 -0.18886471 -0.33385888
+		 -0.19326061 -0.36174098 -0.19892257 -0.38814238 -0.05160901 -0.36146489 -0.046155065
+		 -0.38838729;
+	setAttr ".uvtk[1750:1999]" -0.055769771 -0.33316121 -0.059959814 -0.30395994
+		 -0.064179346 -0.27433875 -0.068426415 -0.2447799 -0.072697923 -0.21576203 -0.076991126
+		 -0.18775101 -0.081303105 -0.16118921 -0.087803349 -0.12494621 -0.092154071 -0.10369048
+		 -0.096516415 -0.085082084 -0.10088961 -0.069307536 -0.10527202 -0.056457013 -0.10966235
+		 -0.046513826 -0.11186028 -0.042597324 -0.11846358 -0.034756929 -0.1206674 -0.033338517
+		 -0.12728494 -0.032233447 -0.12949234 -0.032845229 -0.13611655 -0.037578434 -0.14053182
+		 -0.043298453 -0.14273851 -0.047001332 -0.14714967 -0.056229323 -0.15155779 -0.068027467
+		 -0.15596288 -0.082485527 -0.16036516 -0.099589914 -0.16476509 -0.11922714 -0.16916287
+		 -0.14119479 -0.17575574 -0.17789604 -0.18014812 -0.20436022 -0.18453962 -0.23196562
+		 -0.18892902 -0.26029071 -0.19331777 -0.2888982 -0.19770348 -0.31734303 -0.20208877
+		 -0.34518084 -0.20647037 -0.37197164 -0.21156657 -0.39729336 -0.064593837 -0.37040028
+		 -0.058630452 -0.3962746 -0.068782374 -0.34314647 -0.073003456 -0.31501767 -0.077256426
+		 -0.28647932 -0.081538305 -0.2579945 -0.085845992 -0.23001893 -0.090177044 -0.20299253
+		 -0.094527587 -0.17733081 -0.10108344 -0.14221844 -0.10547039 -0.12153396 -0.10986739
+		 -0.10332677 -0.1142723 -0.087772459 -0.11868319 -0.074963659 -0.12309825 -0.064906329
+		 -0.12530696 -0.060887307 -0.13193505 -0.052663296 -0.13414471 -0.051127046 -0.14077155
+		 -0.049837083 -0.14297877 -0.050459355 -0.14959256 -0.055437714 -0.1539948 -0.061446875
+		 -0.15619349 -0.065305322 -0.16058633 -0.074815482 -0.16497326 -0.086800784 -0.16935477
+		 -0.10130647 -0.17373157 -0.11829624 -0.17810458 -0.13765129 -0.18247396 -0.15917577
+		 -0.18902445 -0.19493923 -0.19338936 -0.22062089 -0.19775218 -0.24733944 -0.20211506
+		 -0.27469096 -0.20647854 -0.30225655 -0.21084338 -0.32960978 -0.21521109 -0.35632566
+		 -0.21958148 -0.38198689 -0.22401702 -0.40618488 -0.077589497 -0.3803511 -0.071297035
+		 -0.4049587 -0.081825122 -0.3543689 -0.086092934 -0.32752398 -0.090391204 -0.30026349
+		 -0.094717667 -0.27302644 -0.099068865 -0.24624325 -0.10344073 -0.22032662 -0.10783061
+		 -0.19566497 -0.11444134 -0.16179176 -0.11886099 -0.14172825 -0.12328684 -0.1239607
+		 -0.1277163 -0.10865942 -0.13214688 -0.095924824 -0.13657664 -0.085785955 -0.13879071
+		 -0.081680626 -0.14542542 -0.073082179 -0.14763366 -0.071403593 -0.15424609 -0.069748491
+		 -0.15644604 -0.070293874 -0.163032 -0.075194627 -0.16741121 -0.081237644 -0.16959751
+		 -0.085119575 -0.17396379 -0.094653219 -0.17832232 -0.10658953 -0.18267399 -0.12093577
+		 -0.18702066 -0.13763472 -0.1913628 -0.15655984 -0.19570214 -0.17751713 -0.20220631
+		 -0.2121947 -0.20654142 -0.2370149 -0.21087658 -0.26278016 -0.21521288 -0.28910407
+		 -0.21955174 -0.31558499 -0.2238946 -0.34181479 -0.22824293 -0.36738798 -0.23259628
+		 -0.3919116 -0.23637736 -0.41498128 -0.090629563 -0.3914977 -0.084236965 -0.41466042
+		 -0.094924733 -0.36697045 -0.099249348 -0.34157529 -0.10360029 -0.31573722 -0.10797459
+		 -0.28986928 -0.11236995 -0.26437309 -0.11678275 -0.23963554 -0.12120923 -0.21601976
+		 -0.12786657 -0.18341818 -0.13231097 -0.16397895 -0.13675646 -0.14664635 -0.14119993
+		 -0.13158974 -0.14563881 -0.11891851 -0.15006922 -0.10866639 -0.15228081 -0.10444841
+		 -0.15889835 -0.095378369 -0.1610983 -0.09352693 -0.16767976 -0.091389567 -0.16986758
+		 -0.091799825 -0.17641264 -0.096384495 -0.18076199 -0.10226813 -0.18293273 -0.10607323
+		 -0.18726712 -0.1154336 -0.19159353 -0.1271393 -0.19591331 -0.14116839 -0.20022774
+		 -0.15744431 -0.20453846 -0.17583205 -0.20884722 -0.19613686 -0.21530801 -0.22963424
+		 -0.21961612 -0.25354919 -0.22392553 -0.2783303 -0.22823787 -0.30360642 -0.23255444
+		 -0.32899234 -0.23687607 -0.35409763 -0.24120384 -0.37853673 -0.24553537 -0.40194073
+		 -0.24874783 -0.42389479 -0.10374007 -0.40393266 -0.097500727 -0.42552218 -0.10810205
+		 -0.38098815 -0.11248472 -0.3571569 -0.11688814 -0.33282778 -0.12130973 -0.30838868
+		 -0.12574661 -0.2842162 -0.13019475 -0.26067182 -0.13465069 -0.23809703 -0.14134072
+		 -0.20673211 -0.14579915 -0.18788345 -0.15025191 -0.17094125 -0.15469456 -0.15606065
+		 -0.15912464 -0.14336804 -0.16354078 -0.13294432 -0.16574341 -0.12859604 -0.17232728
+		 -0.11902067 -0.17451438 -0.11698022 -0.18105233 -0.11427936 -0.1832245 -0.11451349
+		 -0.18972045 -0.11861989 -0.19403619 -0.12421259 -0.19619006 -0.12787262 -0.20049119
+		 -0.13692531 -0.20478469 -0.14827779 -0.20907259 -0.16188426 -0.21335673 -0.17765142
+		 -0.21763903 -0.19543537 -0.22192079 -0.2150398 -0.2283445 -0.24731453 -0.23263007
+		 -0.27031133 -0.23691893 -0.29410633 -0.24121171 -0.3183414 -0.24550945 -0.34264651
+		 -0.24981225 -0.36664757 -0.25411922 -0.38997832 -0.25842673 -0.41229227 -0.26122487
+		 -0.43315473 -0.11694202 -0.41763595 -0.11109993 -0.43758067 -0.12136436 -0.39635077
+		 -0.12580234 -0.37412784 -0.13025412 -0.35133246 -0.13471656 -0.32832578 -0.13918684
+		 -0.30546001 -0.14366113 -0.28307536 -0.14813571 -0.26149496 -0.15483952 -0.23127235
+		 -0.15929615 -0.21291699 -0.16373909 -0.19625875 -0.16816616 -0.18148401 -0.17257568
+		 -0.16873822 -0.17696697 -0.15812708 -0.17915565 -0.15364513 -0.18569386 -0.14355643
+		 -0.18786466 -0.14132234 -0.19435138 -0.13802502 -0.19650614 -0.13806394 -0.20295018
+		 -0.14160755 -0.20723188 -0.14683816 -0.20936936 -0.15031525 -0.21363854 -0.15898581
+		 -0.217902 -0.16991712 -0.22216219 -0.18304434 -0.22642076 -0.19826052 -0.23067975
+		 -0.21541269 -0.23494053 -0.23430236 -0.24133712 -0.26535329 -0.24560684 -0.28744379
+		 -0.24988121 -0.3102704 -0.25416028 -0.3334882 -0.25844395 -0.35673997 -0.26273125
+		 -0.37966713 -0.26702023 -0.40191981 -0.27130574 -0.42316964 -0.27388966 -0.44296548
+		 -0.13024482 -0.43247268 -0.12500474 -0.45074865 -0.13471602 -0.41285089 -0.13919948
+		 -0.39222446 -0.14368926 -0.37093261 -0.14818148 -0.3493115 -0.15267301 -0.3276926
+		 -0.15716028 -0.30639496 -0.16163817 -0.28570613 -0.16832948 -0.25644198 -0.17276967
+		 -0.23849829 -0.17719075 -0.22208066 -0.18159157 -0.20738716 -0.18597123 -0.19458136
+		 -0.19033003 -0.18379197 -0.19250184 -0.17918453 -0.19898701 -0.16861793 -0.20113975
+		 -0.16620234 -0.20757329 -0.16233422 -0.20971066 -0.1621808 -0.21610481 -0.16515455
+		 -0.22035581 -0.17000516 -0.22247875 -0.17328848 -0.22672099 -0.18155435;
+	setAttr ".uvtk[2000:2249]" -0.23096031 -0.19204429 -0.23519897 -0.20467809 -0.23943907
+		 -0.21933694 -0.24368221 -0.23586006 -0.24792963 -0.25404498 -0.25431079 -0.28390053
+		 -0.25857216 -0.30510929 -0.26283908 -0.326996 -0.26711094 -0.34922567 -0.27138656
+		 -0.37145355 -0.27566367 -0.39333382 -0.27993971 -0.41453037 -0.28421026 -0.43472657
+		 -0.286798 -0.45347282 -0.14363854 -0.44818541 -0.13914035 -0.46480533 -0.14815126
+		 -0.43017051 -0.15266639 -0.41107574 -0.15717912 -0.39121202 -0.16168547 -0.37088767
+		 -0.16618058 -0.35039482 -0.17066172 -0.33004209 -0.17512581 -0.31013283 -0.18178493
+		 -0.28173247 -0.1861977 -0.26416495 -0.19058773 -0.24797274 -0.1949544 -0.23336615
+		 -0.19929835 -0.2205254 -0.2036202 -0.20959915 -0.20577341 -0.20489205 -0.21220422
+		 -0.19393596 -0.21433932 -0.19136927 -0.22072273 -0.18701567 -0.22284442 -0.1866947
+		 -0.22919577 -0.18915714 -0.23342222 -0.19365564 -0.23553413 -0.19675621 -0.23975664
+		 -0.20463648 -0.24397945 -0.21470197 -0.24820501 -0.22686024 -0.25243497 -0.24098124
+		 -0.25667083 -0.25689754 -0.26091361 -0.27440295 -0.26729161 -0.30310389 -0.2715525
+		 -0.32345858 -0.27581954 -0.34443191 -0.28009117 -0.36569759 -0.28436524 -0.38692155
+		 -0.28863877 -0.40776804 -0.29290974 -0.42791221 -0.29717553 -0.44704363 -0.29997498
+		 -0.46473643 -0.15713105 -0.46439514 -0.15339673 -0.47943422 -0.16166267 -0.44789252
+		 -0.16618791 -0.43021891 -0.17070132 -0.41164258 -0.17519912 -0.39245954 -0.17967901
+		 -0.37297288 -0.1841386 -0.35348645 -0.18857607 -0.33430031 -0.19518718 -0.30671832
+		 -0.19956428 -0.28952494 -0.203917 -0.27357915 -0.2082454 -0.25910231 -0.21255121
+		 -0.24628909 -0.21683598 -0.23530526 -0.21897131 -0.23054262 -0.22535133 -0.21933885
+		 -0.22747082 -0.21666934 -0.23381203 -0.21196873 -0.2359215 -0.21152265 -0.24224138
+		 -0.21358557 -0.24645138 -0.21779324 -0.24855644 -0.22073831 -0.25276798 -0.22828056
+		 -0.2569834 -0.23796327 -0.26120478 -0.24968238 -0.26543355 -0.2632992 -0.26967078
+		 -0.27863941 -0.27391726 -0.29549351 -0.28030407 -0.32307616 -0.28457201 -0.34259674
+		 -0.28884631 -0.36267141 -0.29312468 -0.38298181 -0.29740411 -0.40320286 -0.30168128
+		 -0.42300627 -0.30595553 -0.44207677 -0.31022722 -0.46010885 -0.31341326 -0.47671399
+		 -0.17071566 -0.48063251 -0.16766828 -0.49419996 -0.17523023 -0.4654766 -0.17973644
+		 -0.44905695 -0.18422693 -0.43164 -0.18869767 -0.41350994 -0.19314656 -0.39496186
+		 -0.19757158 -0.37629589 -0.20197198 -0.35781005 -0.20852408 -0.33105806 -0.21286094
+		 -0.31427684 -0.21717367 -0.29863879 -0.2214638 -0.28437552 -0.22573313 -0.27169135
+		 -0.2299841 -0.26076373 -0.23210353 -0.25600633 -0.23844153 -0.24474318 -0.24054897
+		 -0.24203344 -0.24686021 -0.23716457 -0.24896151 -0.23664834 -0.25526357 -0.23845835
+		 -0.25946659 -0.24245663 -0.26156944 -0.24528225 -0.26577944 -0.25254968 -0.26999664
+		 -0.26190159 -0.27422267 -0.27322456 -0.27845877 -0.28637174 -0.28270537 -0.30116305
+		 -0.28696293 -0.317386 -0.29336888 -0.34386835 -0.29765022 -0.36255714 -0.301938 -0.38172773
+		 -0.30622905 -0.40106824 -0.31052095 -0.42026272 -0.31481081 -0.43899152 -0.31909454
+		 -0.45693716 -0.32337362 -0.47380027 -0.32707512 -0.48925516 -0.1843462 -0.49629006
+		 -0.18180785 -0.50853634 -0.18881902 -0.48234949 -0.19328332 -0.46708605 -0.19773155
+		 -0.45075092 -0.20215937 -0.43361744 -0.20656452 -0.4159759 -0.21094602 -0.39812365
+		 -0.21530232 -0.3803567 -0.22179016 -0.35450932 -0.22608685 -0.33822212 -0.23036155
+		 -0.32299414 -0.23461658 -0.30906352 -0.23885462 -0.29664198 -0.24307817 -0.28591439
+		 -0.24518555 -0.28123561 -0.25149423 -0.27013472 -0.25359422 -0.2674565 -0.25988954
+		 -0.26262107 -0.26198781 -0.2620959 -0.26828659 -0.26381394 -0.27249211 -0.26769045
+		 -0.27459759 -0.27043435 -0.27881497 -0.27749112 -0.28304225 -0.28656188 -0.28728068
+		 -0.29752538 -0.29153103 -0.3102276 -0.29579335 -0.32448342 -0.30006778 -0.34007868
+		 -0.30650014 -0.36544672 -0.31079966 -0.38328251 -0.3151055 -0.40151748 -0.31941491
+		 -0.41984853 -0.32372367 -0.43796203 -0.32802933 -0.45554885 -0.33232975 -0.47229919
+		 -0.33662492 -0.48791549 -0.34089279 -0.50211036 -0.19797605 -0.51086712 -0.19571301
+		 -0.52189398 -0.20239183 -0.49806544 -0.20679855 -0.48389646 -0.21119159 -0.46860489
+		 -0.21556529 -0.45245251 -0.21991953 -0.43572852 -0.22425216 -0.41872516 -0.22856364
+		 -0.40174136 -0.23498964 -0.37693873 -0.23924929 -0.36126247 -0.24349123 -0.34658
+		 -0.24771816 -0.33313069 -0.25193271 -0.32112953 -0.25613785 -0.31076393 -0.25823796
+		 -0.30624506 -0.26453215 -0.29554281 -0.26662958 -0.29297087 -0.27292424 -0.28837362
+		 -0.27502447 -0.28789958 -0.28133422 -0.28968111 -0.28555089 -0.29351625 -0.28766292
+		 -0.29621133 -0.29189521 -0.30311015 -0.29613912 -0.31193575 -0.30039567 -0.32255951
+		 -0.30466491 -0.33482185 -0.30894715 -0.34853408 -0.31324166 -0.36348101 -0.31970471
+		 -0.38768318 -0.3240242 -0.40461579 -0.32834989 -0.42185554 -0.33267879 -0.439105
+		 -0.33700728 -0.45606014 -0.3413322 -0.47241709 -0.34565079 -0.48787495 -0.34996343
+		 -0.50214064 -0.35478985 -0.514956 -0.21156448 -0.52396333 -0.2093223 -0.53385222
+		 -0.2159141 -0.51226902 -0.22025496 -0.49917778 -0.22458488 -0.48493251 -0.22890267
+		 -0.4697971 -0.23320505 -0.45404693 -0.23749071 -0.43797454 -0.24175975 -0.42187437
+		 -0.24813217 -0.39830717 -0.25236213 -0.38338915 -0.25657994 -0.36941066 -0.2607879
+		 -0.35660908 -0.26498911 -0.34519735 -0.26918632 -0.33536121 -0.27128428 -0.33108404
+		 -0.27757961 -0.32101163 -0.27967966 -0.3186166 -0.28598797 -0.31444517 -0.28809422
+		 -0.3140761 -0.29442692 -0.31605169 -0.29866153 -0.31990632 -0.3007831 -0.32257584
+		 -0.30503553 -0.32934806 -0.30930012 -0.33794096 -0.31357807 -0.34822038 -0.31786859
+		 -0.36002263 -0.32217187 -0.37315759 -0.32648671 -0.38740781 -0.33297914 -0.41034827
+		 -0.33731782 -0.42630276 -0.34166247 -0.44246182 -0.34601003 -0.45853564 -0.35035717
+		 -0.4742299 -0.35470033 -0.48924956 -0.35903704 -0.5033021 -0.36336589 -0.51610243
+		 -0.36867636 -0.52740991 -0.22507679 -0.53529835 -0.22260997 -0.54408765 -0.22935733
+		 -0.52471519 -0.23363203 -0.51274276 -0.23790193 -0.49960038 -0.24216625 -0.48555121
+		 -0.24642226 -0.47087023 -0.25066787 -0.45584473;
+	setAttr ".uvtk[2250:2499]" -0.25490257 -0.44076321 -0.26123494 -0.41865811 -0.26544523
+		 -0.40466198 -0.26964927 -0.39155576 -0.27384919 -0.37957105 -0.27804777 -0.36891487
+		 -0.28224748 -0.35976717 -0.28434843 -0.35580745 -0.29065919 -0.34657088 -0.29276615
+		 -0.34441349 -0.29909986 -0.34082076 -0.30121577 -0.34059742 -0.30757976 -0.34285679
+		 -0.31183666 -0.34676465 -0.31396955 -0.3494176 -0.31824458 -0.3560662 -0.32253176
+		 -0.36441085 -0.32683069 -0.37431267 -0.33114147 -0.38560656 -0.33546352 -0.3981007
+		 -0.33979613 -0.41158041 -0.34631246 -0.43312809 -0.35066617 -0.44800529 -0.35502535
+		 -0.46297702 -0.35938728 -0.47776303 -0.36374921 -0.49207994 -0.36810744 -0.50564325
+		 -0.37245882 -0.51817167 -0.37680125 -0.52939022 -0.38246554 -0.53906906 -0.23848921
+		 -0.54471922 -0.23558614 -0.55240154 -0.24270388 -0.53531897 -0.24692005 -0.5245291
+		 -0.25114 -0.51257861 -0.25536188 -0.49972543 -0.25958261 -0.48624048 -0.26379925
+		 -0.47240278 -0.26801106 -0.45849249 -0.27432007 -0.43809149 -0.27852231 -0.42518207
+		 -0.28272349 -0.41311136 -0.28692612 -0.40210131 -0.29113242 -0.39234945 -0.29534394
+		 -0.38402703 -0.29745221 -0.3804476 -0.30379003 -0.37221 -0.30590731 -0.37033489 -0.3122744
+		 -0.36742494 -0.3144021 -0.36737117 -0.32080203 -0.36995396 -0.32508254 -0.37391528
+		 -0.32722682 -0.37654409 -0.33152372 -0.38304016 -0.33583111 -0.39109024 -0.34014857
+		 -0.40055332 -0.34447569 -0.4112635 -0.34881175 -0.42303035 -0.35315621 -0.43564269
+		 -0.35968679 -0.45563743 -0.36404854 -0.46932349 -0.36841506 -0.4829894 -0.37278432
+		 -0.49636719 -0.37715429 -0.50918555 -0.3815217 -0.52117395 -0.38588321 -0.53206456
+		 -0.39023525 -0.54159546 -0.39608461 -0.54954588 -0.25179112 -0.55222881 -0.24829349
+		 -0.55873716 -0.25595078 -0.54409671 -0.26012444 -0.53459215 -0.26431096 -0.52395058
+		 -0.26850602 -0.51242554 -0.27270579 -0.50027955 -0.27690703 -0.48778114 -0.28110859
+		 -0.47519717 -0.28741223 -0.4567332 -0.29161727 -0.44506094 -0.29582638 -0.43416879
+		 -0.30004105 -0.42426547 -0.3042632 -0.41553685 -0.30849415 -0.40814278 -0.3106131
+		 -0.40498838 -0.31698561 -0.39785591 -0.31911492 -0.39628884 -0.32551903 -0.39410666
+		 -0.32765895 -0.39422747 -0.33409446 -0.3971177 -0.33839661 -0.40109804 -0.34055084
+		 -0.40367922 -0.34486628 -0.40996322 -0.3491894 -0.41764471 -0.35351974 -0.42658278
+		 -0.35785669 -0.43661246 -0.36219972 -0.44754705 -0.36654812 -0.45918021 -0.37308007
+		 -0.47744796 -0.37744075 -0.48982319 -0.38180524 -0.50206459 -0.38617307 -0.51391709
+		 -0.39054269 -0.52512419 -0.394912 -0.53543162 -0.39927799 -0.54458845 -0.40363592
+		 -0.55234826 -0.40948319 -0.55850339 -0.26497623 -0.55795002 -0.26081261 -0.56316626
+		 -0.2691097 -0.5511831 -0.27326435 -0.54308188 -0.27743727 -0.53387988 -0.28162321
+		 -0.52382231 -0.28581727 -0.51315939 -0.29001683 -0.50214434 -0.29422042 -0.4910284
+		 -0.3005355 -0.47470245 -0.3047528 -0.46438929 -0.30897796 -0.4547846 -0.31321213
+		 -0.44608328 -0.31745622 -0.43845639 -0.32171053 -0.43205151 -0.32384181 -0.42934558
+		 -0.33025163 -0.42335984 -0.33239347 -0.42210469 -0.33883363 -0.42063424 -0.3409847
+		 -0.42091486 -0.34745067 -0.42404327 -0.35176986 -0.42797682 -0.35393167 -0.43047175
+		 -0.35825926 -0.43645856 -0.36259145 -0.44367585 -0.36692721 -0.45198473 -0.37126577
+		 -0.46122405 -0.37560678 -0.4712126 -0.37994987 -0.48175117 -0.38646865 -0.49811849
+		 -0.39081806 -0.50907111 -0.39517087 -0.51978052 -0.39952737 -0.53000677 -0.40388787
+		 -0.53951073 -0.40825164 -0.54805613 -0.41261637 -0.55541158 -0.41697723 -0.5613513
+		 -0.42263907 -0.56568372 -0.27807519 -0.56207883 -0.27323768 -0.56588697 -0.28220913
+		 -0.55678833 -0.28636867 -0.55021214 -0.29054818 -0.5425781 -0.2947416 -0.53411806
+		 -0.29894423 -0.52506542 -0.30315396 -0.51565516 -0.30737039 -0.50612068 -0.31370938
+		 -0.4920803 -0.31794617 -0.48320779 -0.32219315 -0.47495684 -0.3264502 -0.46750674
+		 -0.33071825 -0.46101376 -0.33499783 -0.4556118 -0.33714139 -0.45335528 -0.34358644
+		 -0.44849107 -0.34573936 -0.44753096 -0.35220957 -0.44669804 -0.35436934 -0.44710621
+		 -0.36085683 -0.45035681 -0.36518627 -0.45415267 -0.36735195 -0.45651302 -0.37168419
+		 -0.46209928 -0.37601697 -0.46874377 -0.38034934 -0.47631201 -0.38468057 -0.48464856
+		 -0.38901049 -0.49357936 -0.39333892 -0.50291526 -0.3998301 -0.51722956 -0.40415889
+		 -0.5266664 -0.40849042 -0.53576005 -0.41282672 -0.54428709 -0.41716987 -0.55202711
+		 -0.42152053 -0.55876565 -0.42587894 -0.5642916 -0.43024105 -0.56840479 -0.43556011
+		 -0.57093191 -0.29112384 -0.56487572 -0.28568146 -0.56716967 -0.29528531 -0.5611645
+		 -0.2994718 -0.5562228 -0.30367503 -0.55026615 -0.30788943 -0.54350793 -0.31211156
+		 -0.53616166 -0.31634077 -0.52844107 -0.32057711 -0.52055883 -0.32694852 -0.50888431
+		 -0.33120772 -0.50148594 -0.33547783 -0.49460623 -0.33975944 -0.48840687 -0.34405109
+		 -0.48303148 -0.34835261 -0.47860107 -0.3505066 -0.4767718 -0.35698014 -0.4729428
+		 -0.35914123 -0.47224268 -0.36563152 -0.47192428 -0.36779648 -0.47241423 -0.37429392
+		 -0.47563776 -0.37862539 -0.47918972 -0.38079053 -0.48136064 -0.3851189 -0.48643634
+		 -0.3894437 -0.49239835 -0.39376414 -0.49911818 -0.39807957 -0.50644839 -0.40238976
+		 -0.51422465 -0.40669525 -0.52226806 -0.41314656 -0.53441358 -0.41744632 -0.54227221
+		 -0.42174941 -0.54970086 -0.4260577 -0.55649304 -0.43037719 -0.56244969 -0.43471104
+		 -0.56737733 -0.4390583 -0.5710938 -0.44341409 -0.57342064 -0.44828355 -0.57420421
+		 -0.30416545 -0.56661642 -0.29825625 -0.56732011 -0.30837756 -0.56456494 -0.31260705
+		 -0.56133986 -0.3168461 -0.55713606 -0.32109019 -0.55214548 -0.32533878 -0.54655755
+		 -0.32959303 -0.54056346 -0.33385262 -0.53435647 -0.34025717 -0.52505159 -0.34454021
+		 -0.51910841 -0.34883255 -0.51356626 -0.35313448 -0.50857091 -0.35744509 -0.5042522
+		 -0.361763 -0.50071955 -0.36392432 -0.49927673 -0.37041563 -0.49634644 -0.37258095
+		 -0.49585673 -0.37907904 -0.49589559 -0.38124472 -0.49641284 -0.3877393 -0.49944398
+		 -0.39206415 -0.50264168 -0.39422446 -0.50456941 -0.39854068 -0.50902951 -0.4028495
+		 -0.51420939 -0.40715057 -0.51998878 -0.41144288 -0.5262301 -0.41572678 -0.53278005
+		 -0.42000276 -0.53947163 -0.42640585 -0.54938507;
+	setAttr ".uvtk[2500:2749]" -0.43067092 -0.55564106 -0.43493861 -0.56139445 -0.43921596
+		 -0.56646144 -0.44350755 -0.57066071 -0.44781941 -0.57382357 -0.45215404 -0.57579315
+		 -0.4565081 -0.57642174 -0.4608624 -0.57556462 -0.31724462 -0.56755054 -0.31105945
+		 -0.56663263 -0.32152086 -0.56720555 -0.32580262 -0.56573856 -0.33008358 -0.56331766
+		 -0.33436081 -0.56011152 -0.33863735 -0.5562824 -0.34291527 -0.55200183 -0.34719917
+		 -0.54743731 -0.35363585 -0.54042614 -0.35793695 -0.53587317 -0.36224586 -0.53158987
+		 -0.36656174 -0.52770889 -0.37088379 -0.52434802 -0.37521034 -0.52160752 -0.37737483
+		 -0.52049613 -0.38387054 -0.51829374 -0.38603574 -0.51795661 -0.39252818 -0.51818001
+		 -0.39469033 -0.51866782 -0.40116936 -0.52134323 -0.40547961 -0.5240854 -0.40763146
+		 -0.52572238 -0.41192847 -0.52947843 -0.41621524 -0.53379858 -0.42049092 -0.53857267
+		 -0.42475551 -0.54367352 -0.42900962 -0.54895949 -0.43325263 -0.5542779 -0.43960071
+		 -0.56195641 -0.44383091 -0.56663036 -0.44806272 -0.57074726 -0.4523049 -0.57414138
+		 -0.45656556 -0.57665384 -0.46085286 -0.57813907 -0.46517187 -0.57846808 -0.46951991
+		 -0.57752573 -0.47337621 -0.57516599 -0.33040211 -0.56786871 -0.32417974 -0.56706393
+		 -0.33474487 -0.56923044 -0.33907932 -0.56951392 -0.34339878 -0.56885672 -0.3477082
+		 -0.56739354 -0.35201043 -0.56527066 -0.35631034 -0.56263399 -0.36061165 -0.55963266
+		 -0.3670699 -0.55477238 -0.371382 -0.55150092 -0.37569916 -0.54836035 -0.38002071
+		 -0.54547215 -0.38434491 -0.54294384 -0.3886708 -0.54086888 -0.3908338 -0.54002595
+		 -0.39732021 -0.53836668 -0.3994807 -0.53812242 -0.4059549 -0.53836107 -0.40810972
+		 -0.53876758 -0.41456211 -0.54094458 -0.41885173 -0.54315126 -0.42099243 -0.54446173
+		 -0.42526537 -0.54745364 -0.42952651 -0.55086839 -0.43377429 -0.55460715 -0.43800926
+		 -0.55855346 -0.442231 -0.56257975 -0.44644213 -0.56654501 -0.45274001 -0.57205355
+		 -0.45693356 -0.57520878 -0.46112913 -0.5777694 -0.46533585 -0.57958686 -0.46956402
+		 -0.58052325 -0.4738248 -0.58045661 -0.47812456 -0.57928514 -0.48246044 -0.57692707
+		 -0.48589474 -0.57495201 -0.34366748 -0.5694778 -0.33767062 -0.56977546 -0.34807044
+		 -0.57069373 -0.35244679 -0.57266068 -0.35679933 -0.57368731 -0.36113235 -0.57388127
+		 -0.36545163 -0.57336199 -0.3697637 -0.57225573 -0.37407359 -0.57069314 -0.380539
+		 -0.56778359 -0.38485259 -0.56565404 -0.3891682 -0.56351519 -0.39348507 -0.56147885
+		 -0.39780232 -0.55964541 -0.40211803 -0.5581032 -0.40427512 -0.55746472 -0.41073966
+		 -0.55616939 -0.41289169 -0.5559634 -0.41933721 -0.55607188 -0.42148143 -0.556355
+		 -0.4279002 -0.55793011 -0.4321655 -0.55955064 -0.43429381 -0.56051612 -0.43854105
+		 -0.56271899 -0.44277507 -0.56522179 -0.44699627 -0.56793451 -0.45120376 -0.570755
+		 -0.45539778 -0.57356668 -0.45957935 -0.57624316 -0.46583229 -0.5797087 -0.46999347
+		 -0.5814501 -0.47415555 -0.58257306 -0.47832805 -0.58294547 -0.48252314 -0.58244753
+		 -0.48675424 -0.58097994 -0.4910304 -0.57846856 -0.49534655 -0.57667768 -0.49848092
+		 -0.57622778 -0.35706529 -0.5734303 -0.35148114 -0.57342947 -0.36150366 -0.57375479
+		 -0.36590993 -0.57506835 -0.37028 -0.57765627 -0.37462112 -0.57937276 -0.37894332
+		 -0.5803138 -0.3832545 -0.58058691 -0.38756081 -0.58030701 -0.39401656 -0.57911086
+		 -0.39832079 -0.57796717 -0.40262473 -0.57667792 -0.40692788 -0.57534802 -0.4112291
+		 -0.57407308 -0.41552687 -0.57293844 -0.41767406 -0.57244647 -0.42410725 -0.57136238
+		 -0.42624789 -0.57115149 -0.43265879 -0.57102442 -0.43479067 -0.5711565 -0.44117308
+		 -0.57207704 -0.44541389 -0.57310009 -0.44752967 -0.57372046 -0.45175284 -0.57514882
+		 -0.45596379 -0.57677186 -0.46016192 -0.57851088 -0.46434718 -0.58027399 -0.46851939
+		 -0.58195746 -0.47267896 -0.5834471 -0.47889751 -0.58505106 -0.48303312 -0.58551514
+		 -0.48716688 -0.58534825 -0.4913078 -0.58443117 -0.49546915 -0.58265984 -0.49966693
+		 -0.57995427 -0.50391382 -0.57851005 -0.508205 -0.5780853 -0.51120561 -0.57782507
+		 -0.37058422 -0.57818127 -0.36559951 -0.57793653 -0.37504894 -0.57876301 -0.37946135
+		 -0.5795635 -0.38382515 -0.58052409 -0.3881534 -0.58359551 -0.39245969 -0.58582437
+		 -0.39675421 -0.58730197 -0.40104315 -0.58813155 -0.40747195 -0.58839703 -0.41175699
+		 -0.58808076 -0.41604078 -0.58749318 -0.42032242 -0.58673477 -0.42460129 -0.58589792
+		 -0.42887557 -0.58506572 -0.43101066 -0.58467472 -0.4374072 -0.58369064 -0.43953562
+		 -0.58344734 -0.44591051 -0.58303142 -0.44803029 -0.58300555 -0.45437777 -0.58327448
+		 -0.45859724 -0.58372545 -0.46070284 -0.58402205 -0.46490723 -0.58473098 -0.46910083
+		 -0.58554637 -0.47328371 -0.58640051 -0.47745514 -0.58721113 -0.48161477 -0.5878855
+		 -0.48576224 -0.58832049 -0.49196202 -0.58828259 -0.49608129 -0.58762753 -0.50019377
+		 -0.58633447 -0.50430727 -0.5842948 -0.50843412 -0.5814153 -0.51259327 -0.58068728
+		 -0.51680386 -0.58016169 -0.52106595 -0.57993436 -0.52410382 -0.57992911 -0.38425633
+		 -0.58350694 -0.37994093 -0.58309054 -0.38870424 -0.58425128 -0.39308327 -0.58521056
+		 -0.39740667 -0.58627486 -0.4016957 -0.58737302 -0.40596563 -0.5895685 -0.41022736
+		 -0.59206796 -0.41448638 -0.59383106 -0.42087489 -0.59531391 -0.42513359 -0.59567916
+		 -0.42939124 -0.59566379 -0.43364757 -0.59536445 -0.43789992 -0.59487128 -0.4421497
+		 -0.59426832 -0.4442718 -0.59394789 -0.45063305 -0.59300828 -0.45274925 -0.59272289
+		 -0.45909017 -0.59202063 -0.46120012 -0.59184766 -0.46752065 -0.5915277 -0.47172487
+		 -0.59147167 -0.4738242 -0.59148288 -0.47801739 -0.59156108 -0.48220301 -0.59167409
+		 -0.48638064 -0.59176159 -0.49054915 -0.59175062 -0.49470788 -0.5915575 -0.49885583
+		 -0.59108865 -0.50505608 -0.58964813 -0.50917101 -0.58803904 -0.5132727 -0.58578658
+		 -0.5173654 -0.58393335 -0.52145827 -0.58327246 -0.52556914 -0.58272564 -0.52973205
+		 -0.58237994 -0.53395712 -0.58236468 -0.53718251 -0.58264601 -0.39807984 -0.58909774
+		 -0.39442664 -0.58858764 -0.40244982 -0.58991838 -0.40674013 -0.59093964 -0.41098151
+		 -0.59201121 -0.41520199 -0.5930537 -0.41941744 -0.59402645 -0.42363518 -0.59490502
+		 -0.42785653 -0.59711385 -0.43419778 -0.59959853 -0.43842787 -0.60052514 -0.4426578
+		 -0.60098004 -0.44688904 -0.60106027 -0.45111796 -0.60085356;
+	setAttr ".uvtk[2750:2999]" -0.45534253 -0.60044122 -0.45745337 -0.60018134 -0.46378285
+		 -0.59928405 -0.46589017 -0.59896779 -0.47220701 -0.59803891 -0.4743101 -0.59774768
+		 -0.48061496 -0.59695244 -0.48481303 -0.59648383 -0.48691052 -0.59626234 -0.49110299
+		 -0.59582579 -0.49529141 -0.59536278 -0.49947518 -0.59482026 -0.50365359 -0.59413207
+		 -0.50782496 -0.59322226 -0.51198721 -0.59200478 -0.51821065 -0.58939946 -0.52233648
+		 -0.58732069 -0.52644181 -0.58674848 -0.53052586 -0.58623612 -0.5345884 -0.58579409
+		 -0.53863698 -0.58544505 -0.54273587 -0.58527303 -0.54690611 -0.58543968 -0.55041832
+		 -0.58598661 -0.41203293 -0.5946008 -0.40896839 -0.59405279 -0.41622958 -0.59545696
+		 -0.42036253 -0.59645808 -0.42448318 -0.59743261 -0.42861626 -0.59831262 -0.43276843
+		 -0.59907126 -0.43694037 -0.59969687 -0.44112477 -0.60018337 -0.44742167 -0.60108459
+		 -0.45162714 -0.60248578 -0.45583507 -0.60334849 -0.46004212 -0.6037643 -0.46425018
+		 -0.60382211 -0.46845728 -0.60360217 -0.47056031 -0.6034112 -0.47686881 -0.60260999
+		 -0.47897059 -0.60228956 -0.48527569 -0.60124135 -0.48737669 -0.60087538 -0.49368042
+		 -0.59975505 -0.4978826 -0.59898961 -0.49998361 -0.59859657 -0.50418657 -0.59777391
+		 -0.50838953 -0.59687114 -0.51259202 -0.5958395 -0.51679307 -0.59461868 -0.52099085
+		 -0.59313786 -0.52518243 -0.59131742 -0.53145331 -0.59018588 -0.5356093 -0.58981073
+		 -0.5397355 -0.5895052 -0.54383343 -0.58925676 -0.54788578 -0.5890671 -0.5519008 -0.58894145
+		 -0.55587399 -0.58890295 -0.55990636 -0.58909273 -0.56375235 -0.58986247 -0.42602202
+		 -0.59969842 -0.42346221 -0.59907293 -0.42991075 -0.60061193 -0.43383288 -0.60151851
+		 -0.43782407 -0.60230172 -0.44187817 -0.60293221 -0.44597706 -0.60340285 -0.45011783
+		 -0.60372102 -0.45427582 -0.60388708 -0.46054506 -0.60386622 -0.46472871 -0.60368347
+		 -0.46891925 -0.60337937 -0.47311288 -0.60354304 -0.4773092 -0.60388148 -0.48150724
+		 -0.60388851 -0.48360652 -0.60379052 -0.48990792 -0.60318303 -0.49200904 -0.6028986
+		 -0.49831718 -0.60187006 -0.50042111 -0.60148156 -0.50673926 -0.60020614 -0.51095647
+		 -0.59926593 -0.51306671 -0.5987649 -0.51729089 -0.59768522 -0.52151972 -0.59647369
+		 -0.52575237 -0.59508443 -0.52998799 -0.5940448 -0.53422481 -0.59366667 -0.53845972
+		 -0.59337425 -0.54480064 -0.59309995 -0.54901016 -0.59300959 -0.55319744 -0.59298611
+		 -0.55733609 -0.59302044 -0.5614143 -0.59308827 -0.56540412 -0.59317064 -0.56927705
+		 -0.59325278 -0.57306641 -0.59337723 -0.57709515 -0.59403598 -0.43971309 -0.60422611
+		 -0.43773741 -0.60324764 -0.44323227 -0.60520697 -0.44699454 -0.60592902 -0.45091754
+		 -0.60644424 -0.45494303 -0.60677207 -0.45903334 -0.6069268 -0.46315682 -0.60692024
+		 -0.46730706 -0.60676992 -0.47356451 -0.60630369 -0.47774345 -0.6058495 -0.48192939
+		 -0.60530198 -0.48611981 -0.6046772 -0.49031422 -0.60399079 -0.49451262 -0.60325992
+		 -0.49661303 -0.60288286 -0.50292265 -0.60173357 -0.50502801 -0.60135007 -0.51135445
+		 -0.60023046 -0.51346636 -0.59987307 -0.51981395 -0.5988754 -0.52405608 -0.59828734
+		 -0.52618039 -0.59802043 -0.53043562 -0.59754789 -0.53469914 -0.59716308 -0.53897113
+		 -0.59687102 -0.54325026 -0.59667468 -0.54753566 -0.5965749 -0.55182499 -0.59656763
+		 -0.55825853 -0.59671962 -0.56253844 -0.59691215 -0.5668022 -0.59715939 -0.57103175
+		 -0.59744263 -0.57520324 -0.59773123 -0.57927346 -0.59799039 -0.58316773 -0.59818292
+		 -0.58676118 -0.59828091 -0.59018648 -0.59818339 0.38332766 0.64191067 0.38416654
+		 0.6445787 0.37254733 0.63907194 0.38523349 0.64708382 0.38626665 0.64934361 0.38729459
+		 0.65156674 0.38832033 0.65376157 0.38883346 0.65624392 0.38940394 0.65867341 0.38999379
+		 0.66112167 0.3908869 0.66489971 0.39137888 0.66793668 0.3918364 0.67099625 0.39219809
+		 0.67406452 0.39251217 0.67716354 0.39288807 0.68034339 0.39307612 0.68195415 0.39232284
+		 0.68875957 0.39197329 0.69080687 0.39088005 0.69659925 0.39055991 0.69855577 0.38956273
+		 0.70455331 0.38898009 0.70878142 0.38876295 0.71104342 0.38828579 0.71562386 0.38763708
+		 0.71964657 0.38703769 0.7236973 0.38637558 0.7278071 0.38556486 0.73201108 0.38436389
+		 0.73590285 0.38255328 0.74177432 0.38133329 0.74569517 0.38010103 0.74960726 0.37853581
+		 0.7533409 0.37695548 0.75704098 0.37535918 0.7606957 0.3737458 0.76429397 0.37216645
+		 0.7678659 0.37107027 0.77007395 0.35991716 0.77334362 0.36256826 0.63608438 0.34950513
+		 0.77606475 0.35300654 0.6329996 0.33932447 0.7782352 0.34372586 0.63020551 0.32937345
+		 0.7795403 0.33473611 0.6277349 0.3194941 0.78047699 0.32379448 0.62415171 0.31013077
+		 0.78081876 0.31301892 0.62102163 0.300953 0.78114951 0.30278379 0.61749393 0.29178375
+		 0.78167152 0.29241309 0.61374426 0.28272825 0.78125215 0.28255981 0.61013341 0.27428025
+		 0.78089666 0.27305174 0.60817033 0.26624537 0.78233576 0.26519978 0.60945004 0.25834107
+		 0.78549516 0.25727308 0.61187953 0.25048107 0.79024959 0.24922657 0.61519974 0.24255799
+		 0.79631281 0.24102454 0.6191262 0.2345268 0.80339921 0.23265813 0.62337905 0.22630532
+		 0.81118178 0.2240445 0.62781525 0.21717577 0.81876367 0.21524628 0.63220584 0.20774288
+		 0.82666403 0.2056257 0.63687372 0.19796672 0.83470356 0.19594264 0.64115387 0.18795902
+		 0.84266508 0.18628949 0.6452623 0.17780238 0.85030681 0.17672712 0.64993757 0.16759311
+		 0.85752022 0.16727586 0.65605193 0.15743011 0.86434948 0.15791994 0.66397673 0.1473964
+		 0.87096721 0.14866017 0.67336833 0.13756041 0.87758249 0.13948126 0.683622 0.12797877
+		 0.88438469 0.13035536 0.69424665 0.11869169 0.89148408 0.12121782 0.70485175 0.10969806
+		 0.89886522 0.112018 0.71510899 0.10093395 0.90619779 0.10269476 0.72461545 0.092347182
+		 0.91305852 0.093208231 0.73293614 0.083827235 0.91916603 0.083576061 0.73963666 0.075269975
+		 0.92406142 0.0737615 0.74436468 0.066538192 0.9278596 0.063781239 0.74690789 0.057356812
+		 0.93207741 0.053775258 0.74640149 0.047601022 0.93774569 0.04382439 0.74264336 0.037310287
+		 0.94400644 0.034011051 0.7356025 0.026699468 0.9487651;
+	setAttr ".uvtk[3000:3249]" 0.02434428 0.72651708 0.015920356 0.95064306 0.014765099
+		 0.71878344 0.0050944537 0.94948292 0.0051148981 0.71590382 -0.0056489483 0.94585001
+		 -0.0046469644 0.71758109 -0.016173825 0.9405936 -0.014414325 0.72036487 -0.026427999
+		 0.93447047 -0.024039999 0.72179741 -0.036379345 0.92796272 -0.033471979 0.72146559
+		 -0.045980401 0.92141819 -0.042739965 0.71974856 -0.055213913 0.91505563 -0.051914796
+		 0.71697938 -0.064229354 0.9087615 -0.061088786 0.71329182 -0.072956696 0.90273499
+		 -0.070336446 0.70863867 -0.081537232 0.8966471 -0.079709873 0.70290387 -0.089558944
+		 0.88991952 -0.089202777 0.69622552 -0.097653046 0.88304174 -0.098837867 0.68818563
+		 -0.1059754 0.87618607 -0.10861324 0.67885256 -0.11465524 0.86945003 -0.11805414 0.66880578
+		 -0.12368418 0.86256123 -0.1272911 0.65816694 -0.13298549 0.85503185 -0.13634871 0.64725202
+		 -0.14245079 0.84661198 -0.14531897 0.63708824 -0.15197636 0.83746225 -0.15426289
+		 0.62904841 -0.16151224 0.82800007 -0.16320242 0.62349129 -0.17100023 0.81871551 -0.17201303
+		 0.61966592 -0.18038605 0.81008601 -0.18055068 0.61726379 -0.18960951 0.80254418 -0.18880819
+		 0.61613071 -0.19862317 0.79641783 -0.19686793 0.6164723 -0.20739561 0.79193121 -0.2048738
+		 0.61834055 -0.21588321 0.78923178 -0.21294938 0.62163913 -0.22409695 0.78775048 -0.2212119
+		 0.62615919 -0.23218118 0.78802913 -0.22993921 0.63184536 -0.24047668 0.79001313 -0.23940931
+		 0.63715595 -0.24901514 0.79189605 -0.24909173 0.64022827 -0.25754464 0.79243928 -0.2588653
+		 0.64249152 -0.26617807 0.79249477 -0.26889259 0.64402902 -0.27499259 0.79198164 -0.27917242
+		 0.64502603 -0.28399843 0.79077464 -0.28940678 0.64585406 -0.29368657 0.78834128 -0.29982328
+		 0.64651901 -0.30359679 0.78518951 -0.31043458 0.64742213 -0.31428343 0.78123909 -0.32208675
+		 0.64878744 -0.32586533 0.77705169 -0.32298225 0.64980108 -0.32478708 0.65191305 -0.32673466
+		 0.65449864 -0.32865775 0.65720648 -0.33018595 0.65999299 -0.33168828 0.66290265 -0.33316761
+		 0.66593319 -0.33461487 0.66907543 -0.3367992 0.67401034 -0.33821219 0.67741257 -0.33957452
+		 0.68088222 -0.34080058 0.68436307 -0.34123081 0.6894241 -0.34192818 0.69408315 -0.34223592
+		 0.69639176 -0.34357631 0.70310199 -0.34399539 0.70531732 -0.34519154 0.71253049 -0.34540427
+		 0.71529454 -0.34487563 0.7232976 -0.34422165 0.72822911 -0.34393811 0.73068571 -0.34334052
+		 0.73549414 -0.34230089 0.73907673 -0.34133387 0.7425189 -0.34032971 0.74582255 -0.33924681
+		 0.74900693 -0.33816785 0.75206786 -0.33658051 0.75642794 -0.33554846 0.75982565 -0.33430535
+		 0.76273066 -0.33292717 0.76526219 -0.33157772 0.76799983 -0.33010143 0.77020663 -0.32860845
+		 0.77232343 -0.3271184 0.7743957 0.47923839 0.07937704 0.38115579 0.27147645 0.38102555
+		 0.27599114 0.3815791 0.27830082 0.38074446 0.28131467 0.37973613 0.28477472 0.37896454
+		 0.2890138 0.37965214 0.29408032 0.37887973 0.29691565 0.37762755 0.29967177 0.37561673
+		 0.30549854 0.37431943 0.30970389 0.372877 0.31360853 0.37119573 0.31747174 0.36934245
+		 0.32146496 0.36743784 0.32576132 0.36543512 0.33033526 0.36366028 0.3357231 0.36319983
+		 0.34100199 0.35165012 0.34648818 0.341171 0.35092539 0.33123678 0.35434043 0.32170507
+		 0.35678685 0.31246811 0.35851395 0.30348098 0.35960674 0.29463583 0.36041373 0.2857663
+		 0.36140442 0.27707383 0.36109412 0.26856768 0.36090589 0.26025927 0.36250883 0.25202292
+		 0.36583012 0.24381478 0.37072289 0.23556329 0.3769846 0.22721766 0.38430095 0.21866781
+		 0.39239258 0.20995684 0.40074366 0.2010197 0.40922058 0.19188702 0.41758913 0.1825498
+		 0.42567605 0.1730455 0.43333942 0.16342828 0.44055861 0.15375847 0.44744116 0.14410733
+		 0.45415878 0.13452633 0.46092379 0.12505558 0.46789372 0.11569545 0.47525305 0.10647301
+		 0.48304498 0.097373553 0.49107957 0.088360973 0.49904919 0.07947246 0.50662613 0.070703544
+		 0.51351768 0.062078334 0.51942581 0.053394802 0.52494365 0.044536725 0.53035003 0.035420403
+		 0.53473711 0.025982782 0.53734171 0.016299799 0.53748387 0.0064431578 0.53520936
+		 -0.003495045 0.53093994 -0.013418205 0.52532136 -0.023259655 0.51895887 -0.032992132
+		 0.51224744 -0.042569824 0.50559705 -0.051913515 0.49926674 -0.061047569 0.49323624
+		 -0.069884911 0.48741889 -0.078420952 0.48163301 -0.086701736 0.47557539 -0.094847575
+		 0.46912032 -0.10300668 0.46234512 -0.1113127 0.45519108 -0.11984374 0.44754624 -0.12860619
+		 0.43917519 -0.13755821 0.4300518 -0.14665525 0.42033905 -0.15584563 0.410429 -0.16507064
+		 0.40075701 -0.17426585 0.39175689 -0.18336634 0.38382071 -0.19234012 0.37723053 -0.20116381
+		 0.37222159 -0.2097981 0.36893052 -0.21827324 0.36753261 -0.22658652 0.3679356 -0.23498406
+		 0.36989313 -0.24337937 0.37179142 -0.25159705 0.3722204 -0.25974452 0.3719815 -0.26800013
+		 0.37084609 -0.27644461 0.36858875 -0.28539187 0.36504334 -0.29493272 0.36018664 -0.30553269
+		 0.35401982 -0.31793416 0.34682941 -0.31890839 0.34148496 -0.32066894 0.33793908 -0.32252437
+		 0.33506972 -0.3242299 0.3325516 -0.32569158 0.32998186 -0.32704234 0.32755923 -0.32805848
+		 0.32492375 -0.32870394 0.32173795 -0.3304171 0.31695378 -0.33177012 0.31368577 -0.33320147
+		 0.31045341 -0.33466893 0.30742496 -0.33598226 0.30459851 -0.33659035 0.30150545 -0.3370592
+		 0.29788136 -0.33775061 0.29622298 -0.33973545 0.29313266 -0.3383227 0.28916383 -0.33803785
+		 0.28749079 -0.33667874 0.2824502 -0.33623946 0.28043717 -0.33498925 0.27381569 -0.33487177
+		 0.27147096 -0.33474523 0.26686013 -0.33447498 0.26328123 -0.33357054 0.26023036 -0.33229536
+		 0.25710934 -0.33085781 0.25380987 -0.32845628 0.2489239 -0.32679671 0.24563009 -0.32507008
+		 0.24243575 -0.32333362 0.23923081 -0.32134718 0.23628795 -0.31903005 0.23316604 -0.3165428
+		 0.22952068 -0.31449801 0.22472513 -0.31397533 0.22141284 -0.30180269 0.21767491 -0.29084557
+		 0.21500981 -0.28046894 0.21312666 -0.27037424 0.21157628 -0.26050818 0.20995814 -0.25090694
+		 0.20797116 -0.24157436 0.20538163;
+	setAttr ".uvtk[3250:3499]" -0.23242031 0.20204335 -0.22349352 0.19658726 -0.21509023
+		 0.19046694 -0.2070455 0.18556613 -0.19909631 0.18197089 -0.19115125 0.17988729 -0.18310951
+		 0.17945445 -0.17489772 0.18072289 -0.166481 0.18363261 -0.15783451 0.18817663 -0.14900459
+		 0.19449168 -0.14002495 0.20277047 -0.1308841 0.21266562 -0.12154429 0.22318012 -0.1120647
+		 0.23359251 -0.10254849 0.24339622 -0.093050346 0.25235313 -0.083701476 0.26018 -0.074556574
+		 0.26662654 -0.06577684 0.2721833 -0.057182565 0.27684778 -0.048662677 0.28073758
+		 -0.040112056 0.28394014 -0.031461336 0.28651851 -0.022646651 0.28838885 -0.013644978
+		 0.28943598 -0.004482694 0.28989339 0.0047757477 0.2909717 0.014121816 0.29426771
+		 0.023634568 0.29979062 0.033402309 0.30565447 0.043419316 0.30997705 0.053578146
+		 0.31196463 0.063661315 0.31138641 0.073457815 0.30815816 0.082853533 0.30308783 0.09192843
+		 0.29631674 0.10074375 0.28821176 0.10940439 0.27905566 0.11799029 0.26923978 0.12657711
+		 0.25910795 0.13522668 0.24904668 0.1439967 0.23937681 0.15292346 0.23045123 0.16202766
+		 0.2226246 0.17132147 0.21607018 0.18081722 0.21060532 0.19046062 0.2056812 0.20005685
+		 0.20074767 0.20948146 0.19589281 0.2185891 0.19108987 0.22737037 0.18637776 0.23583914
+		 0.18200952 0.24406596 0.17822713 0.25210792 0.17523196 0.26004863 0.17338988 0.26796764
+		 0.17307243 0.27653176 0.17486802 0.28551975 0.17854071 0.29511121 0.18247026 0.30502725
+		 0.18549734 0.31513342 0.18884522 0.3253777 0.19237602 0.33502299 0.19585043 0.34444943
+		 0.19967383 0.35397077 0.2040832 0.36409152 0.20927989 0.37567109 0.21513361 0.37601298
+		 0.22025573 0.37714487 0.22421432 0.37860939 0.22730207 0.38007408 0.22964573 0.38091284
+		 0.23178178 0.38130015 0.23409569 0.38171661 0.23642826 0.38218081 0.23878849 0.38269633
+		 0.2426036 0.38306564 0.2455278 0.38364467 0.2485888 0.38453299 0.25152236 0.38616112
+		 0.25362271 0.38749677 0.25559974 0.38873911 0.25602913 0.385741 0.25765854 0.38454497
+		 0.2583704 0.38272536 0.26316762 0.48136473 0.079350457 0.38225481 0.26516163 0.48783892
+		 0.079386935 0.49001265 0.079437181 0.49656278 0.079682216 0.4987908 0.079802558 0.50324774
+		 0.080079719 0.50774598 0.08040534 0.51221788 0.080763385 0.51663631 0.081144676 0.52104473
+		 0.081542537 0.52770388 0.082119152 0.53217924 0.082477018 0.53668946 0.082782313
+		 0.54124188 0.082998499 0.54584748 0.08306919 0.55051649 0.082897946 0.55524468 0.082305297
+		 0.55995333 0.080933973 0.56417596 0.07791923 0.55262029 0.07373552 0.54023159 0.069195196
+		 0.52740669 0.064551517 0.51438951 0.059979603 0.50133622 0.055629656 0.48834047 0.051627144
+		 0.4754447 0.048061773 0.46251744 0.044934556 0.44966462 0.040863864 0.43713415 0.036872678
+		 0.42473775 0.034460664 0.41226834 0.033350348 0.39965469 0.033302248 0.38684145 0.03406167
+		 0.37379771 0.035383701 0.360522 0.037055247 0.34704614 0.038909726 0.33343083 0.040833585
+		 0.31976309 0.042761318 0.30613732 0.04470031 0.29263353 0.04680787 0.27929497 0.049457535
+		 0.2661283 0.053091928 0.25312486 0.057896003 0.24027345 0.06369172 0.22754772 0.070134625
+		 0.21489461 0.076878056 0.20223601 0.083584771 0.1894827 0.089892611 0.17655165 0.095413193
+		 0.16338058 0.099762037 0.14993878 0.10259624 0.13623329 0.10364379 0.1223122 0.10270794
+		 0.10822513 0.099640086 0.094110519 0.094363257 0.080094464 0.086950943 0.066266656
+		 0.078089222 0.052660882 0.069475278 0.0391711 0.062862381 0.025775969 0.058215246
+		 0.012530088 0.05403094 -0.00050905347 0.049206451 -0.013347149 0.043543153 -0.026049018
+		 0.037158363 -0.038713396 0.030094385 -0.051445901 0.022264682 -0.064342722 0.013513885
+		 -0.077477083 0.0036872551 -0.090888962 -0.0073158145 -0.10457832 -0.01951012 -0.11850178
+		 -0.03281042 -0.1326019 -0.04702577 -0.14672945 -0.061834663 -0.16074002 -0.076803595
+		 -0.17459178 -0.091164798 -0.1882416 -0.10405192 -0.20166624 -0.11510548 -0.21480519
+		 -0.12447748 -0.22760636 -0.1322774 -0.24008691 -0.13841416 -0.25233269 -0.14284417
+		 -0.2644667 -0.14567515 -0.27662665 -0.1471267 -0.28894299 -0.14746878 -0.30171353
+		 -0.14696023 -0.3151564 -0.14756557 -0.32893473 -0.15047982 -0.34292203 -0.1543285
+		 -0.35720354 -0.15907837 -0.37174296 -0.16456915 -0.38652301 -0.17055686 -0.40159532
+		 -0.17673291 -0.41714892 -0.18271002 -0.43374583 -0.18782689 -0.43625444 -0.18998441
+		 -0.44060537 -0.19208921 -0.44502521 -0.19337316 -0.4494077 -0.19415452 -0.45374194
+		 -0.19460453 -0.45803627 -0.19481434 -0.46230108 -0.19483466 -0.46654037 -0.19470061
+		 -0.47288892 -0.19423302 -0.47710079 -0.19378395 -0.48128012 -0.19324459 -0.48537827
+		 -0.19264193 -0.48943302 -0.19199385 -0.49352795 -0.19130005 -0.49555236 -0.19095434
+		 -0.50183135 -0.18982877 -0.50391024 -0.18946245 -0.51026177 -0.18834688 -0.51240271
+		 -0.18798555 -0.51883572 -0.18697067 -0.52316898 -0.18636151 -0.52538449 -0.18607207
+		 -0.52978843 -0.18556984 -0.53426242 -0.18514951 -0.53877431 -0.1848305 -0.54325634
+		 -0.18462488 -0.54768455 -0.18452856 -0.55211407 -0.18453231 -0.55877656 -0.18468866
+		 -0.56327599 -0.18488885 -0.56780303 -0.18513878 -0.57237613 -0.18540348 -0.57700825
+		 -0.1856261 -0.58171284 -0.1857086 -0.58649129 -0.1854737 -0.59127474 -0.18458661
+		 -0.59601396 -0.18180546 -0.58420569 -0.17667033 -0.57162076 -0.17168339 -0.55865508
+		 -0.16718873 -0.54556423 -0.16337605 -0.53251123 -0.16032209 -0.51958895 -0.15799864
+		 -0.50684011 -0.1562856 -0.49410468 -0.15497485 -0.48141056 -0.15515336 -0.4690364
+		 -0.155543 -0.4568277 -0.15423319 -0.44449443 -0.15107951 -0.43195039 -0.14599779
+		 -0.41913736 -0.13900492 -0.40603048 -0.13022986 -0.39263862 -0.11991206 -0.37900156
+		 -0.10838726 -0.36518252 -0.096064419 -0.35126144 -0.083395392 -0.33732623 -0.070834905
+		 -0.32347196 -0.058774561 -0.30980402 -0.047429413 -0.29642957 -0.036750942 -0.28342432
+		 -0.026520222 -0.27078891 -0.016594797 -0.25843972 -0.0069904625 -0.24624306 0.0022744834
+		 -0.23405558 0.011305355 -0.22174674 0.020299308 -0.20920783 0.029450357 -0.19635707
+		 0.038874321 -0.18314213 0.048563644;
+	setAttr ".uvtk[3500:3559]" -0.16954288 0.058369145 -0.15557349 0.068000957 -0.1412618
+		 0.077055737 -0.12669367 0.084919676 -0.11202091 0.090923294 -0.097402483 0.094589397
+		 -0.082988977 0.095877215 -0.068956703 0.095445082 -0.055444181 0.09439753 -0.042481691
+		 0.09324722 -0.029948413 0.091579482 -0.017690837 0.088844463 -0.0054923594 0.085050449
+		 0.0067923069 0.080622241 0.019275695 0.076057121 0.032040566 0.071733281 0.045138299
+		 0.067859396 0.058583081 0.064480469 0.072349042 0.061509475 0.086372234 0.058768615
+		 0.10055763 0.056039318 0.11478946 0.053120956 0.12894146 0.049889371 0.14288965 0.046339795
+		 0.15652964 0.042585127 0.16980296 0.038790576 0.18271619 0.035125017 0.19533512 0.031798303
+		 0.20775831 0.029117644 0.22009262 0.027462482 0.23244137 0.027204812 0.24489775 0.028646886
+		 0.25753558 0.031991184 0.27056679 0.037419371 0.28413939 0.043276362 0.29790932 0.048296079
+		 0.31186348 0.053654 0.32604852 0.059154972 0.34043622 0.064556763 0.35502359 0.069635257
+		 0.36986518 0.074193105 0.38511485 0.078051612 0.4010759 0.080860004 0.40431952 0.082621917
+		 0.40877894 0.083837256 0.41326562 0.084329054 0.41770697 0.084407255 0.42209703 0.084242508
+		 0.42644536 0.083930776 0.43076378 0.083530471 0.43506247 0.08307974 0.44147044 0.08234708
+		 0.44573915 0.081860408 0.44996619 0.081393942 0.45411235 0.08096014 0.45821488 0.080561146
+		 0.46234304 0.080202684 0.46652526 0.079897448 0.46860349 0.079765543 0.47283554 0.079558;
+createNode polyMapCut -n "polyMapCut2";
+	rename -uid "2A328EF7-458C-B7A5-1F15-FAB8C87683D5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 9 "e[42]" "e[55]" "e[57:58]" "e[74]" "e[87]" "e[89:90]" "e[106]" "e[119]" "e[121:122]";
+createNode polyTweakUV -n "polyTweakUV2";
+	rename -uid "17A508AC-4998-3E43-A92A-F496FFCC3284";
+	setAttr ".uopa" yes;
+	setAttr -s 96 ".uvtk[0:95]" -type "float2" -0.039108507 0.073209539
+		 -0.052381597 0.042357374 -0.20095749 -0.19186607 -0.22684658 -0.22030531 -0.26407981
+		 -0.13328293 -0.28966033 -0.16315657 -0.49992466 0.35777169 -0.6704824 0.15435794
+		 -0.52425826 0.31847492 -0.50204742 0.34458271 -0.10510206 0.11124688 -0.12426993
+		 0.07950443 -0.086250737 -0.0073003676 -0.15654631 0.023969837 -0.21966925 -0.084429234
+		 -0.15601206 -0.14230758 -0.65935856 0.17297778 -0.53609288 0.30228013 -0.13471207
+		 0.061761111 -0.062430926 0.025147382 -0.18642189 -0.17580636 -0.15287897 -0.12777595
+		 -0.63614541 0.21195862 -0.5565362 0.26812184 -0.44566962 0.31134287 -0.43721178 0.32430911
+		 -0.46719316 0.28148204 -0.4792096 0.26462352 -0.50519419 0.22924381 -0.57338321 0.17471895
+		 -0.3533532 -0.22133662 -0.60793477 0.11594877 -0.38038746 0.26882318 -0.37143409
+		 0.28153598 -0.40159059 0.23866138 -0.4135648 0.22163826 -0.43861163 0.18605757 -0.50019282
+		 0.1294522 -0.5246802 0.091083199 -0.53645682 0.072854638 -0.30030203 0.21884641 -0.29160911
+		 0.23171932 -0.32075998 0.18833441 -0.33229041 0.17110795 -0.35639477 0.1350895 -0.41295391
+		 0.071135521 -0.22516733 -0.16846846 -0.45145833 0.016313754 -0.24052119 0.18380184
+		 -0.23221314 0.19690639 -0.26022828 0.152863 -0.27136618 0.13540559 -0.29464376 0.098891184
+		 -0.35010159 0.02487161 -0.37777376 -0.010960199 -0.39101255 -0.028119359 -0.16878007
+		 0.14436017 -0.16076227 0.15766183 -0.18786113 0.11298403 -0.19865716 0.095262781
+		 -0.22111034 0.058161452 -0.27922261 -0.032485534 -0.098119207 -0.12743078 -0.32224625
+		 -0.083546698 -0.16359946 0.010322938 -0.22914934 0.044868503 -0.30296969 0.08579725
+		 -0.36507219 0.12219922 -0.44758779 0.17335358 -0.51500797 0.21717736 -0.096685156
+		 0.12461479 -0.3469491 -0.11315322 -0.41442215 -0.058539301 -0.47346139 -0.015093453
+		 -0.55718023 0.040809717 -0.62805885 0.08461082 -0.69006866 0.12136781 -0.55064821
+		 0.30968928 -0.56928545 0.2623499 -0.050292172 0.016428102 -0.085700914 -0.021287389
+		 -0.038322888 0.038247634 -0.53589767 0.32914042 -0.026861735 0.080443338 -0.24965298
+		 -0.11700885 -0.15310763 -0.11241819 -0.097890444 -0.11206249 -0.3083536 -0.06693618
+		 -0.27827919 -0.17362426 -0.28012627 -0.15837005 -0.22629839 -0.1531485 -0.43902129
+		 0.034022864 -0.41244709 -0.23079012 -0.4151721 -0.2156892 -0.35566425 -0.20616832
+		 -0.59669942 0.13438466;
+createNode polyMapCut -n "polyMapCut3";
+	rename -uid "8ABB62DC-409A-95A1-F5C9-D491DE2A8A53";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 9 "e[31]" "e[33:34]" "e[50]" "e[63]" "e[65:66]" "e[82]" "e[95]" "e[97:98]" "e[114]";
+createNode polyTweakUV -n "polyTweakUV3";
+	rename -uid "DBD40D91-4903-01EF-543B-61B8669D256C";
+	setAttr ".uopa" yes;
+	setAttr -s 98 ".uvtk[0:97]" -type "float2" 0.52966589 0.05330047 0.70561391
+		 0.12378626 0.52304393 0.11729699 0.52464443 0.05917196 0.44710451 0.11209022 0.45096996
+		 0.052519485 0.013751857 0.0034523308 0.0052935183 0.062338173 0.30506262 -0.20917532
+		 0.26826185 -0.16234222 0.6095593 0.1187752 0.30454177 0.01607959 0.77367789 0.045477927
+		 0.7163654 -0.0045225322 0.4396295 0.2155278 0.5157544 0.2206389 0.00059881806 0.095601618
+		 0.32580513 -0.23560256 0.66999406 0.050042152 0.72763515 0.098439023 0.52064383 0.15069599
+		 0.44467929 0.14557663 -0.009354353 0.16512561 0.37021464 -0.28709432 0.31875253 -0.12260175
+		 0.077233851 0.012833834 0.35612619 -0.17027333 0.37713832 -0.19637933 0.42089719
+		 -0.25051728 0.054597288 0.17450312 0.064348571 0.10494712 0.068948276 0.071686 0.37717205
+		 -0.076058328 0.150958 0.023138702 0.057940256 -0.32247573 0.4357335 -0.14890173 0.47986042
+		 -0.20315939 0.12987836 0.18499142 0.13895005 0.11536062 0.14325386 0.082066894 0.44730479
+		 -0.019055963 0.24022686 0.034236103 0.48514938 -0.065008551 0.5064981 -0.090911567
+		 0.55115139 -0.14497119 0.2218765 0.1963722 0.22976905 0.12665737 0.23352396 0.093316853
+		 0.49831933 0.023404896 0.30582136 0.041151613 0.2089642 -0.06651897 0.55814916 -0.047671914
+		 0.60330904 -0.10152605 0.29004979 0.20354253 0.29683319 0.13371882 0.30009145 0.1003281
+		 0.55790025 0.074064881 0.38325977 0.047807306 0.59648621 0.029457644 0.61825299 0.0039801002
+		 0.66400063 -0.049865663 0.3701185 0.21047518 0.37581086 0.14058734 0.37855303 0.10715011
+		 0.72198701 -0.010958567 0.66957694 -0.056342006 0.60882062 -0.10805783 0.55658102
+		 -0.15157235 0.48522592 -0.20981231 0.42589223 -0.25743499 0.36927766 -0.294799 0.31915769
+		 -0.24131444 0.29832372 -0.21443564 0.45178646 0.044020355 0.66652483 0.16859426 0.38390544
+		 0.039286345 0.30662131 0.032644361 0.24122271 0.025748014 0.15209705 0.014668316
+		 0.078483403 0.0043783784 0.52917522 0.15125559 0.52428854 0.22119209 0.53186554 0.11738034
+		 0.015041761 -0.0050022602 0.26152986 -0.16760129 0.77931166 0.039053619 0.64804274
+		 0.075331733 0.30517668 0.01572758 0.30392003 0.014885888 0.3044399 0.014325216 0.53658599
+		 -0.021979719 0.20969245 -0.066718496 0.20837551 -0.067570753 0.20892224 -0.068100877
+		 0.41462904 -0.12273842 0.058766689 -0.32261813 0.057126205 -0.32378328 0.057822805
+		 -0.32391709;
+createNode polyMapCut -n "polyMapCut4";
+	rename -uid "D1CD7DA3-426E-1792-04D4-BB92628C90D9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 18 "e[31]" "e[33:34]" "e[42]" "e[50]" "e[55]" "e[57:58]" "e[63]" "e[65:66]" "e[74]" "e[82]" "e[87]" "e[89:90]" "e[95]" "e[97:98]" "e[106]" "e[114]" "e[119]" "e[121:122]";
+createNode polyTweakUV -n "polyTweakUV4";
+	rename -uid "2B94AFAD-4ED3-49D9-EDE5-639507244606";
+	setAttr ".uopa" yes;
+	setAttr -s 110 ".uvtk[0:109]" -type "float2" -0.70228666 0.37414396 -0.70228666
+		 0.37414399 -0.70228666 0.37414399 -0.70228666 0.37414402 -0.70180279 0.37563241 -0.70228666
+		 0.37414402 -0.70228666 0.37414402 -0.70228666 0.37414402 -0.70228666 0.37414399 -0.70228666
+		 0.37414402 -0.70228666 0.37414402 0 2.9802322e-08 -0.70228666 0.37414399 -0.70228666
+		 0.37414402 -0.70228666 0.37414399 -0.70228666 0.37414402 -0.70228666 0.37414396 -0.70228666
+		 0.37414402 -0.7022866 0.37414402 -0.70228666 0.37414402 -0.70228666 0.37414396 -0.3257094
+		 -0.24106508 -0.70228666 0.37414402 -0.70228666 0.37414399 -0.70228666 0.37414402
+		 -0.70228666 0.37414399 -0.70228666 0.37414399 -0.70228666 0.37414405 -0.70228666
+		 0.37414396 -0.70228666 0.37414396 -0.39942244 -0.33266354 -0.70258564 0.37302098
+		 -0.70228666 0.37414396 -0.70228666 0.37414399 0 1.4901161e-08 -0.70228672 0.37414399
+		 -0.70228666 0.37414399 -0.70228666 0.37414399 -0.7024017 0.37376285 -0.70243043 0.37380078
+		 -0.70228666 0.37414399 -0.70228666 0.37414402 -0.70228678 0.37414393 -0.70228654
+		 0.37414402 -0.70228666 0.37414399 -0.70228666 0.37414399 -0.28998473 -0.2648322 -0.70233381
+		 0.37411565 -0.70228666 0.37414399 -0.70228666 0.37414396 2.9802322e-08 1.4901161e-08
+		 -0.70228666 0.37414396 -0.70228666 0.37414396 -0.70228666 0.37414399 -0.70226616
+		 0.3742913 -0.70228916 0.37429193 -0.70228666 0.37414396 -0.70228666 0.37414399 -0.70228666
+		 0.37414396 -0.7022866 0.37414399 -0.70228666 0.37414399 -0.70228666 0.37414399 -0.30960375
+		 -0.19645834 -0.7021414 0.37467709 -0.70228666 0.37414402 -0.70228666 0.37414399 -0.70228666
+		 0.37414396 -0.70228666 0.37414399 -0.70228666 0.37414399 -0.70228666 0.37414396 -0.70228666
+		 0.37414399 -0.70228666 0.37414399 -0.70228666 0.37414402 -0.70228666 0.37414396 -0.70228666
+		 0.37414402 -0.70228666 0.37414399 -0.70228666 0.37414402 -0.70228666 0.37414402 -0.70228666
+		 0.37414402 -0.70228666 0.37414399 -0.70228666 0.37414396 -0.70228666 0.37414402 -0.70228666
+		 0.37414396 -0.70228666 0.37414396 -0.70228666 0.37414399 -0.70228666 0.37414399 -0.7022866
+		 0.37414399 0 -1.4901161e-08 0 0 -2.9802322e-08 -1.4901161e-08 -0.70228666 0.37414399
+		 0 1.4901161e-08 0 0 -2.9802322e-08 0 -0.70228666 0.37414399 0 0 0 0 0 -1.4901161e-08
+		 -0.70169067 0.37566987 -0.34750232 -0.23319685 -0.33135596 -0.18844026 -0.70211351
+		 0.37470999 -0.30428475 -0.30884391 -0.32637078 -0.30179846 -0.31199497 -0.25755692
+		 -0.70233774 0.37410155 -0.41423425 -0.38234559 -0.43648678 -0.37588373 -0.42163113
+		 -0.32606429 -0.70265335 0.37298852;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -10707,17 +13912,20 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
+	setAttr -s 2 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
+	setAttr -s 3 ".r";
 select -ne :defaultTextureList1;
+	setAttr -s 2 ".tx";
 select -ne :standardSurface1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 5 ".dsm";
+	setAttr -s 10 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
+	setAttr -s 2 ".t";
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -10736,7 +13944,15 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "floor.di" "pCube1.do";
+connectAttr "polyTweakUV2.out" "pCubeShape2.i";
+connectAttr "polyTweakUV2.uvtk[0]" "pCubeShape2.uvst[0].uvtw";
+connectAttr "polyTweakUV4.out" "pasted__pCubeShape2.i";
+connectAttr "polyTweakUV4.uvtk[0]" "pasted__pCubeShape2.uvst[0].uvtw";
+connectAttr "polyTweakUV1.out" "pPlaneShape1.i";
+connectAttr "polyTweakUV1.uvtk[0]" "pPlaneShape1.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -10751,6 +13967,18 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "polySurfaceShape1.o" "polyPlanarProj1.ip";
+connectAttr "pPlaneShape1.wm" "polyPlanarProj1.mp";
+connectAttr "polyPlanarProj1.out" "polySplitRing1.ip";
+connectAttr "pPlaneShape1.wm" "polySplitRing1.mp";
+connectAttr "polySplitRing1.out" "polyMapCut1.ip";
+connectAttr "polyMapCut1.out" "polyTweakUV1.ip";
+connectAttr "polySurfaceShape2.o" "polyMapCut2.ip";
+connectAttr "polyMapCut2.out" "polyTweakUV2.ip";
+connectAttr "polySurfaceShape3.o" "polyMapCut3.ip";
+connectAttr "polyMapCut3.out" "polyTweakUV3.ip";
+connectAttr "polyTweakUV3.out" "polyMapCut4.ip";
+connectAttr "polyMapCut4.out" "polyTweakUV4.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
